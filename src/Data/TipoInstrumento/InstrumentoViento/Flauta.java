@@ -2,5 +2,5 @@ package Data.TipoInstrumento.InstrumentoViento;
 
 import Data.TipoInstrumento.Viento;
 
-public class Saxofon extends Viento {
+public class Flauta extends Viento {
 }
