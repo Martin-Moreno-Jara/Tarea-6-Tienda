@@ -24,6 +24,21 @@ public final class Piano extends Cuerda {
         this.setDistribucion(distribucion);
 
     }
+    public Piano(int precio,int referencia,int numero_teclas, String marca,
+                 String generacion_del_sonido,String distribucion){
+        this.setPrecio(precio);
+        this.setReferencia(referencia);
+        this.setNumero_teclas(numero_teclas);
+        this.setMarca(marca);
+        this.setGeneracion_del_sonido(generacion_del_sonido);
+        this.setDistribucion(distribucion);
+    }
+    public Piano(int precio,int referencia,int numero_teclas, String marca){
+        this.setPrecio(precio);
+        this.setReferencia(referencia);
+        this.setNumero_teclas(numero_teclas);
+        this.setMarca(marca);
+    }
 
     public int getNumero_teclas() {
         return this.numero_teclas;
