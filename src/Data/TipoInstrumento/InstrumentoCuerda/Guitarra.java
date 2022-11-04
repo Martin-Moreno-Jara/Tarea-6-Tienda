@@ -2,7 +2,7 @@ package Data.TipoInstrumento.InstrumentoCuerda;
 
 import Data.TipoInstrumento.Cuerda;
 
-public class Guitarra extends Cuerda {
+public final class Guitarra extends Cuerda {
 
     private int numero_trastes;
     private int numero_pastillas;

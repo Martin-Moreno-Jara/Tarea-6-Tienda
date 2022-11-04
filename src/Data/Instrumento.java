@@ -1,6 +1,6 @@
 package Data;
 
-public class Instrumento {
+public abstract class Instrumento {
 
     private int precio;
     private int referencia;

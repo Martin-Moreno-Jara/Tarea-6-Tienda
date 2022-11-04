@@ -2,7 +2,7 @@ package Data.TipoInstrumento;
 
 import Data.Instrumento;
 
-public class Cuerda extends Instrumento {
+public abstract class Cuerda extends Instrumento {
 
     private int numero_de_cuerdas;
     private String material_de_cuerda;

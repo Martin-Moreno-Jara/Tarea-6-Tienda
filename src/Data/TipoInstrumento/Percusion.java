@@ -2,7 +2,7 @@ package Data.TipoInstrumento;
 
 import Data.Instrumento;
 
-public class Percusion extends Instrumento {
+public abstract class Percusion extends Instrumento {
 
     private String manipulacion;
     private String altura;
