@@ -9,7 +9,7 @@ public final class Guitarra extends Cuerda {
     private String tipo_madera;
 
     public Guitarra(int precio,int referencia,int numero_cuerda,int numero_trastes,int numero_pastillas,String marca
-            ,String color,String generacion_del_sonido,String material_de_cuerda,String tecnica, String tipo_madera){
+            ,String modelo,String color,String generacion_del_sonido,String material_de_cuerda,String tecnica, String tipo_madera){
 
         this.setPrecio(precio);
         this.setReferencia(referencia);
@@ -17,6 +17,7 @@ public final class Guitarra extends Cuerda {
         this.setNumero_trastes(numero_trastes);
         this.setNumero_pastillas(numero_pastillas);
         this.setMarca(marca);
+        this.setModelo(modelo);
         this.setColor(color);
         this.setGeneracion_del_sonido(generacion_del_sonido);
         this.setMaterial_de_cuerda(material_de_cuerda);
