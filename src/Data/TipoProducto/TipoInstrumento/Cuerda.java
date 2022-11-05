@@ -1,6 +1,6 @@
-package Data.TipoInstrumento;
+package Data.TipoProducto.TipoInstrumento;
 
-import Data.Instrumento;
+import Data.TipoProducto.Instrumento;
 
 public abstract class Cuerda extends Instrumento {
 

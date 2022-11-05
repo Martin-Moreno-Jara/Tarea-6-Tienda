@@ -1,7 +1,7 @@
 package Logic;
 
-import Data.TipoInstrumento.InstrumentoCuerda.Guitarra;
-import Data.TipoInstrumento.InstrumentoCuerda.Piano;
+import Data.TipoProducto.TipoInstrumento.InstrumentoCuerda.Guitarra;
+import Data.TipoProducto.TipoInstrumento.InstrumentoCuerda.Piano;
 
 public class Main {
 

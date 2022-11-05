@@ -1,6 +1,6 @@
-package Data.TipoInstrumento.InstrumentoCuerda;
+package Data.TipoProducto.TipoInstrumento.InstrumentoCuerda;
 
-import Data.TipoInstrumento.Cuerda;
+import Data.TipoProducto.TipoInstrumento.Cuerda;
 
 public final class Piano extends Cuerda {
 
