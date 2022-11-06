@@ -9,11 +9,11 @@ public abstract class Instrumento extends Producto {
     private String generacion_del_sonido;
 
     public String getModelo() {
-        return this.color;
+        return this.modelo;
     }
 
-    public void setModelo(String color) {
-        this.color = color;
+    public void setModelo(String modelo) {
+        this.modelo = modelo;
     }
 
     public String getColor() {
