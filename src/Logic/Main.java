@@ -10,20 +10,37 @@ public class Main {
     public static void main(String [] args) {
 
         //------------------------------------------------------------------------------------------------ instanciación de piano
-        Piano piano1 = new Piano(1000, 132123, 70, 70, 8, "yamaha",
-                "Blanco y negro", "Acústico", "nilon", "percutida",
-                "De cola");
-        Piano piano2 = new Piano(1500,4457,50,"Casio");
-        Piano piano3 = new Piano(800,8885,45,"Yamaha");
+    Piano piano1 = new Piano(4500000,111201,"Yamaha","PSR E273","Blanco y negro",
+                            "Eléctrico",0,"N/A","Cuerda percutida"
+                             ,61,5,"Teclado");
+
+    Piano piano2 = new Piano(7000000,111202,"Fazioli","F308","Blanco y negro",
+                            "Acústico",88,"Acero al carbono templado");
+                            piano2.setTecnica("Cuerda percutida");
+                            piano2.setNumero_teclas(88);
+                            piano2.setNumero_octavas(7);
+                            piano2.setDistribucion("De cola");
+
+    Piano piano3 = new Piano(5800000,111203,"Samick","JS-121","Blanco y negro");
+                            piano3.setGeneracion_del_sonido("Acústico");
+                            piano3.setNumero_de_cuerdas(88);
+                            piano3.setMaterial_de_cuerda("Alambre tensado");
+                            piano3.setTecnica("Cuerda percutida");
+                            piano3.setNumero_teclas(88);
+                            piano3.setNumero_octavas(7);
+                            piano3.setDistribucion("De pared");
         //------------------------------------------------------------------------------------------------ instanciación de guitarra
-        Guitarra guitarra1 = new Guitarra(2500,54898,6,24,4,"Fender","Stratocaster",
-                "Negro","Electrica","Metal","Tocada","Roble");
-        Guitarra guitarra2 = new Guitarra(4000,55898,7,22,"Gibson");
-        Guitarra guitarra3 = new Guitarra(4500,88455,6,24,"Gibson");
+
+        //------------------------------------------------------------------------------------------------ instanciación de flauta
+
+        //------------------------------------------------------------------------------------------------ instanciación de trompeta
+
+        //------------------------------------------------------------------------------------------------ instanciación de bateria
+
+        //------------------------------------------------------------------------------------------------ instanciación de xilofono
+
         //------------------------------------------------------------------------------------------------ instanciación de accesorios
-        Accesorio pua = new Accesorio(400,"Mertens","Púa 5 mm");
-        Accesorio amplificador = new Accesorio(5000,"vox","Amplificador 55A");
-        Accesorio capo = new Accesorio(2600,"fender","Capo grande");
+
 
         UI.Bienvenida();
        int eleccion_producto = UI.seleccionar_producto();
@@ -33,7 +50,7 @@ public class Main {
             if(eleccion_instrumento ==1){
                 int eleccion_cuerda = UI.seleccionar_instrumento_de_cuerda();
                 if(eleccion_cuerda==1){
-                    UI.imprimir_guitarras(guitarra1,guitarra2,guitarra3);
+
                 }
             }
             else if(eleccion_instrumento==2){
@@ -44,7 +61,6 @@ public class Main {
             }
         }
         else if(eleccion_producto == 2){
-            UI.imprimir_accesorios(pua,amplificador,capo);
         }
     }
 

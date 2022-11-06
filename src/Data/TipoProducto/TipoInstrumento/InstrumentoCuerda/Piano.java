@@ -8,36 +8,51 @@ public final class Piano extends Cuerda {
     private int numero_octavas;
     private String distribucion;
 
-    public Piano(int precio,int referencia,int numero_cuerda,int numero_teclas,int numero_octavas,String marca
-            ,String color,String generacion_del_sonido,String material_de_cuerda,String tecnica, String distribucion){
+    public Piano(int precio,int referencia,String marca, String modelo,String color,String generacion_del_sonido,
+                 int numero_cuerda,   String material_de_cuerda,String tecnica, int numero_teclas,int numero_octavas,
+                 String distribucion){
 
         this.setPrecio(precio);
         this.setReferencia(referencia);
-        this.setNumero_de_cuerdas(numero_cuerda);
-        this.setNumero_teclas(numero_teclas);
-        this.setNumero_octavas(numero_octavas);
         this.setMarca(marca);
+
+        this.setModelo(modelo);
         this.setColor(color);
         this.setGeneracion_del_sonido(generacion_del_sonido);
+
+        this.setNumero_de_cuerdas(numero_cuerda);
         this.setMaterial_de_cuerda(material_de_cuerda);
         this.setTecnica(tecnica);
+
+        this.setNumero_teclas(numero_teclas);
+        this.setNumero_octavas(numero_octavas);
         this.setDistribucion(distribucion);
 
     }
-    public Piano(int precio,int referencia,int numero_teclas, String marca,
-                 String generacion_del_sonido,String distribucion){
+    public Piano(int precio,int referencia,String marca, String modelo,String color,String generacion_del_sonido,
+                 int numero_cuerda,   String material_de_cuerda){
+
         this.setPrecio(precio);
         this.setReferencia(referencia);
-        this.setNumero_teclas(numero_teclas);
         this.setMarca(marca);
+
+        this.setModelo(modelo);
+        this.setColor(color);
         this.setGeneracion_del_sonido(generacion_del_sonido);
-        this.setDistribucion(distribucion);
+
+        this.setNumero_de_cuerdas(numero_cuerda);
+        this.setMaterial_de_cuerda(material_de_cuerda);
+
     }
-    public Piano(int precio,int referencia,int numero_teclas, String marca){
+    public Piano(int precio,int referencia,String marca, String modelo,String color){
+
         this.setPrecio(precio);
         this.setReferencia(referencia);
-        this.setNumero_teclas(numero_teclas);
         this.setMarca(marca);
+
+        this.setModelo(modelo);
+        this.setColor(color);
+
     }
 
     public int getNumero_teclas() {
@@ -67,8 +82,9 @@ public final class Piano extends Cuerda {
     @Override
     public String toString(){
         return "-----------------------------------------------------------------"
-                +"\nEl piano marca "+this.getMarca()+" de distribución "+this.getDistribucion()+" y número de referencia "+
-                this.getReferencia()+" tiene un precio de "+this.getPrecio()+"\nAdemás tiene las siguientes caracteristicas: "+
+                +"\nEl piano marca "+this.getMarca()+" y modelo "+this.getModelo()+" de distribución "
+                +this.getDistribucion()+" y número de referencia "+
+                this.getReferencia()+" tiene un precio de $"+this.getPrecio()+"\nAdemás tiene las siguientes caracteristicas: "+
                 "\nGeneración del sonido: "+this.getGeneracion_del_sonido()+
                 "\nMaterial de la cuerda: "+this.getMaterial_de_cuerda()+
                 "\nTécnica con la cuerda: "+this.getTecnica()+

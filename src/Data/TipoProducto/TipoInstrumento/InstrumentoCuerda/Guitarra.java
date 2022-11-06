@@ -8,47 +8,55 @@ public final class Guitarra extends Cuerda {
     private int numero_pastillas;
     private String tipo_madera;
 
-    public Guitarra(int precio,int referencia,int numero_cuerda,int numero_trastes,int numero_pastillas,String marca
-            ,String modelo,String color,String generacion_del_sonido,String material_de_cuerda,String tecnica, String tipo_madera){
+    public Guitarra(int precio,int referencia,String marca, String modelo,String color,String generacion_del_sonido,
+                    int numero_cuerda,   String material_de_cuerda,String tecnica, int numero_trastes,int numero_pastillas,
+                    String tipo_madera){
 
         this.setPrecio(precio);
         this.setReferencia(referencia);
-        this.setNumero_de_cuerdas(numero_cuerda);
-        this.setNumero_trastes(numero_trastes);
-        this.setNumero_pastillas(numero_pastillas);
         this.setMarca(marca);
+
         this.setModelo(modelo);
         this.setColor(color);
         this.setGeneracion_del_sonido(generacion_del_sonido);
+
+        this.setNumero_de_cuerdas(numero_cuerda);
         this.setMaterial_de_cuerda(material_de_cuerda);
         this.setTecnica(tecnica);
-        this.setTipo_madera(tipo_madera);
 
-    }
-
-    public Guitarra(int precio,int referencia,int numero_cuerda,int numero_trastes,int numero_pastillas,String marca
-            ,String generacion_del_sonido, String tipo_madera){
-
-        this.setPrecio(precio);
-        this.setReferencia(referencia);
-        this.setNumero_de_cuerdas(numero_cuerda);
         this.setNumero_trastes(numero_trastes);
         this.setNumero_pastillas(numero_pastillas);
-        this.setMarca(marca);
-        this.setGeneracion_del_sonido(generacion_del_sonido);
         this.setTipo_madera(tipo_madera);
 
     }
 
-    public Guitarra(int precio,int referencia,int numero_cuerda,int numero_trastes,String marca){
+    public Guitarra(int precio,int referencia,String marca, String modelo,String color,String generacion_del_sonido,
+                    int numero_cuerda,   String material_de_cuerda){
 
         this.setPrecio(precio);
         this.setReferencia(referencia);
-        this.setNumero_de_cuerdas(numero_cuerda);
-        this.setNumero_trastes(numero_trastes);
         this.setMarca(marca);
 
+        this.setModelo(modelo);
+        this.setColor(color);
+        this.setGeneracion_del_sonido(generacion_del_sonido);
+
+        this.setNumero_de_cuerdas(numero_cuerda);
+        this.setMaterial_de_cuerda(material_de_cuerda);
+
     }
+
+    public Guitarra(int precio,int referencia,String marca, String modelo,String color){
+
+        this.setPrecio(precio);
+        this.setReferencia(referencia);
+        this.setMarca(marca);
+
+        this.setModelo(modelo);
+        this.setColor(color);
+
+    }
+
     public int getNumero_trastes() {
         return this.numero_trastes;
     }
@@ -76,8 +84,8 @@ public final class Guitarra extends Cuerda {
     @Override
     public String toString(){
         return "-----------------------------------------------------------------"
-                +"\nLa guitarra marca "+this.getMarca()+" y número de referencia "+
-                this.getReferencia()+" tiene un precio de "+this.getPrecio()+
+                +"\nLa guitarra marca "+this.getMarca()+" "+this.getModelo() +" y número de referencia "+
+                this.getReferencia()+" tiene un precio de $"+this.getPrecio()+
                 "\nAdemás tiene las siguientes caracteristicas: "+
                 "\nGeneración del sonido: "+this.getGeneracion_del_sonido()+
                 "\nMaterial de la cuerda: "+this.getMaterial_de_cuerda()+
