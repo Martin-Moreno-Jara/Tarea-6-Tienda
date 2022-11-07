@@ -2,6 +2,11 @@ package UI;
 
 import Data.TipoProducto.Accesorio;
 import Data.TipoProducto.TipoInstrumento.InstrumentoCuerda.Guitarra;
+import Data.TipoProducto.TipoInstrumento.InstrumentoCuerda.Piano;
+import Data.TipoProducto.TipoInstrumento.InstrumentoPercusion.Bateria;
+import Data.TipoProducto.TipoInstrumento.InstrumentoPercusion.Xilofono;
+import Data.TipoProducto.TipoInstrumento.InstrumentoViento.Flauta;
+import Data.TipoProducto.TipoInstrumento.InstrumentoViento.Trompeta;
 
 import java.util.Scanner;
 public class UI {
@@ -63,6 +68,35 @@ public class UI {
         System.out.println(guitarra2);
         System.out.println(guitarra3);
     }
+    public static void imprimir_pianos(Piano piano1,Piano piano2,Piano piano3){
+        System.out.println(piano1);
+        System.out.println(piano2);
+        System.out.println(piano3);
+    }
+    public static void imprimir_flautas(Flauta flauta1,Flauta flauta2,Flauta flauta3){
+        System.out.println(flauta1);
+        System.out.println(flauta2);
+        System.out.println(flauta3);
+    }
+    public static void imprimir_trompetas(Trompeta tr1,Trompeta tr2,Trompeta tr3){
+        System.out.println(tr1);
+        System.out.println(tr2);
+        System.out.println(tr3);
+    }
+
+    public static void imprimir_baterias(Bateria btr1,Bateria btr2,Bateria btr3){
+        System.out.println(btr1);
+        System.out.println(btr2);
+        System.out.println(btr3);
+    }
+
+    public static void imprimir_xilofonos(Xilofono xlf1,Xilofono xlf2,Xilofono xlf3){
+        System.out.println(xlf1);
+        System.out.println(xlf2);
+        System.out.println(xlf3);
+    }
+
+
     public static void imprimir_accesorios(Accesorio accesorio1,Accesorio accesorio2,Accesorio accesorio3){
         System.out.println(accesorio1);
         System.out.println(accesorio2);

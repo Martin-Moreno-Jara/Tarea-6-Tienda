@@ -4,32 +4,38 @@ import Data.Producto;
 
 public final class Accesorio extends Producto {
 
+    private String nombre_del_accesorio;
     private String instrumento;
     private String tipo_de_accesorio;
 
-    public Accesorio(int precio, int referencia, String marca,String instrumento, String tipo_de_accesorio, String nombre_del_accesorio) {
+    public Accesorio(int precio, int referencia, String marca,String nombre_del_accesorio,
+                     String instrumento, String tipo_de_accesorio) {
         this.setPrecio(precio);
         this.setReferencia(referencia);
         this.setMarca(marca);
+
+        this.nombre_del_accesorio = nombre_del_accesorio;
         this.instrumento = instrumento;
         this.tipo_de_accesorio = tipo_de_accesorio;
-        this.nombre_del_accesorio = nombre_del_accesorio;
     }
 
-    public Accesorio(int precio, int referencia, String marca,String instrumento,String nombre_del_accesorio) {
+    public Accesorio(int precio, int referencia, String marca,String nombre_del_accesorio,
+                     String instrumento) {
         this.setPrecio(precio);
+        this.setReferencia(referencia);
         this.setMarca(marca);
+
+        this.nombre_del_accesorio = nombre_del_accesorio;
         this.instrumento = instrumento;
-        this.nombre_del_accesorio = nombre_del_accesorio;
     }
 
-    public Accesorio(int precio,String marca,String nombre_del_accesorio) {
+    public Accesorio(int precio, int referencia, String marca,String nombre_del_accesorio) {
         this.setPrecio(precio);
+        this.setReferencia(referencia);
         this.setMarca(marca);
+
         this.nombre_del_accesorio = nombre_del_accesorio;
     }
-
-    private String nombre_del_accesorio;
 
     public String getInstrumento() {
         return this.instrumento;
