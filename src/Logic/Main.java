@@ -208,9 +208,13 @@ public class Main {
                             switch (seleccion_cuerda) {
                                 case 1:
                                     UI.imprimir_guitarras(guitarra1, guitarra2, guitarra3);
+                                    verificador=false;
+                                    verificador_instrumento=false;
                                     break;
                                 case 2:
                                     UI.imprimir_pianos(piano1, piano2, piano3);
+                                    verificador=false;
+                                    verificador_instrumento=false;
                                     break;
                                 case 3:
                                     break;
@@ -229,9 +233,13 @@ public class Main {
                             switch (seleccion_viento) {
                                 case 1:
                                     UI.imprimir_flautas(flauta1,flauta2,flauta3);
+                                    verificador=false;
+                                    verificador_instrumento=false;
                                     break;
                                 case 2:
                                     UI.imprimir_trompetas(trompeta1,trompeta2,trompeta3);
+                                    verificador=false;
+                                    verificador_instrumento=false;
                                     break;
                                 case 3:
                                     break;
@@ -247,6 +255,28 @@ public class Main {
                             break;
                         case 3:
                             int seleccion_percusion = UI.seleccionar_instrumento_de_percusion();
+                            switch (seleccion_percusion) {
+                                case 1:
+                                    UI.imprimir_baterias(bateria1,bateria2,bateria3);
+                                    verificador=false;
+                                    verificador_instrumento=false;
+                                    break;
+                                case 2:
+                                    UI.imprimir_xilofonos(xilofono1,xilofono2,xilofono3);
+                                    verificador=false;
+                                    verificador_instrumento=false;
+                                    break;
+                                case 3:
+                                    break;
+                                case 4:
+                                    verificador_instrumento = false;
+                                    break;
+
+                                default:
+                                    verificador_instrumento = false;
+                                    verificador = false;
+                                    break;
+                            }
                             break;
                         case 4:
                             break;
@@ -258,8 +288,8 @@ public class Main {
                 break;
 
             case 2:
-                System.out.println("ERROR....");
                 UI.imprimir_accesorios(capo, amplificador, pua);
+                verificador=false;
                 break;
 
             default:
