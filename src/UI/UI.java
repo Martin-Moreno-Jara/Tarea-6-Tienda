@@ -18,7 +18,7 @@ public class UI {
     public static  int seleccionar_producto(){
         Scanner scan = new  Scanner(System.in);
         System.out.println("¿Que producto deseas ver?\n Escribe 1 para ver instrumentos musicales" +
-                "\nEscribe 2 para ver accesorios\n");
+                "\nEscribe 2 para ver accesorios\nEscribe cualquier otra tecla para salir de la tienda");
         System.out.print("Tu selección: ");
         int seleccion = scan.nextInt();
 
@@ -30,7 +30,8 @@ public class UI {
         System.out.println("¿Qué tipo de instrumento deseas ver?");
         System.out.println("Escribe 1 para instrumentos de cuerda" +
                 "\nEcribe 2 para instrumentos de viento" +
-                "\nEscribe 3 para instrumentos de percusión");
+                "\nEscribe 3 para instrumentos de percusión" +
+                "\nEscribe 4 para regresar al menu anterior\nEscribe cualquier otra tecla para salir de la tienda");
         System.out.print("Tu selección: ");
         int seleccion = scan.nextInt();
         return seleccion;
@@ -39,7 +40,9 @@ public class UI {
     public static int seleccionar_instrumento_de_cuerda(){
         Scanner scan = new  Scanner(System.in);
         System.out.println("¿Qué instrumento de cuerda quieres ver?");
-        System.out.println("Escribe 1 para guitarra\nEscribe 2 para piano");
+        System.out.println("Escribe 1 para guitarra\nEscribe 2 para piano\nEscribe 3 para regresar a la selección" +
+                "de instrumeto\nEscribe 4 para regresar a la selección de producto\nEscribe cualquier otra " +
+                "tecla para salir de la tienda");
         System.out.print("Tu selección: ");
         int seleccion = scan.nextInt();
         return seleccion;
@@ -48,7 +51,9 @@ public class UI {
     public static int seleccionar_instrumento_de_viento(){
         Scanner scan = new  Scanner(System.in);
         System.out.println("¿Qué instrumento de viento quieres ver?");
-        System.out.println("Escribe 1 para flauta\nEscribe 2 para trompeta");
+        System.out.println("Escribe 1 para flauta\nEscribe 2 para trompeta\nEscribe 3 para regresar a la selección de " +
+                "instrumento\nEscribe 4 para regresar a la selección de producto\nEscribe cualquier otra tecla" +
+                " para salir de la tienda");
         System.out.print("Tu selección: ");
         int seleccion = scan.nextInt();
         return seleccion;
@@ -57,7 +62,9 @@ public class UI {
     public static int seleccionar_instrumento_de_percusion(){
         Scanner scan = new  Scanner(System.in);
         System.out.println("¿Qué instrumento de percusión quieres ver?");
-        System.out.println("Escribe 1 para bateria\nEscribe 2 para xilofono");
+        System.out.println("Escribe 1 para bateria\nEscribe 2 para xilofono\nEcribe 3 para regresar a la selección de " +
+                "instrumento\nEscribe 4 para regresar a la selección de producto\nEscribe cualquier otra tecla" +
+                " para salir de la tienda");
         System.out.print("Tu selección: ");
         int seleccion = scan.nextInt();
         return seleccion;

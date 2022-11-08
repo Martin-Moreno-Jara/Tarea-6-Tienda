@@ -152,7 +152,7 @@ public class Main {
                             capo.setTipo_de_accesorio("Modificador del tono");
 
         UI.Bienvenida();
-       int eleccion_producto = UI.seleccionar_producto();
+  /*     int eleccion_producto = UI.seleccionar_producto();
 
         if(eleccion_producto == 1){
             int eleccion_instrumento = UI.seleccionar_instrumento();
@@ -187,6 +187,85 @@ public class Main {
         }
         else if(eleccion_producto == 2){
             UI.imprimir_accesorios(pua,amplificador,capo);
+        }
+
+   */
+        boolean verificador = true;
+        boolean verificador_instrumento;
+
+        while(verificador){
+            verificador_instrumento = true;
+        int eleccion_producto = UI.seleccionar_producto();
+        switch (eleccion_producto) {
+            case 1:
+                while(verificador_instrumento) {
+
+                    int seleccion_intrumento = UI.seleccionar_instrumento();
+                    switch (seleccion_intrumento) {
+                        case 1:
+                            int seleccion_cuerda = UI.seleccionar_instrumento_de_cuerda();
+
+                            switch (seleccion_cuerda) {
+                                case 1:
+                                    UI.imprimir_guitarras(guitarra1, guitarra2, guitarra3);
+                                    break;
+                                case 2:
+                                    UI.imprimir_pianos(piano1, piano2, piano3);
+                                    break;
+                                case 3:
+                                    break;
+                                case 4:
+                                    verificador_instrumento = false;
+                                    break;
+
+                                default:
+                                    verificador_instrumento = false;
+                                    verificador = false;
+                                    break;
+                            }
+                            break;
+                        case 2:
+                            int seleccion_viento = UI.seleccionar_instrumento_de_viento();
+                            switch (seleccion_viento) {
+                                case 1:
+                                    UI.imprimir_flautas(flauta1,flauta2,flauta3);
+                                    break;
+                                case 2:
+                                    UI.imprimir_trompetas(trompeta1,trompeta2,trompeta3);
+                                    break;
+                                case 3:
+                                    break;
+                                case 4:
+                                    verificador_instrumento = false;
+                                    break;
+
+                                default:
+                                    verificador_instrumento = false;
+                                    verificador = false;
+                                    break;
+                            }
+                            break;
+                        case 3:
+                            int seleccion_percusion = UI.seleccionar_instrumento_de_percusion();
+                            break;
+                        case 4:
+                            break;
+                        default:
+                            verificador = false;
+                            break;
+                    }
+                }
+                break;
+
+            case 2:
+                System.out.println("ERROR....");
+                UI.imprimir_accesorios(capo, amplificador, pua);
+                break;
+
+            default:
+                verificador=false;
+                break;
+        }
         }
     }
 
