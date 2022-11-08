@@ -9,6 +9,8 @@ import Data.TipoProducto.TipoInstrumento.InstrumentoViento.Flauta;
 import Data.TipoProducto.TipoInstrumento.InstrumentoViento.Trompeta;
 import UI.*;
 
+import java.util.ArrayList;
+
 public class Main {
 
     public static void main(String [] args) {
@@ -151,45 +153,19 @@ public class Main {
                             capo.setInstrumento("Guitarra");
                             capo.setTipo_de_accesorio("Modificador del tono");
 
+        //------------------------------------------------------------------------------------------------
+        ArrayList<Object> bundle_guitarra = new ArrayList<Object>();
+        bundle_guitarra.add(guitarra1);
+        bundle_guitarra.add(amplificador);
+        bundle_guitarra.add(pua);
+
+        ArrayList<Object> bundle_salsa = new ArrayList<Object>();
+        bundle_salsa.add(trompeta1);
+        bundle_salsa.add(piano2);
+        bundle_salsa.add(bateria1);
+
         UI.Bienvenida();
-  /*     int eleccion_producto = UI.seleccionar_producto();
 
-        if(eleccion_producto == 1){
-            int eleccion_instrumento = UI.seleccionar_instrumento();
-
-            if(eleccion_instrumento ==1){
-                int eleccion_cuerda = UI.seleccionar_instrumento_de_cuerda();
-                if(eleccion_cuerda==1){
-                    UI.imprimir_guitarras(guitarra1,guitarra2,guitarra3);
-                }
-                else if(eleccion_cuerda==2){
-                    UI.imprimir_pianos(piano1,piano2,piano3);
-                }
-            }
-            else if(eleccion_instrumento==2){
-                int eleccion_viento = UI.seleccionar_instrumento_de_viento();
-                if(eleccion_viento==1){
-                    UI.imprimir_flautas(flauta1,flauta2,flauta3);
-                }
-                else if(eleccion_viento==2){
-                    UI.imprimir_trompetas(trompeta1,trompeta2,trompeta3);
-                }
-            }
-            else if(eleccion_instrumento==3){
-                int eleccion_percusion = UI.seleccionar_instrumento_de_percusion();
-                    if(eleccion_percusion==1){
-                        UI.imprimir_baterias(bateria1,bateria2,bateria3);
-                    }
-                    else if(eleccion_percusion==2){
-                        UI.imprimir_xilofonos(xilofono1,xilofono2,xilofono3);
-                    }
-            }
-        }
-        else if(eleccion_producto == 2){
-            UI.imprimir_accesorios(pua,amplificador,capo);
-        }
-
-   */
         boolean verificador = true;
         boolean verificador_instrumento;
 

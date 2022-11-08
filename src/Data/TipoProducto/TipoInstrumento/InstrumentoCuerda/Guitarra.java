@@ -81,6 +81,10 @@ public final class Guitarra extends Cuerda {
         this.tipo_madera = tipo_madera;
     }
 
+    public String tocar(){
+        return "Estás tocando la guitarra";
+    }
+
     @Override
     public String toString(){
         return "-----------------------------------------------------------------"

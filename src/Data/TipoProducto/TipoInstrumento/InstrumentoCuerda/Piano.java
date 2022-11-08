@@ -79,6 +79,10 @@ public final class Piano extends Cuerda {
         this.distribucion = distribucion;
     }
 
+    public String tocar(){
+        return "Estás tocando el piano";
+    }
+
     @Override
     public String toString(){
         return "-----------------------------------------------------------------"
