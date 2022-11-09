@@ -93,43 +93,106 @@ public class UI {
         return seleccion;
     }
 
-    public static void imprimir_guitarras(Guitarra guitarra1, Guitarra guitarra2,Guitarra guitarra3){
+
+    public static int imprimir_guitarras(Guitarra guitarra1, Guitarra guitarra2,Guitarra guitarra3){
+        Scanner scan = new  Scanner(System.in);
         System.out.println(guitarra1);
         System.out.println(guitarra2);
         System.out.println(guitarra3);
+
+        System.out.println("\n\n¿Qué deseas hacer ahora?");
+        System.out.println("\n1 para regresar al menu de tipo de instrumento" +
+                "\n2 para regresar al menu de producto" +
+                "\nCualquier otro número para salir de la tienda");
+        System.out.print("\n\nTu elección: ");
+        int eleccion = scan.nextInt();
+        return eleccion;
+
     }
-    public static void imprimir_pianos(Piano piano1,Piano piano2,Piano piano3){
+    public static int imprimir_pianos(Piano piano1,Piano piano2,Piano piano3){
+        Scanner scan = new  Scanner(System.in);
         System.out.println(piano1);
         System.out.println(piano2);
         System.out.println(piano3);
+        System.out.println("\n\n¿Qué deseas hacer ahora?");
+        System.out.println("\n1 para regresar al menu de tipo de instrumento" +
+                "\n2 para regresar al menu de producto" +
+                "\nCualquier otro número para salir de la tienda");
+        System.out.print("\n\nTu elección: ");
+        int eleccion = scan.nextInt();
+        return eleccion;
     }
-    public static void imprimir_flautas(Flauta flauta1,Flauta flauta2,Flauta flauta3){
+    public static int imprimir_flautas(Flauta flauta1,Flauta flauta2,Flauta flauta3){
+        Scanner scan = new  Scanner(System.in);
         System.out.println(flauta1);
         System.out.println(flauta2);
         System.out.println(flauta3);
+
+        System.out.println("\n\n¿Qué deseas hacer ahora?");
+        System.out.println("\n1 para regresar al menu de tipo de instrumento" +
+                "\n2 para regresar al menu de producto" +
+                "\nCualquier otro número para salir de la tienda");
+        System.out.print("\n\nTu elección: ");
+        int eleccion = scan.nextInt();
+        return eleccion;
     }
-    public static void imprimir_trompetas(Trompeta tr1,Trompeta tr2,Trompeta tr3){
+    public static int imprimir_trompetas(Trompeta tr1,Trompeta tr2,Trompeta tr3){
+        Scanner scan = new  Scanner(System.in);
         System.out.println(tr1);
         System.out.println(tr2);
         System.out.println(tr3);
+
+        System.out.println("\n\n¿Qué deseas hacer ahora?");
+        System.out.println("\n1 para regresar al menu de tipo de instrumento" +
+                "\n2 para regresar al menu de producto" +
+                "\nCualquier otro número para salir de la tienda");
+        System.out.print("\n\nTu elección: ");
+        int eleccion = scan.nextInt();
+        return eleccion;
     }
 
-    public static void imprimir_baterias(Bateria btr1,Bateria btr2,Bateria btr3){
+    public static int imprimir_baterias(Bateria btr1,Bateria btr2,Bateria btr3){
+        Scanner scan = new  Scanner(System.in);
         System.out.println(btr1);
         System.out.println(btr2);
         System.out.println(btr3);
+
+        System.out.println("\n\n¿Qué deseas hacer ahora?");
+        System.out.println("\n1 para regresar al menu de tipo de instrumento" +
+                "\n2 para regresar al menu de producto" +
+                "\nCualquier otro número para salir de la tienda");
+        System.out.print("\n\nTu elección: ");
+        int eleccion = scan.nextInt();
+        return eleccion;
     }
 
-    public static void imprimir_xilofonos(Xilofono xlf1,Xilofono xlf2,Xilofono xlf3){
+    public static int imprimir_xilofonos(Xilofono xlf1,Xilofono xlf2,Xilofono xlf3){
+        Scanner scan = new  Scanner(System.in);
         System.out.println(xlf1);
         System.out.println(xlf2);
         System.out.println(xlf3);
+
+        System.out.println("\n\n¿Qué deseas hacer ahora?");
+        System.out.println("\n1 para regresar al menu de tipo de instrumento" +
+                "\n2 para regresar al menu de producto" +
+                "\nCualquier otro número para salir de la tienda");
+        System.out.print("\n\nTu elección: ");
+        int eleccion = scan.nextInt();
+        return eleccion;
     }
 
 
-    public static void imprimir_accesorios(Accesorio accesorio1,Accesorio accesorio2,Accesorio accesorio3){
+    public static int imprimir_accesorios(Accesorio accesorio1,Accesorio accesorio2,Accesorio accesorio3){
+        Scanner scan = new  Scanner(System.in);
         System.out.println(accesorio1);
         System.out.println(accesorio2);
         System.out.println(accesorio3);
+
+        System.out.println("\n\n¿Qué deseas hacer ahora?");
+        System.out.println("\n1 para regresar al menu de tipo de producto" +
+                "\nCualquier otro número para salir de la tienda");
+        System.out.print("\n\nTu elección: ");
+        int eleccion = scan.nextInt();
+        return eleccion;
     }
 }

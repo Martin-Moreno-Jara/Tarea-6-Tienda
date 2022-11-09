@@ -10,6 +10,8 @@ import Data.TipoProducto.TipoInstrumento.InstrumentoViento.Trompeta;
 import UI.*;
 
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.HashSet;
 
 public class Main {
 
@@ -153,7 +155,7 @@ public class Main {
                             capo.setInstrumento("Guitarra");
                             capo.setTipo_de_accesorio("Modificador del tono");
 
-        //------------------------------------------------------------------------------------------------
+        //------------------------------------------------------------------------------------------------Arraylist
         ArrayList<Object> bundle_guitarra = new ArrayList<Object>();
         bundle_guitarra.add(guitarra1);
         bundle_guitarra.add(amplificador);
@@ -163,34 +165,95 @@ public class Main {
         bundle_salsa.add(trompeta1);
         bundle_salsa.add(piano2);
         bundle_salsa.add(bateria1);
+        //------------------------------------------------------------------------------------------------hashset
+        HashSet<Object> bundle_rock = new HashSet<Object>();
+        bundle_rock.add(guitarra1);
+        bundle_rock.add(guitarra1);
+        bundle_rock.add(bateria3);
+
+        HashSet<Object> bundle_infantil = new HashSet<Object>();
+        bundle_infantil.add(flauta1);
+        bundle_infantil.add(xilofono2);
+        bundle_infantil.add(xilofono3);
+
+        //------------------------------------------------------------------------------------------------hashmap
+        HashMap<String,Object> instrumentos_pequeños = new HashMap<String,Object>();
+        instrumentos_pequeños.put("xilofono pequeño",xilofono3);
+        instrumentos_pequeños.put("flauta pequeña",flauta3);
+        instrumentos_pequeños.put("trompeta pequeña",trompeta3);
+
+        HashMap<String,Object> instrumentos_grandes = new HashMap<String,Object>();
+        instrumentos_grandes.put("piano grande",piano2);
+        instrumentos_grandes.put("bateria grande",bateria2);
+        instrumentos_grandes.put("guitarra grande",guitarra1);
+
+        //------------------------------------------------------------------------------------------------
 
         UI.Bienvenida();
 
         boolean verificador = true;
         boolean verificador_instrumento;
+        boolean verificador_instrumento_final;
 
         while(verificador){
             verificador_instrumento = true;
+
         int eleccion_producto = UI.seleccionar_producto();
+        //Se selecciona que tipo de producto quiere ver el usuario
         switch (eleccion_producto) {
             case 1:
                 while(verificador_instrumento) {
-
+                    //Se selecciona que tipo de instrumento se quiere ver
                     int seleccion_intrumento = UI.seleccionar_instrumento();
                     switch (seleccion_intrumento) {
                         case 1:
                             int seleccion_cuerda = UI.seleccionar_instrumento_de_cuerda();
-
+                                //Se selecciona instrumento de cuerda
                             switch (seleccion_cuerda) {
                                 case 1:
-                                    UI.imprimir_guitarras(guitarra1, guitarra2, guitarra3);
-                                    verificador=false;
-                                    verificador_instrumento=false;
+                                    verificador_instrumento_final = true;
+                                    int seleccion_guitarra = UI.imprimir_guitarras(guitarra1, guitarra2, guitarra3);
+
+                                    while(verificador_instrumento_final){
+                                        //se selecciona que se quiere hacer despues de ver guitarras
+                                        switch (seleccion_guitarra){
+                                            case 1:
+                                                verificador_instrumento_final=false;
+                                                break;
+                                            case 2:
+                                                verificador_instrumento_final=false;
+                                                verificador_instrumento=false;
+                                                break;
+                                            default:
+                                                verificador_instrumento_final =false;
+                                                verificador_instrumento=false;
+                                                verificador = false;
+                                                break;
+                                        }
+
+                                    }
+
                                     break;
                                 case 2:
-                                    UI.imprimir_pianos(piano1, piano2, piano3);
-                                    verificador=false;
-                                    verificador_instrumento=false;
+                                    verificador_instrumento_final = true;
+                                    int seleccion_piano = UI.imprimir_pianos(piano1, piano2, piano3);
+                                    while(verificador_instrumento_final){
+                                        switch (seleccion_piano){
+                                            case 1:
+                                                verificador_instrumento_final =false;
+                                                break;
+                                            case 2:
+                                                verificador_instrumento_final =false;
+                                                verificador_instrumento=false;
+                                                break;
+                                            default:
+                                                verificador_instrumento_final =false;
+                                                verificador_instrumento=false;
+                                                verificador = false;
+                                                break;
+                                        }
+
+                                    }
                                     break;
                                 case 3:
                                     break;
@@ -205,17 +268,48 @@ public class Main {
                             }
                             break;
                         case 2:
+                            //Se selecciona instrumento de viento
                             int seleccion_viento = UI.seleccionar_instrumento_de_viento();
                             switch (seleccion_viento) {
                                 case 1:
-                                    UI.imprimir_flautas(flauta1,flauta2,flauta3);
-                                    verificador=false;
-                                    verificador_instrumento=false;
+                                    verificador_instrumento_final = true;
+                                    int seleccion_flauta = UI.imprimir_flautas(flauta1,flauta2,flauta3);
+                                    while(verificador_instrumento_final) {
+                                        switch (seleccion_flauta) {
+                                            case 1:
+                                                verificador_instrumento_final = false;
+                                                break;
+                                            case 2:
+                                                verificador_instrumento_final = false;
+                                                verificador_instrumento = false;
+                                                break;
+                                            default:
+                                                verificador_instrumento_final = false;
+                                                verificador_instrumento = false;
+                                                verificador = false;
+                                                break;
+                                        }
+                                    }
                                     break;
                                 case 2:
-                                    UI.imprimir_trompetas(trompeta1,trompeta2,trompeta3);
-                                    verificador=false;
-                                    verificador_instrumento=false;
+                                    verificador_instrumento_final = true;
+                                    int seleccion_trompeta = UI.imprimir_trompetas(trompeta1,trompeta2,trompeta3);
+                                    while(verificador_instrumento_final) {
+                                        switch (seleccion_trompeta) {
+                                            case 1:
+                                                verificador_instrumento_final = false;
+                                                break;
+                                            case 2:
+                                                verificador_instrumento_final = false;
+                                                verificador_instrumento = false;
+                                                break;
+                                            default:
+                                                verificador_instrumento_final = false;
+                                                verificador_instrumento = false;
+                                                verificador = false;
+                                                break;
+                                        }
+                                    }
                                     break;
                                 case 3:
                                     break;
@@ -230,17 +324,49 @@ public class Main {
                             }
                             break;
                         case 3:
+                            //Se selecciona instrumento de percusión
                             int seleccion_percusion = UI.seleccionar_instrumento_de_percusion();
                             switch (seleccion_percusion) {
                                 case 1:
-                                    UI.imprimir_baterias(bateria1,bateria2,bateria3);
-                                    verificador=false;
-                                    verificador_instrumento=false;
+                                    verificador_instrumento_final = true;
+                                    int seleccion_bateria = UI.imprimir_baterias(bateria1,bateria2,bateria3);
+                                    while(verificador_instrumento_final) {
+                                        switch (seleccion_bateria) {
+                                            case 1:
+                                                verificador_instrumento_final = false;
+                                                break;
+                                            case 2:
+                                                verificador_instrumento_final = false;
+                                                verificador_instrumento = false;
+                                                break;
+                                            default:
+                                                verificador_instrumento_final = false;
+                                                verificador_instrumento = false;
+                                                verificador = false;
+                                                break;
+                                        }
+                                    }
                                     break;
                                 case 2:
-                                    UI.imprimir_xilofonos(xilofono1,xilofono2,xilofono3);
-                                    verificador=false;
-                                    verificador_instrumento=false;
+                                    verificador_instrumento_final = true;
+                                    int seleccion_xilofonos=UI.imprimir_xilofonos(xilofono1,xilofono2,xilofono3);
+
+                                    while(verificador_instrumento_final) {
+                                        switch (seleccion_xilofonos) {
+                                            case 1:
+                                                verificador_instrumento_final = false;
+                                                break;
+                                            case 2:
+                                                verificador_instrumento_final = false;
+                                                verificador_instrumento = false;
+                                                break;
+                                            default:
+                                                verificador_instrumento_final = false;
+                                                verificador_instrumento = false;
+                                                verificador = false;
+                                                break;
+                                        }
+                                    }
                                     break;
                                 case 3:
                                     break;
@@ -255,8 +381,11 @@ public class Main {
                             }
                             break;
                         case 4:
+                            //Opción para volver al menu
+                            verificador_instrumento=false;
                             break;
                         default:
+                            verificador_instrumento=false;
                             verificador = false;
                             break;
                     }
@@ -264,11 +393,19 @@ public class Main {
                 break;
 
             case 2:
-                UI.imprimir_accesorios(capo, amplificador, pua);
-                verificador=false;
+                //Se selecciona ver los accesorios
+                int seleccion_accesorio = UI.imprimir_accesorios(capo, amplificador, pua);
+                switch (seleccion_accesorio){
+                    case 1:
+                        break;
+                    default:
+                        verificador=false;
+                }
+
                 break;
 
             default:
+                //Salir de la tienda
                 verificador=false;
                 break;
         }
