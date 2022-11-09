@@ -18,140 +18,120 @@ public class Main {
     public static void main(String [] args) {
 
         //------------------------------------------------------------------------------------------------ instanciación de piano
-    Piano piano1 = new Piano(4500000,111201,"Yamaha","PSR E273","Blanco y negro",
+    final Piano piano1 = new Piano(4500000,111201,"Yamaha","PSR E273","Blanco y negro",
                             "Eléctrico",0,"N/A","Cuerda percutida"
                              ,61,5,"Teclado");
 
-    Piano piano2 = new Piano(7000000,111202,"Fazioli","F308","Blanco y negro",
-                            "Acústico",88,"Acero al carbono templado");
-                            piano2.setTecnica("Cuerda percutida");
+    final Piano piano2 = new Piano(7000000,111202,"Fazioli","F308","Blanco y negro",
+                            "Acústico",88,"Acero al carbono templado",
+            "Cuerda percutida");
                             piano2.setNumero_teclas(88);
                             piano2.setNumero_octavas(7);
                             piano2.setDistribucion("De cola");
 
-    Piano piano3 = new Piano(5800000,111203,"Samick","JS-121","Blanco y negro");
-                            piano3.setGeneracion_del_sonido("Acústico");
-                            piano3.setNumero_de_cuerdas(88);
-                            piano3.setMaterial_de_cuerda("Alambre tensado");
-                            piano3.setTecnica("Cuerda percutida");
+    final Piano piano3 = new Piano(5800000,111203,"Samick","JS-121","Blanco y negro",
+            "Acústico",88,"Alambre tensado","Cuerda percutida");
                             piano3.setNumero_teclas(88);
                             piano3.setNumero_octavas(7);
                             piano3.setDistribucion("De pared");
         //------------------------------------------------------------------------------------------------ instanciación de guitarra
-    Guitarra guitarra1 = new Guitarra(1200000,111101,"Fender","Stratocaster","Rojo",
+    final Guitarra guitarra1 = new Guitarra(1200000,111101,"Fender","Stratocaster","Rojo",
                         "Electrica",6,"Acero","Cuerda pulsada",
                         24, 3,"Fresno");
 
-    Guitarra guitarra2 = new Guitarra(980000,111102,"Martin","11XL1","Marrón",
-                        "Acústica",12,"Nilon");
-                            guitarra2.setTecnica("Cuerda pulsada");
+    final Guitarra guitarra2 = new Guitarra(980000,111102,"Martin","11XL1","Marrón",
+                        "Acústica",12,"Nilon","Cuerda pulsada");
                             guitarra2.setNumero_trastes(19);
                             guitarra2.setNumero_pastillas(0);
                             guitarra2.setTipo_madera("Caoba");
 
-    Guitarra guitarra3 = new Guitarra(1150000,111103,"Gibson","Les Paul","Cafe claro");
-                            guitarra3.setGeneracion_del_sonido("Eléctrica");
-                            guitarra3.setNumero_de_cuerdas(6);
-                            guitarra3.setMaterial_de_cuerda("Acero");
-                            guitarra3.setTecnica("Cuerda pulsada");
+    final Guitarra guitarra3 = new Guitarra(1150000,111103,"Gibson","Les Paul","Cafe claro","Eléctrica",6,"Acero",
+                        "Cuerda pulsada");
                             guitarra3.setNumero_trastes(24);
                             guitarra3.setNumero_pastillas(2);
                             guitarra3.setTipo_madera("Arce");
         //------------------------------------------------------------------------------------------------ instanciación de flauta
-    Flauta flauta1 = new Flauta(32000,112101,"Yamaha","Yrs23","Blanco",
+    final Flauta flauta1 = new Flauta(32000,112101,"Yamaha","Yrs23","Blanco",
                     "Acústico", "Madera","Soprano","Bisel",
                     "Dulce",32,8);
 
-    Flauta flauta2 = new Flauta(475000,112102,"Aileen","AFL-202","Plateado",
-                    "Acústico", "Metal","Soprano");
-                            flauta2.setTipo_embocadura("Bisel");
+    final Flauta flauta2 = new Flauta(475000,112102,"Aileen","AFL-202","Plateado",
+                    "Acústico", "Metal","Soprano","Bisel");
                             flauta2.setTipo_flauta("Traversa");
                             flauta2.setLongitud(67);
                             flauta2.setNumero_Huecos(16);
 
-    Flauta flauta3 = new Flauta(120000,112103,"Bundy","BFL-105","Plateado");
-                            flauta3.setGeneracion_del_sonido("Acústico");
-                            flauta3.setMaterial_instrumento("Metal");
-                            flauta3.setTesitura("Sopranino");
-                            flauta3.setTipo_embocadura("Bisel");
+    final Flauta flauta3 = new Flauta(120000,112103,"Bundy","BFL-105","Plateado",
+            "Acústico","Metal","Sopranino","Bisel");
                             flauta3.setTipo_flauta("Piccolo");
                             flauta3.setLongitud(15);
                             flauta3.setNumero_Huecos(8);
         //------------------------------------------------------------------------------------------------ instanciación de trompeta
-        Trompeta trompeta1 = new Trompeta(880000,112201,"Fides Symphony","FTR-700",
+        final Trompeta trompeta1 = new Trompeta(880000,112201,"Fides Symphony","FTR-700",
                             "Plateada","Acústico","Latón galvonizado",
                             "Soprano","Boquilla","De válvulas","Do 4",
                             "Estandar");
 
-        Trompeta trompeta2 = new Trompeta(650000,112202,"J. Michael","TRS-01",
+        final Trompeta trompeta2 = new Trompeta(650000,112202,"J. Michael","TRS-01",
                             "Dorado","Acústico","Latón galvanizado",
-                            "Mezzosoprano");
-                            trompeta2.setTipo_embocadura("Boquilla");
+                            "Mezzosoprano","Boquilla");
                             trompeta2.setEstructura("De varas");
                             trompeta2.setAfinacion("Si bemol 3");
                             trompeta2.setTamano("Estandar");
 
-        Trompeta trompeta3 = new Trompeta(570000,112203,"STOMVI","JBMT-500L",
-                            "Modelo");
-                            trompeta3.setGeneracion_del_sonido("Acústico");
-                            trompeta3.setMaterial_instrumento("Latón galvonizado");
-                            trompeta3.setTesitura("Sopranino");
-                            trompeta3.setTipo_embocadura("Boquilla");
+        final Trompeta trompeta3 = new Trompeta(570000,112203,"STOMVI","JBMT-500L",
+                            "Modelo","Acústico","Latón Galvonizado","Sopranino",
+                            "Boquilla");
                             trompeta3.setEstructura("De válvulas");
                             trompeta3.setAfinacion("Si bemol 4");
                             trompeta3.setTamano("Pocket");
         //------------------------------------------------------------------------------------------------ instanciación de bateria
-        Bateria bateria1 = new Bateria(1600000,113101,"BOSS","jbp-0803","Rojo",
+        final Bateria bateria1 = new Bateria(1600000,113101,"BOSS","jbp-0803","Rojo",
                             "Acústico","Golpeado","Indefinido",
                             "Híbrido",5,2,1);
 
-        Bateria bateria2 = new Bateria(3000000,113102,"Yamaha","Rydeen 5","Rojo",
-                            "Acústico","Golpeado","Indefinido");
-                            bateria2.setClasificacion_de_elementos("Híbrido");
+        final Bateria bateria2 = new Bateria(3000000,113102,"Yamaha","Rydeen 5","Rojo",
+                            "Acústico","Golpeado","Indefinido","Hibrido");
                             bateria2.setNumero_tambores(8);
                             bateria2.setNumero_platillos(4);
                             bateria2.setNumero_pedales(3);
 
-        Bateria bateria3 = new Bateria(2700000,113103,"Alesis","Nitro Mesh Kit","Negro");
-                            bateria3.setGeneracion_del_sonido("Eléctrica");
-                            bateria3.setManipulacion("Golpeado");
-                            bateria3.setAltura("Indefinido");
-                            bateria3.setClasificacion_de_elementos("Híbrido");
+        final Bateria bateria3 = new Bateria(2700000,113103,"Alesis","Nitro Mesh Kit","Negro",
+                "Eléctrica","Golpeado","Indefinido","Hibrido");
                             bateria3.setNumero_tambores(5);
                             bateria3.setNumero_platillos(3);
                             bateria3.setNumero_pedales(2);
 
         //------------------------------------------------------------------------------------------------ instanciación de xilofono
-        Xilofono xilofono1 = new Xilofono(140000,113201,"Raonzena","Glockenspiel 42 note",
+        final Xilofono xilofono1 = new Xilofono(140000,113201,"Raonzena","Glockenspiel 42 note",
                             "Plateado","Acústico","Golpeado","Definido",
                             "Barras y placas",42, "Metal","Cromático");
 
-        Xilofono xilofono2 = new Xilofono(90000,113202,"Adams","XS1HA","Arcoiris",
-                            "Acústico","Golpeado","Definido");
-                            xilofono2.setClasificacion_de_elementos("Barras y placas");
-                            xilofono2.setNumero_laminas(252
-                            );
+        final Xilofono xilofono2 = new Xilofono(90000,113202,"Adams","XS1HA","Arcoiris",
+                            "Acústico","Golpeado",
+                            "Definido","Barras y placas");
+                            xilofono2.setNumero_laminas(252);
                             xilofono2.setMaterial_laminas("Madera");
                             xilofono2.setTipo_xilofono("Diatónico");
 
-        Xilofono xilofono3 = new Xilofono(45000,113203,"JVC","xl5","Arcoiris");
-                            xilofono3.setGeneracion_del_sonido("Acústico");
-                            xilofono3.setManipulacion("Golpeado");
-                            xilofono3.setAltura("Definido");
-                            xilofono3.setClasificacion_de_elementos("Barras y placas");
+        final Xilofono xilofono3 = new Xilofono(45000,113203,"JVC","xl5","Arcoiris",
+                            "Acústico","Golpeado","Definido",
+                            "Barras de placas");
                             xilofono3.setNumero_laminas(15);
                             xilofono3.setMaterial_laminas("Plástico");
                             xilofono3.setTipo_xilofono("Infantil");
 
         //------------------------------------------------------------------------------------------------ instanciación de accesorios
-        Accesorio pua = new Accesorio(8000,120100,"Ibanez","Púa",
+        final Accesorio pua = new Accesorio(8000,120100,"Ibanez","Púa",
                         "Guitarra","De rasgueo");
 
-        Accesorio amplificador = new Accesorio(500000,120101,"Marshall","Amplificador",
-                                "Guitarra");
+        final Accesorio amplificador = new Accesorio(500000,120101,"Marshall");
                             amplificador.setTipo_de_accesorio("Amplificación");
+                            amplificador.setInstrumento("Guitarra");
+                            amplificador.setNombre_del_accesorio("Amplificador");
 
-        Accesorio capo = new Accesorio(25000,120102,"A-corde","Capo");
+        final Accesorio capo = new Accesorio(25000,120102,"A-corde");
+                            capo.setNombre_del_accesorio("Capo");
                             capo.setInstrumento("Guitarra");
                             capo.setTipo_de_accesorio("Modificador del tono");
 

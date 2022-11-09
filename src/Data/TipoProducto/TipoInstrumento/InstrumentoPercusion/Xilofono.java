@@ -7,53 +7,21 @@ public final class Xilofono extends Percusion {
     private String material_laminas;
     private String tipo_xilofono;
 
-    public Xilofono(int precio,int referencia,String marca,
-                    String modelo, String color, String generacion_del_sonido,
-                    String manipulacion, String altura, String clasificacion_de_elementos,
-                    int numero_laminas, String material_laminas, String tipo_xilofono){
-
-        this.setPrecio(precio);
-        this.setReferencia(referencia);
-        this.setMarca(marca);
-
-        this.setModelo(modelo);
-        this.setColor(color);
-        this.setGeneracion_del_sonido(generacion_del_sonido);
-
-        this.setManipulacion(manipulacion);
-        this.setAltura(altura);
-        this.setClasificacion_de_elementos(clasificacion_de_elementos);
-
-        this.setNumero_laminas(numero_laminas);
-        this.setMaterial_laminas(material_laminas);
-        this.setTipo_xilofono(tipo_xilofono);
+    public Xilofono(final int precio,final int referencia,final String marca,
+                    final String modelo,final String color,final String generacion_del_sonido,
+                    final String manipulacion,final String altura,final String clasificacion_de_elementos,
+                    final int numero_laminas,final String material_laminas,final String tipo_xilofono) {
+        super(precio, referencia, marca, modelo, color, generacion_del_sonido,
+                manipulacion, altura, clasificacion_de_elementos);
+        this.numero_laminas = numero_laminas;
+        this.material_laminas = material_laminas;
+        this.tipo_xilofono = tipo_xilofono;
     }
-
-    public Xilofono(int precio,int referencia,String marca,
-                    String modelo, String color, String generacion_del_sonido,
-                    String manipulacion, String altura){
-
-        this.setPrecio(precio);
-        this.setReferencia(referencia);
-        this.setMarca(marca);
-
-        this.setModelo(modelo);
-        this.setColor(color);
-        this.setGeneracion_del_sonido(generacion_del_sonido);
-
-        this.setManipulacion(manipulacion);
-        this.setAltura(altura);
-    }
-
-    public Xilofono(int precio,int referencia,String marca,
-                    String modelo, String color){
-
-        this.setPrecio(precio);
-        this.setReferencia(referencia);
-        this.setMarca(marca);
-
-        this.setModelo(modelo);
-        this.setColor(color);
+    public Xilofono(final int precio,final int referencia,final String marca,
+                    final String modelo,final String color,final String generacion_del_sonido,
+                    final String manipulacion,final String altura,final String clasificacion_de_elementos) {
+        super(precio, referencia, marca, modelo, color, generacion_del_sonido,
+                manipulacion, altura, clasificacion_de_elementos);
     }
 
     public int getNumero_laminas() {

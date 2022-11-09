@@ -7,55 +7,22 @@ public final class Trompeta extends Viento {
     private String afinacion;
     private String tamano;
 
-    public Trompeta (int precio, int referencia, String marca,
-                     String modelo, String color, String generacion_del_sonido,
-                     String material_instrumento, String tesitura, String tipo_embocadura,
-                     String estructura, String afinacion, String tamano){
-
-        this.setPrecio(precio);
-        this.setReferencia(referencia);
-        this.setMarca(marca);
-
-        this.setModelo(modelo);
-        this.setColor(color);
-        this.setGeneracion_del_sonido(generacion_del_sonido);
-
-        this.setMaterial_instrumento(material_instrumento);
-        this.setTesitura(tesitura);
-        this.setTipo_embocadura(tipo_embocadura);
-
-        this.setEstructura(estructura);
-        this.setAfinacion(afinacion);
-        this.setTamano(tamano);
+    public Trompeta(final int precio,final int referencia,final String marca,
+                    final String modelo,final String color,final String generacion_del_sonido,
+                    final String material_instrumento,final String tesitura,final String tipo_embocadura,
+                    final String estructura,final String afinacion,final String tamano) {
+        super(precio, referencia, marca, modelo, color, generacion_del_sonido, material_instrumento, tesitura, tipo_embocadura);
+        this.estructura = estructura;
+        this.afinacion = afinacion;
+        this.tamano = tamano;
     }
 
-    public Trompeta (int precio, int referencia, String marca,
-                     String modelo, String color, String generacion_del_sonido,
-                     String material_instrumento, String tesitura){
+    public Trompeta(final int precio,final int referencia,final String marca,
+                    final String modelo,final String color,final String generacion_del_sonido,
+                    final String material_instrumento,final String tesitura,final String tipo_embocadura) {
+        super(precio, referencia, marca, modelo, color, generacion_del_sonido, material_instrumento, tesitura, tipo_embocadura);
 
-        this.setPrecio(precio);
-        this.setReferencia(referencia);
-        this.setMarca(marca);
-
-        this.setModelo(modelo);
-        this.setColor(color);
-        this.setGeneracion_del_sonido(generacion_del_sonido);
-
-        this.setMaterial_instrumento(material_instrumento);
-        this.setTesitura(tesitura);
     }
-
-    public Trompeta (int precio, int referencia, String marca,
-                     String modelo, String color){
-
-        this.setPrecio(precio);
-        this.setReferencia(referencia);
-        this.setMarca(marca);
-
-        this.setModelo(modelo);
-        this.setColor(color);
-    }
-
     public String getEstructura() {
         return estructura;
     }

@@ -6,6 +6,12 @@ public abstract class Producto {
     private int referencia;
     private String marca;
 
+    public Producto(int precio, int referencia, String marca) {
+        this.precio = precio;
+        this.referencia = referencia;
+        this.marca = marca;
+    }
+
     public int getPrecio() {
         return this.precio;
     }

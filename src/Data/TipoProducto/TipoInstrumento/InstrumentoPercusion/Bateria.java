@@ -7,57 +7,22 @@ public final class Bateria extends Percusion {
     private int numero_platillos;
     private int numero_pedales;
 
-    public Bateria( int precio,int referencia ,String marca,
-                    String modelo, String color, String generacion_del_sonido,
-                    String manipulacion, String altura, String clasificacion_de_elementos,
-                    int numero_tambores, int numero_platillos, int numero_pedales){
-
-        this.setPrecio(precio);
-        this.setReferencia(referencia);
-        this.setMarca(marca);
-
-        this.setModelo(modelo);
-        this.setColor(color);
-        this.setGeneracion_del_sonido(generacion_del_sonido);
-
-        this.setManipulacion(manipulacion);
-        this.setAltura(altura);
-        this.setClasificacion_de_elementos(clasificacion_de_elementos);
-
-        this.setNumero_tambores(numero_tambores);
-        this.setNumero_platillos(numero_platillos);
-        this.setNumero_pedales(numero_pedales);
+    public Bateria(final int precio,final int referencia,final String marca,
+                   final String modelo,final String color,final String generacion_del_sonido,
+                   final String manipulacion,final String altura,final String clasificacion_de_elementos,
+                   final int numero_tambores,final int numero_platillos,final int numero_pedales) {
+        super(precio, referencia, marca, modelo, color, generacion_del_sonido, manipulacion, altura, clasificacion_de_elementos);
+        this.numero_tambores = numero_tambores;
+        this.numero_platillos = numero_platillos;
+        this.numero_pedales = numero_pedales;
+    }
+    public Bateria(final int precio,final int referencia,final String marca,
+                   final String modelo,final String color,final String generacion_del_sonido,
+                   final String manipulacion,final String altura,final String clasificacion_de_elementos
+                   ) {
+        super(precio, referencia, marca, modelo, color, generacion_del_sonido, manipulacion, altura, clasificacion_de_elementos);
 
     }
-
-    public Bateria( int precio,int referencia ,String marca,
-                    String modelo, String color, String generacion_del_sonido,
-                    String manipulacion, String altura){
-
-        this.setPrecio(precio);
-        this.setReferencia(referencia);
-        this.setMarca(marca);
-
-        this.setModelo(modelo);
-        this.setColor(color);
-        this.setGeneracion_del_sonido(generacion_del_sonido);
-
-        this.setManipulacion(manipulacion);
-        this.setAltura(altura);
-
-    }
-
-    public Bateria( int precio,int referencia ,String marca,
-                    String modelo, String color){
-
-        this.setPrecio(precio);
-        this.setReferencia(referencia);
-        this.setMarca(marca);
-
-        this.setModelo(modelo);
-        this.setColor(color);
-    }
-
     public int getNumero_tambores() {
         return numero_tambores;
     }

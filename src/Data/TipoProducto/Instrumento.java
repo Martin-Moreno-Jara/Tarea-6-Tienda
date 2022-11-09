@@ -4,9 +4,18 @@ import Data.Producto;
 
 public abstract class Instrumento extends Producto {
 
+
+
+
     private String modelo;
     private String color;
     private String generacion_del_sonido;
+    public Instrumento(int precio, int referencia, String marca,String modelo,String color, String generacion_del_sonido){
+        super(precio,referencia,marca);
+        this.modelo =modelo;
+        this.color =color;
+        this.generacion_del_sonido=generacion_del_sonido;
+    }
 
     public String getModelo() {
         return this.modelo;

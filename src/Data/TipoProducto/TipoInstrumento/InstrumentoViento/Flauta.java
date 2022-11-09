@@ -7,57 +7,20 @@ public final class Flauta extends Viento {
     private int numero_Huecos;
     private int longitud;
 
-    public Flauta (int precio, int referencia, String marca,
-                   String modelo, String color, String generacion_del_sonido,
-                   String material_instrumento, String tesitura, String tipo_embocadura,
-                   String tipo_flauta,int longitud,int numero_Huecos){
-
-        this.setPrecio(precio);
-        this.setReferencia(referencia);
-        this.setMarca(marca);
-
-        this.setModelo(modelo);
-        this.setColor(color);
-        this.setGeneracion_del_sonido(generacion_del_sonido);
-
-        this.setMaterial_instrumento(material_instrumento);
-        this.setTesitura(tesitura);
-        this.setTipo_embocadura(tipo_embocadura);
-
-        this.setTipo_flauta(tipo_flauta);
-        this.setLongitud(longitud);
-        this.setNumero_Huecos(numero_Huecos);
-
+    public Flauta(final int precio, final int referencia,final String marca,
+                  final String modelo,final String color,final String generacion_del_sonido,
+                  final String material_instrumento,final String tesitura,final String tipo_embocadura,
+                  final String tipo_flauta,final int numero_Huecos,final int longitud) {
+        super(precio, referencia, marca, modelo, color, generacion_del_sonido, material_instrumento, tesitura, tipo_embocadura);
+        this.tipo_flauta = tipo_flauta;
+        this.numero_Huecos = numero_Huecos;
+        this.longitud = longitud;
     }
-    public Flauta (int precio, int referencia, String marca,
-                   String modelo, String color, String generacion_del_sonido,
-                   String material_instrumento, String tesitura){
-
-        this.setPrecio(precio);
-        this.setReferencia(referencia);
-        this.setMarca(marca);
-
-        this.setModelo(modelo);
-        this.setColor(color);
-        this.setGeneracion_del_sonido(generacion_del_sonido);
-
-        this.setMaterial_instrumento(material_instrumento);
-        this.setTesitura(tesitura);
-
+    public Flauta(final int precio, final int referencia,final String marca,
+                  final String modelo,final String color,final String generacion_del_sonido,
+                  final String material_instrumento,final String tesitura,final String tipo_embocadura) {
+        super(precio, referencia, marca, modelo, color, generacion_del_sonido, material_instrumento, tesitura, tipo_embocadura);
     }
-    public Flauta (int precio, int referencia, String marca,
-                   String modelo, String color){
-
-        this.setPrecio(precio);
-        this.setReferencia(referencia);
-        this.setMarca(marca);
-
-        this.setModelo(modelo);
-        this.setColor(color);
-
-    }
-
-
     public String getTipo_flauta() {
         return tipo_flauta;
     }

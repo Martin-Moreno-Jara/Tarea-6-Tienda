@@ -8,33 +8,16 @@ public final class Accesorio extends Producto {
     private String instrumento;
     private String tipo_de_accesorio;
 
-    public Accesorio(int precio, int referencia, String marca,String nombre_del_accesorio,
-                     String instrumento, String tipo_de_accesorio) {
-        this.setPrecio(precio);
-        this.setReferencia(referencia);
-        this.setMarca(marca);
-
+    public Accesorio(int precio, int referencia, String marca,
+                     String nombre_del_accesorio, String instrumento, String tipo_de_accesorio) {
+        super(precio, referencia, marca);
         this.nombre_del_accesorio = nombre_del_accesorio;
         this.instrumento = instrumento;
         this.tipo_de_accesorio = tipo_de_accesorio;
     }
 
-    public Accesorio(int precio, int referencia, String marca,String nombre_del_accesorio,
-                     String instrumento) {
-        this.setPrecio(precio);
-        this.setReferencia(referencia);
-        this.setMarca(marca);
-
-        this.nombre_del_accesorio = nombre_del_accesorio;
-        this.instrumento = instrumento;
-    }
-
-    public Accesorio(int precio, int referencia, String marca,String nombre_del_accesorio) {
-        this.setPrecio(precio);
-        this.setReferencia(referencia);
-        this.setMarca(marca);
-
-        this.nombre_del_accesorio = nombre_del_accesorio;
+    public Accesorio(int precio, int referencia, String marca) {
+        super(precio, referencia, marca);
     }
 
     public String getInstrumento() {
