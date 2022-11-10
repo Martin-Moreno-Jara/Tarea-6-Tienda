@@ -61,18 +61,19 @@ public final class Guitarra extends Cuerda {
 
     @Override
     public String toString(){
-        return "-----------------------------------------------------------------"
-                +"\nLa guitarra marca "+this.getMarca()+" "+this.getModelo() +" y número de referencia "+
-                this.getReferencia()+" tiene un precio de $"+this.getPrecio()+
-                "\nAdemás tiene las siguientes caracteristicas: "+
-                "\nGeneración del sonido: "+this.getGeneracion_del_sonido()+
-                "\nMaterial de la cuerda: "+this.getMaterial_de_cuerda()+
-                "\nTécnica con la cuerda: "+this.getTecnica()+
-                "\nNúmero de cuerdas: "+this.getNumero_de_cuerdas()+
-                "\nNúmero de trastes: "+this.getNumero_trastes()+
-                "\nNúmero de pastillas: "+this.getNumero_pastillas()+
-                "\nColor: "+this.getColor()+
-                "\nTipo de madera: "+this.getTipo_madera()+
+        return "----------------------------------------------------------------------------------------"
+                +"\n- Producto: Guitarra marca "+this.getMarca()+" "+this.getModelo() +
+                "\n- Número de referencia: #"+ this.getReferencia()+
+                "\n- Precio: $"+this.getPrecio()+
+                "\n- Caracteristicas: "+
+                "\n\t* Generación del sonido: "+this.getGeneracion_del_sonido()+
+                "\n\t* Material de la cuerda: "+this.getMaterial_de_cuerda()+
+                "\n\t* Técnica con la cuerda: "+this.getTecnica()+
+                "\n\t* Número de cuerdas: "+this.getNumero_de_cuerdas()+
+                "\n\t* Número de trastes: "+this.getNumero_trastes()+
+                "\n\t* Número de pastillas: "+this.getNumero_pastillas()+
+                "\n\t* Color: "+this.getColor()+
+                "\n\t* Tipo de madera: "+this.getTipo_madera()+
                 "\n"+tipo_musica();
     }
 

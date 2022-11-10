@@ -56,19 +56,19 @@ public final class Xilofono extends Percusion {
 
     @Override
     public String toString(){
-        return "-----------------------------------------------------------------"+
-                "\nEl xilofono marca"+this.getMarca()+
-                "\ncon número de referencia "+this.getReferencia()+
-                "\ntiene un precio de "+this.getPrecio()+
-                "\nmodelo "+this.getModelo()+
-                "\ncolor "+this.getColor()+
-                "\ngenera un sonido "+this.getGeneracion_del_sonido()+
-                "\nsu forma usar es "+this.getManipulacion()+
-                "\nde altura "+this.getAltura()+
-                "\nclasifica como "+this.getClasificacion_de_elementos()+
-                "\nxilofono tipo "+this.getTipo_xilofono()+
-                "\nnumero de laminas "+this.getNumero_laminas()+
-                "\ncon laminas hechas de "+this.getMaterial_laminas()+
+        return "----------------------------------------------------------------------------------------"+
+                "\n- Producto: Xilofono marca "+this.getMarca()+" "+this.getModelo()+
+                "\n- Número de referencia: #"+this.getReferencia()+
+                "\n- Precio: $"+this.getPrecio()+
+                "\n- Caracteristicas: "+
+                "\n\t* Color: "+this.getColor()+
+                "\n\t* Generación del sonido: "+this.getGeneracion_del_sonido()+
+                "\n\t* su forma usar es: "+this.getManipulacion()+
+                "\n\t* de altura: "+this.getAltura()+
+                "\n\t* clasifica como: "+this.getClasificacion_de_elementos()+
+                "\n\t* xilofono tipo: "+this.getTipo_xilofono()+
+                "\n\t* numero de laminas: "+this.getNumero_laminas()+
+                "\n\t* con laminas hechas de: "+this.getMaterial_laminas()+
                 "\n"+tipo_musica();
     }
 }

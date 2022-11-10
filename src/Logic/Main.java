@@ -80,7 +80,7 @@ public class Main {
                             trompeta2.setTamano("Estandar");
 
         final Trompeta trompeta3 = new Trompeta(570000,112203,"STOMVI","JBMT-500L",
-                            "Modelo","Acústico","Latón Galvonizado","Sopranino",
+                            "Dorado","Acústico","Latón Galvonizado","Sopranino",
                             "Boquilla");
                             trompeta3.setEstructura("De válvulas");
                             trompeta3.setAfinacion("Si bemol 4");

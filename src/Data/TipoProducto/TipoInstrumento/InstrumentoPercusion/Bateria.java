@@ -54,18 +54,19 @@ public final class Bateria extends Percusion {
 
     @Override
     public String toString(){
-        return "-----------------------------------------------------------------"+
-                "\nLa bateria marca"+this.getMarca()+
-                "\ncon número de referencia "+this.getReferencia()+
-                "\ntiene un precio de $"+this.getPrecio()+
-                "\nmodelo "+this.getModelo()+
-                "\ncolor "+this.getColor()+
-                "\ngenera un sonido "+this.getGeneracion_del_sonido()+
-                "\nsu forma usar es "+this.getManipulacion()+
-                "\nde altura "+this.getAltura()+
-                "\nclasifica como "+this.getClasificacion_de_elementos()+
-                "\nnumero de tambores "+this.getNumero_tambores()+
-                "\nnumero de platillos "+this.getNumero_platillos()+
-                "\nnumero de pedales "+this.getNumero_pedales()+
-                "\n"+tipo_musica();}
+        return "----------------------------------------------------------------------------------------"+
+                "\n- Producto: Bateria marca "+this.getMarca()+" "+this.getModelo()+
+                "\n- Número de referencia: #"+this.getReferencia()+
+                "\n- Precio: $"+this.getPrecio()+
+                "\n- Caracteristicas: "+
+                "\n\t* Color: "+this.getColor()+
+                "\n\t* Generación del sonido: "+this.getGeneracion_del_sonido()+
+                "\n\t* Manipulación: "+this.getManipulacion()+
+                "\n\t* Altura: "+this.getAltura()+
+                "\n\t* Clasificación: "+this.getClasificacion_de_elementos()+
+                "\n\t* Numero de tambores: "+this.getNumero_tambores()+
+                "\n\t* Numero de platillos: "+this.getNumero_platillos()+
+                "\n\t* Numero de pedales: "+this.getNumero_pedales()+
+                "\n"+tipo_musica();
+    }
 }

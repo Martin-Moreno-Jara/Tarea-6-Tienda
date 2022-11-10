@@ -14,20 +14,20 @@ import java.util.Scanner;
 public class UI {
 
     public static String diferenciador_menus(){
-        return "-----------------------------------------------------------------------------------";
+        return "--------------------------------------------------------------------------------------------------------";
     }
     public static void Bienvenida(){
-        System.out.println("\t\t\t\t*|| Bienvenido a la tienda de instrumentos musicales" +
-                " ||*");
+        diferenciador_menus();
+        System.out.println("\t\t\t\t*|| Bienvenido a la tienda de instrumentos musicales ||*");
     }
 
     public static  int seleccionar_producto(){
         Scanner scan = new  Scanner(System.in);
         System.out.println(diferenciador_menus());
         System.out.println("- ¿Que producto deseas ver? -");
-        System.out.println("\t* |1| para ver instrumentos musicales" +
-                            "\n\t* |2| para ver accesorios" +
-                            "\n\t* |3| para ver los paquetes especiales(colecciones)" +
+        System.out.println("\t* |1| Instrumentos musicales" +
+                            "\n\t* |2| Accesorios" +
+                            "\n\t* |3| Paquetes especiales(colecciones)" +
                             "\n\n\t* Cualquier otro número para salir de la tienda");
         System.out.println();
         System.out.print("Tu elección: ");
@@ -40,13 +40,13 @@ public class UI {
         Scanner scan = new  Scanner(System.in);
         System.out.println(diferenciador_menus());
         System.out.println("\t- ¿Qué tipo de instrumento deseas ver? -");
-        System.out.println("\t\t* |1| para instrumentos de cuerda" +
-                "\n\t\t* |2| para instrumentos de viento" +
-                "\n\t\t* |3| para instrumentos de percusión" +
-                "\n\n\t\t* |4| para regresar al menu anterior" +
+        System.out.println("\t\t* |1| Instrumentos de cuerda" +
+                "\n\t\t* |2| Instrumentos de viento" +
+                "\n\t\t* |3| Instrumentos de percusión" +
+                "\n\n\t\t* |4| Regresar al menú de selección de producto" +
                 "\n\t\t* Cualquier otro número para salir de la tienda");
         System.out.println();
-        System.out.print("Tu selección: ");
+        System.out.print("Tu elección: ");
         int seleccion = scan.nextInt();
         return seleccion;
     }
@@ -55,13 +55,13 @@ public class UI {
         Scanner scan = new  Scanner(System.in);
         System.out.println(diferenciador_menus());
         System.out.println("\t\t- ¿Qué instrumento de cuerda quieres ver? -");
-        System.out.println("\t\t\t* |1| para guitarra" +
-                            "\n\t\t\t* |2| para piano" +
-                            "\n\n\t\t\t* |3| para regresar a la selección de instrumeto" +
-                            "\n\t\t\t* |4| para regresar a la selección de producto" +
+        System.out.println("\t\t\t* |1| Guitarra" +
+                            "\n\t\t\t* |2| Piano" +
+                            "\n\n\t\t\t* |3| Regresar al menú de selección de instrumento" +
+                            "\n\t\t\t* |4| Regresar al menú de selección de producto" +
                             "\n\t\t\t* Cualquier otro número para salir de la tienda");
         System.out.println();
-        System.out.print("Tu selección: ");
+        System.out.print("Tu elección: ");
         int seleccion = scan.nextInt();
         return seleccion;
     }
@@ -70,13 +70,13 @@ public class UI {
         Scanner scan = new  Scanner(System.in);
         System.out.println(diferenciador_menus());
         System.out.println("\t\t- ¿Qué instrumento de viento quieres ver? -");
-        System.out.println("\t\t\t* |1| para flauta" +
-                            "\n\t\t\t* |2| para trompeta" +
-                            "\n\n\t\t\t* |3| para regresar a la selección de instrumento" +
-                            "\n\t\t\t* |4| para regresar a la selección de producto" +
+        System.out.println("\t\t\t* |1| Flauta" +
+                            "\n\t\t\t* |2| Trompeta" +
+                            "\n\n\t\t\t* |3| Regresar al menú de selección de instrumento" +
+                            "\n\t\t\t* |4| Regresar al menú de selección de producto" +
                             "\n\t\t\t* Cualquier otro número para salir de la tienda");
         System.out.println();
-        System.out.print("Tu selección: ");
+        System.out.print("Tu elección: ");
         int seleccion = scan.nextInt();
         return seleccion;
     }
@@ -85,13 +85,13 @@ public class UI {
         Scanner scan = new  Scanner(System.in);
         System.out.println(diferenciador_menus());
         System.out.println("\t\t- ¿Qué instrumento de percusión quieres ver? -");
-        System.out.println("\t\t\t* |1| para bateria" +
-                            "\n\t\t\t* |2| para xilofono" +
-                            "\n\n\t\t\t* |3| para regresar a la selección de instrumento" +
-                            "\n\t\t\t* |4| para regresar a la selección de producto" +
+        System.out.println("\t\t\t* |1| Bateria" +
+                            "\n\t\t\t* |2| Xilofono" +
+                            "\n\n\t\t\t* |3| Regresar al menú de selección de instrumento" +
+                            "\n\t\t\t* |4| Regresar al menú de selección de producto" +
                             "\n\t\t\t* Cualquier otro número para salir de la tienda");
         System.out.println();
-        System.out.print("Tu selección: ");
+        System.out.print("Tu elección: ");
         int seleccion = scan.nextInt();
         return seleccion;
     }
@@ -100,14 +100,14 @@ public class UI {
         Scanner scan = new  Scanner(System.in);
         System.out.println(diferenciador_menus());
         System.out.println("\t\t- ¿Qué colección quieres ver? -");
-        System.out.println("\t\t\t* |1| para ver paquete de guitarra" +
-                "\n\t\t\t* |2| para ver paquete de instrumentos de salsa" +
-                "\n\t\t\t* |3| para ver paquete de instrumentos grandes" +
-                "\n\t\t\t* |4| para ver paquete de instrumentos pequeños" +
-                "\n\n\t\t\t* |5| para regresar a la selección de producto" +
+        System.out.println("\t\t\t* |1| Paquete de guitarra" +
+                "\n\t\t\t* |2| Paquete de instrumentos de salsa" +
+                "\n\t\t\t* |3| Paquete de instrumentos grandes" +
+                "\n\t\t\t* |4| Paquete de instrumentos pequeños" +
+                "\n\n\t\t\t* |5| Regresar al menú de selección de producto" +
                 "\n\t\t\t* Cualquier otro número para salir de la tienda");
         System.out.println();
-        System.out.print("Tu selección: ");
+        System.out.print("Tu elección: ");
         int seleccion = scan.nextInt();
         return seleccion;
     }
@@ -119,10 +119,10 @@ public class UI {
         System.out.println(guitarra2);
         System.out.println(guitarra3);
 
-        System.out.println("\n\n¿Qué deseas hacer ahora?");
-        System.out.println("\n1 para regresar al menu de tipo de instrumento" +
-                "\n2 para regresar al menu de producto" +
-                "\nCualquier otro número para salir de la tienda");
+        System.out.println("\n\n- ¿Qué deseas hacer ahora? -");
+        System.out.println("\n* |1| Regresar al menú de selección de instrumento" +
+                            "\n* |2| Regresar al menú de selección de producto" +
+                            "\n* Cualquier otro número para salir de la tienda");
         System.out.print("\n\nTu elección: ");
         int eleccion = scan.nextInt();
         return eleccion;
@@ -133,10 +133,10 @@ public class UI {
         System.out.println(piano1);
         System.out.println(piano2);
         System.out.println(piano3);
-        System.out.println("\n\n¿Qué deseas hacer ahora?");
-        System.out.println("\n1 para regresar al menu de tipo de instrumento" +
-                "\n2 para regresar al menu de producto" +
-                "\nCualquier otro número para salir de la tienda");
+        System.out.println("\n\n- ¿Qué deseas hacer ahora? -");
+        System.out.println("\n* |1| Regresar al menú de selección de instrumento" +
+                            "\n* |2| Regresar al menú de selección de producto" +
+                            "\n* Cualquier otro número para salir de la tienda");
         System.out.print("\n\nTu elección: ");
         int eleccion = scan.nextInt();
         return eleccion;
@@ -147,10 +147,10 @@ public class UI {
         System.out.println(flauta2);
         System.out.println(flauta3);
 
-        System.out.println("\n\n¿Qué deseas hacer ahora?");
-        System.out.println("\n1 para regresar al menu de tipo de instrumento" +
-                "\n2 para regresar al menu de producto" +
-                "\nCualquier otro número para salir de la tienda");
+        System.out.println("\n\n- ¿Qué deseas hacer ahora? -");
+        System.out.println("\n* |1| Regresar al menú de selección de instrumento" +
+                            "\n* |2| Regresar al menú de selección de producto" +
+                            "\n* Cualquier otro número para salir de la tienda");
         System.out.print("\n\nTu elección: ");
         int eleccion = scan.nextInt();
         return eleccion;
@@ -161,10 +161,10 @@ public class UI {
         System.out.println(tr2);
         System.out.println(tr3);
 
-        System.out.println("\n\n¿Qué deseas hacer ahora?");
-        System.out.println("\n1 para regresar al menu de tipo de instrumento" +
-                "\n2 para regresar al menu de producto" +
-                "\nCualquier otro número para salir de la tienda");
+        System.out.println("\n\n- ¿Qué deseas hacer ahora? -");
+        System.out.println("\n* |1| Regresar al menú de selección de instrumento" +
+                            "\n* |2| Regresar al menú de selección de producto" +
+                            "\n* Cualquier otro número para salir de la tienda");
         System.out.print("\n\nTu elección: ");
         int eleccion = scan.nextInt();
         return eleccion;
@@ -176,10 +176,10 @@ public class UI {
         System.out.println(btr2);
         System.out.println(btr3);
 
-        System.out.println("\n\n¿Qué deseas hacer ahora?");
-        System.out.println("\n1 para regresar al menu de tipo de instrumento" +
-                "\n2 para regresar al menu de producto" +
-                "\nCualquier otro número para salir de la tienda");
+        System.out.println("\n\n- ¿Qué deseas hacer ahora? -");
+        System.out.println("\n* |1| Regresar al menú de selección de instrumento" +
+                            "\n* |2| Regresar al menú de selección de producto" +
+                            "\n* Cualquier otro número para salir de la tienda");
         System.out.print("\n\nTu elección: ");
         int eleccion = scan.nextInt();
         return eleccion;
@@ -191,10 +191,10 @@ public class UI {
         System.out.println(xlf2);
         System.out.println(xlf3);
 
-        System.out.println("\n\n¿Qué deseas hacer ahora?");
-        System.out.println("\n1 para regresar al menu de tipo de instrumento" +
-                "\n2 para regresar al menu de producto" +
-                "\nCualquier otro número para salir de la tienda");
+        System.out.println("\n\n- ¿Qué deseas hacer ahora? -");
+        System.out.println("\n* |1| Regresar al menú de selección de instrumento" +
+                            "\n* |2| Regresar al menú de selección de producto" +
+                            "\n* Cualquier otro número para salir de la tienda");
         System.out.print("\n\nTu elección: ");
         int eleccion = scan.nextInt();
         return eleccion;
@@ -207,9 +207,9 @@ public class UI {
         System.out.println(accesorio2);
         System.out.println(accesorio3);
 
-        System.out.println("\n\n -¿Qué deseas hacer ahora?- ");
-        System.out.println("\n*|1| para regresar al menu de tipo de producto" +
-                "\n*Cualquier otro número para salir de la tienda");
+        System.out.println("\n\n- ¿Qué deseas hacer ahora? -");
+        System.out.println("\n* |1| Regresar al menú de selección de producto" +
+                "\n* Cualquier otro número para salir de la tienda");
         System.out.print("\n\nTu elección: ");
         int eleccion = scan.nextInt();
         return eleccion;
@@ -222,9 +222,9 @@ public class UI {
         }
 
         System.out.println("\n\n -¿Qué deseas hacer ahora?- ");
-        System.out.println("\n*|1| para regresar al menu de tipo de paquetes" +
-                        "\n*|2| para regresar al menu de tipo de producto"+
-                "\n*Cualquier otro número para salir de la tienda");
+        System.out.println("\n* |1| pRegresar al menú de selección de paquetes" +
+                        "\n* |2| Regresar al menú de selección de producto"+
+                "\n* Cualquier otro número para salir de la tienda");
         System.out.print("\n\nTu elección: ");
         int eleccion = scan.nextInt();
         return eleccion;
@@ -236,9 +236,9 @@ public class UI {
         }
 
         System.out.println("\n\n -¿Qué deseas hacer ahora?- ");
-        System.out.println("\n*|1| para regresar al menu de tipo de paquetes" +
-                "\n*|2| para regresar al menu de tipo de producto"+
-                "\n*Cualquier otro número para salir de la tienda");
+        System.out.println("\n* |1| Regresar al menú de selección de paquetes" +
+                "\n* |2| Regresar al menú de selección de producto"+
+                "\n* Cualquier otro número para salir de la tienda");
         System.out.print("\n\nTu elección: ");
         int eleccion = scan.nextInt();
         return eleccion;
@@ -252,9 +252,9 @@ public class UI {
         System.out.println(instrumentos_grandes.get("guitarra grande"));
 
         System.out.println("\n\n -¿Qué deseas hacer ahora?- ");
-        System.out.println("\n*|1| para regresar al menu de tipo de paquetes" +
-                "\n*|2| para regresar al menu de tipo de producto"+
-                "\n*Cualquier otro número para salir de la tienda");
+        System.out.println("\n* |1| Regresar al menú de selección de paquetes" +
+                "\n* |2| Regresar al menú de selección de producto"+
+                "\n* Cualquier otro número para salir de la tienda");
         System.out.print("\n\nTu elección: ");
         int eleccion = scan.nextInt();
         return eleccion;
@@ -268,9 +268,9 @@ public class UI {
         System.out.println(instrumentos_pequeños.get("trompeta pequeña"));
 
         System.out.println("\n\n -¿Qué deseas hacer ahora?- ");
-        System.out.println("\n*|1| para regresar al menu de tipo de paquetes" +
-                "\n*|2| para regresar al menu de tipo de producto"+
-                "\n*Cualquier otro número para salir de la tienda");
+        System.out.println("\n* |1| Regresar al menu de selección de paquetes" +
+                "\n* |2| Regresar al menú de selección de producto"+
+                "\n* Cualquier otro número para salir de la tienda");
         System.out.print("\n\nTu elección: ");
         int eleccion = scan.nextInt();
         return eleccion;

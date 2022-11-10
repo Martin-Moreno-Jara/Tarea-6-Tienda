@@ -53,21 +53,19 @@ public final class Trompeta extends Viento {
     }
     @Override
     public String toString(){
-        return "-----------------------------------------------------------------"+
-                "\nLa trompeta marca"+this.getMarca()+
-                "\ncon número de referencia "+this.getReferencia()+
-                "\ntiene un precio de $"+this.getPrecio()+
-                "\nmodelo "+this.getModelo()+
-                "\ncolor "+this.getColor()+
-                "\ngenera un sonido "+this.getGeneracion_del_sonido()+
-
-                "\nesta hecho de "+this.getMaterial_instrumento()+
-                "\ntiene un tesitura "+this.getTesitura()+
-                "\ncon una embocadura "+this.getTipo_embocadura()+
-
-                "\nde estructura "+this.getEstructura()+
-                "\ncon una afinacion en"+this.getAfinacion()+
-                "\nde tamaño "+this.getTamano()+
+        return "----------------------------------------------------------------------------------------"+
+                "\n- Producto: Trompeta marca "+this.getMarca()+" "+this.getModelo()+
+                "\n- Número de referencia: #"+this.getReferencia()+
+                "\n- Precio: $"+this.getPrecio()+
+                "\n- Caracteristicas: "+
+                "\n\t* Color: "+this.getColor()+
+                "\n\t* Generacióm del sonido: "+this.getGeneracion_del_sonido()+
+                "\n\t* Material del instrumento: "+this.getMaterial_instrumento()+
+                "\n\t* Tesitura: "+this.getTesitura()+
+                "\n\t* Tipo de embocadura: "+this.getTipo_embocadura()+
+                "\n\t* Estructura: "+this.getEstructura()+
+                "\n\t* Afinación: "+this.getAfinacion()+
+                "\n\t* Tamaño: "+this.getTamano()+
                 "\n"+tipo_musica();
     }
 }

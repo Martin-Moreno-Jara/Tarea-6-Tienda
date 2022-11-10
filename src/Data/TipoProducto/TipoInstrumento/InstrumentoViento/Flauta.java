@@ -52,22 +52,20 @@ public final class Flauta extends Viento {
 
     @Override
     public String toString() {
-        return "-----------------------------------------------------------------" +
-                "\nLa flauta marca" + this.getMarca() +
-                "\ncon número de referencia " + this.getReferencia() +
-                "\ntiene un precio de $" + this.getPrecio() +
-                "\nmodelo " + this.getModelo() +
-                "\ncolor " + this.getColor() +
-                "\ngenera un sonido " + this.getGeneracion_del_sonido() +
-
-                "\nesta hecho de " + this.getMaterial_instrumento() +
-                "\ntiene un tesitura " + this.getTesitura() +
-                "\ncon una embocadura " + this.getTipo_embocadura() +
-
-                "\nes una flauta de tipo" + this.getTipo_flauta() +
-                "\ncon una longitud de " + this.getLongitud() +
-                "\nnumero de huecos" + this.getNumero_Huecos()+
-                "\n"+tipo_musica();
+        return "----------------------------------------------------------------------------------------" +
+                "\n- Producto: Flauta marca " + this.getMarca()+" "+ this.getModelo() +
+                "\n- Número de referencia: #" + this.getReferencia() +
+                "\n- Precio: $" + this.getPrecio() +
+                "\n- Caracteristicas: "+
+                "\n\t* Color: " + this.getColor() +
+                "\n\t* Generación del sonido: " + this.getGeneracion_del_sonido() +
+                "\n\t* Material del instrumento: " + this.getMaterial_instrumento() +
+                "\n\t* Tesitura: " + this.getTesitura() +
+                "\n\t* Tipo de embocadura: " + this.getTipo_embocadura() +
+                "\n\t* Tipo de flauta: " + this.getTipo_flauta() +
+                "\n\t* Longitud: " + this.getLongitud()+" cm"+
+                "\n\t* Numero de agujeros: " + this.getNumero_Huecos()+
+                "\n\t* "+tipo_musica();
     }
 }
 

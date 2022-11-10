@@ -61,17 +61,19 @@ public final class Piano extends Cuerda {
 
     @Override
     public String toString(){
-        return "-----------------------------------------------------------------"
-                +"\nEl piano marca "+this.getMarca()+" y modelo "+this.getModelo()+" de distribución "
-                +this.getDistribucion()+" y número de referencia "+
-                this.getReferencia()+" tiene un precio de $"+this.getPrecio()+"\nAdemás tiene las siguientes caracteristicas: "+
-                "\nGeneración del sonido: "+this.getGeneracion_del_sonido()+
-                "\nMaterial de la cuerda: "+this.getMaterial_de_cuerda()+
-                "\nTécnica con la cuerda: "+this.getTecnica()+
-                "\nNúmero de cuerdas: "+this.getNumero_de_cuerdas()+
-                "\nNúmero de teclas: "+this.getNumero_teclas()+
-                "\nNúmero de octavas: "+this.getNumero_octavas()+
-                "\nColor: "+this.getColor()+
+        return "----------------------------------------------------------------------------------------"
+                +"\n- Producto: Piano marca "+this.getMarca()+" "+this.getModelo()+
+                "\n- Número de referencia: #"+ this.getReferencia()+
+                "\n- Precio: $"+this.getPrecio()+
+                "\n- Caracteristicas: "+
+                "\n\t* Distribución: "+this.getDistribucion()+
+                "\n\t* Generación del sonido: "+this.getGeneracion_del_sonido()+
+                "\n\t* Material de la cuerda: "+this.getMaterial_de_cuerda()+
+                "\n\t* Técnica con la cuerda: "+this.getTecnica()+
+                "\n\t* Número de cuerdas: "+this.getNumero_de_cuerdas()+
+                "\n\t* Número de teclas: "+this.getNumero_teclas()+
+                "\n\t* Número de octavas: "+this.getNumero_octavas()+
+                "\n\t* Color: "+this.getColor()+
                 "\n"+tipo_musica();
     }
 

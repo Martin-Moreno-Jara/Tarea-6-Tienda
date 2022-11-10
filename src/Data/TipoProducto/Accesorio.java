@@ -46,9 +46,11 @@ public final class Accesorio extends Producto {
 
     @Override
     public String toString(){
-        return "----------------------------------------------------------------------"+
-                "\nEl accesorio "+this.getNombre_del_accesorio()+" de la marca "+this.getMarca()+", del instrumento "
-                + this.getInstrumento()+  "de tipo "+this.getTipo_de_accesorio() +" y con número de referencia "
-                +this.getReferencia()+" tiene un precio de "+this.getPrecio();
+        return "----------------------------------------------------------------------------------------"+
+                "\n- Producto: Accesorio \""+this.getNombre_del_accesorio()+"\" de la marca "+this.getMarca()+
+                "\n- Número de referencia: #"+this.getReferencia()+
+                "\n- Precio: $"+this.getPrecio()+
+                "\n- Instrumento al que pertenece: " + this.getInstrumento()+
+                "\n- Tipo de accesorio: "+this.getTipo_de_accesorio();
     }
 }
