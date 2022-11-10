@@ -169,33 +169,34 @@ public class Main {
 
         //------------------------------------------------------------------------------------------------
 
-        UI.Bienvenida();
 
         boolean verificador = true;
         boolean verificador_instrumento;
         boolean verificador_instrumento_final;
+        boolean verificador_coleccion;
+        //Aquí comienza el programa --------------------------------------------------------
 
+        UI.Bienvenida();
         while(verificador){
             verificador_instrumento = true;
-
         int eleccion_producto = UI.seleccionar_producto();
         //Se selecciona que tipo de producto quiere ver el usuario
-        switch (eleccion_producto) {
+        switch (eleccion_producto) {//switch para seleccionar el tipo de producto
             case 1:
                 while(verificador_instrumento) {
-                    //Se selecciona que tipo de instrumento se quiere ver
                     int seleccion_intrumento = UI.seleccionar_instrumento();
-                    switch (seleccion_intrumento) {
+                    switch (seleccion_intrumento) {//Switch para seleccionar el tipo de instumento
                         case 1:
                             int seleccion_cuerda = UI.seleccionar_instrumento_de_cuerda();
                                 //Se selecciona instrumento de cuerda
-                            switch (seleccion_cuerda) {
+                            switch (seleccion_cuerda) {//Switch para seleccionar instrumento de cuerda
                                 case 1:
                                     verificador_instrumento_final = true;
                                     int seleccion_guitarra = UI.imprimir_guitarras(guitarra1, guitarra2, guitarra3);
 
                                     while(verificador_instrumento_final){
                                         //se selecciona que se quiere hacer despues de ver guitarras
+
                                         switch (seleccion_guitarra){
                                             case 1:
                                                 verificador_instrumento_final=false;
@@ -210,6 +211,7 @@ public class Main {
                                                 verificador = false;
                                                 break;
                                         }
+
 
                                     }
 
@@ -381,14 +383,113 @@ public class Main {
                     default:
                         verificador=false;
                 }
+                break;
+            case 3:
+                verificador_coleccion=true;
+                while(verificador_coleccion) {
+                int seleccion_paquetes = UI.seleccionar_coleccion();
+                    switch (seleccion_paquetes) {
+                        case 1:
+                            verificador_instrumento_final=true;
+                            int seleccion_paquete_guitarra = UI.imprimir_paquete_guitarra(bundle_guitarra);
+                            while(verificador_instrumento_final) {
+                                //se selecciona que se quiere hacer despues de ver guitarras
+                                switch (seleccion_paquete_guitarra) {
+                                    case 1:
+                                        verificador_instrumento_final = false;
+                                        break;
+                                    case 2:
+                                        verificador_instrumento_final = false;
+                                        verificador_coleccion = false;
+                                        break;
+                                    default:
+                                        verificador_instrumento_final = false;
+                                        verificador_coleccion = false;
+                                        verificador = false;
+                                        break;
+                                }
+                            }
+                            break;
+                        case 2:
+                            verificador_instrumento_final=true;
+                            int seleccion_paquete_salsa = UI.imprimir_paquete_salsa(bundle_salsa);
+                            while(verificador_instrumento_final) {
+                                //se selecciona que se quiere hacer despues de ver guitarras
+                                switch (seleccion_paquete_salsa) {
+                                    case 1:
+                                        verificador_instrumento_final = false;
+                                        break;
+                                    case 2:
+                                        verificador_instrumento_final = false;
+                                        verificador_coleccion = false;
+                                        break;
+                                    default:
+                                        verificador_instrumento_final = false;
+                                        verificador_coleccion = false;
+                                        verificador = false;
+                                        break;
+                                }
+                            }
+                            break;
+                        case 3:
+                            verificador_instrumento_final=true;
+                            int seleccion_instrumentos_grandes = UI.imprimir_instrumentos_grandes(instrumentos_grandes);
+                            while(verificador_instrumento_final) {
+                                //se selecciona que se quiere hacer despues de ver guitarras
+                                switch (seleccion_instrumentos_grandes) {
+                                    case 1:
+                                        verificador_instrumento_final = false;
+                                        break;
+                                    case 2:
+                                        verificador_instrumento_final = false;
+                                        verificador_coleccion = false;
+                                        break;
+                                    default:
+                                        verificador_instrumento_final = false;
+                                        verificador_coleccion = false;
+                                        verificador = false;
+                                        break;
+                                }
+                            }
+                            break;
+                        case 4:
+                            verificador_instrumento_final=true;
+                            int seleccion_instrumentos_pequeños = UI.imprimir_instrumentos_pequeños(instrumentos_pequeños);
+                            while(verificador_instrumento_final) {
+                                //se selecciona que se quiere hacer despues de ver guitarras
+                                switch (seleccion_instrumentos_pequeños) {
+                                    case 1:
+                                        verificador_instrumento_final = false;
+                                        break;
+                                    case 2:
+                                        verificador_instrumento_final = false;
+                                        verificador_coleccion = false;
+                                        break;
+                                    default:
+                                        verificador_instrumento_final = false;
+                                        verificador_coleccion = false;
+                                        verificador = false;
+                                        break;
+                                }
+                            }
+                            break;
+                        case 5:
+                            verificador_coleccion=false;
+                            break;
+                        default:
+                            verificador_coleccion=false;
+                            verificador=false;
+                            break;
 
+                    }
+                }
                 break;
 
             default:
                 //Salir de la tienda
                 verificador=false;
                 break;
-        }
+            }
         }
     }
 

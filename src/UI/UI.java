@@ -8,6 +8,8 @@ import Data.TipoProducto.TipoInstrumento.InstrumentoPercusion.Xilofono;
 import Data.TipoProducto.TipoInstrumento.InstrumentoViento.Flauta;
 import Data.TipoProducto.TipoInstrumento.InstrumentoViento.Trompeta;
 
+import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.Scanner;
 public class UI {
 
@@ -25,6 +27,7 @@ public class UI {
         System.out.println("- ¿Que producto deseas ver? -");
         System.out.println("\t* |1| para ver instrumentos musicales" +
                             "\n\t* |2| para ver accesorios" +
+                            "\n\t* |3| para ver los paquetes especiales(colecciones)" +
                             "\n\n\t* Cualquier otro número para salir de la tienda");
         System.out.println();
         System.out.print("Tu elección: ");
@@ -87,6 +90,22 @@ public class UI {
                             "\n\n\t\t\t* |3| para regresar a la selección de instrumento" +
                             "\n\t\t\t* |4| para regresar a la selección de producto" +
                             "\n\t\t\t* Cualquier otro número para salir de la tienda");
+        System.out.println();
+        System.out.print("Tu selección: ");
+        int seleccion = scan.nextInt();
+        return seleccion;
+    }
+
+    public static int seleccionar_coleccion(){
+        Scanner scan = new  Scanner(System.in);
+        System.out.println(diferenciador_menus());
+        System.out.println("\t\t- ¿Qué colección quieres ver? -");
+        System.out.println("\t\t\t* |1| para ver paquete de guitarra" +
+                "\n\t\t\t* |2| para ver paquete de instrumentos de salsa" +
+                "\n\t\t\t* |3| para ver paquete de instrumentos grandes" +
+                "\n\t\t\t* |4| para ver paquete de instrumentos pequeños" +
+                "\n\n\t\t\t* |5| para regresar a la selección de producto" +
+                "\n\t\t\t* Cualquier otro número para salir de la tienda");
         System.out.println();
         System.out.print("Tu selección: ");
         int seleccion = scan.nextInt();
@@ -188,11 +207,76 @@ public class UI {
         System.out.println(accesorio2);
         System.out.println(accesorio3);
 
-        System.out.println("\n\n¿Qué deseas hacer ahora?");
-        System.out.println("\n1 para regresar al menu de tipo de producto" +
-                "\nCualquier otro número para salir de la tienda");
+        System.out.println("\n\n -¿Qué deseas hacer ahora?- ");
+        System.out.println("\n*|1| para regresar al menu de tipo de producto" +
+                "\n*Cualquier otro número para salir de la tienda");
         System.out.print("\n\nTu elección: ");
         int eleccion = scan.nextInt();
         return eleccion;
     }
+    public static int imprimir_paquete_guitarra(ArrayList<Object> paq_guitarra){
+        Scanner scan = new  Scanner(System.in);
+
+        for(Object elemento:paq_guitarra){
+            System.out.println(elemento);
+        }
+
+        System.out.println("\n\n -¿Qué deseas hacer ahora?- ");
+        System.out.println("\n*|1| para regresar al menu de tipo de paquetes" +
+                        "\n*|2| para regresar al menu de tipo de producto"+
+                "\n*Cualquier otro número para salir de la tienda");
+        System.out.print("\n\nTu elección: ");
+        int eleccion = scan.nextInt();
+        return eleccion;
+    }
+    public static int imprimir_paquete_salsa(ArrayList<Object> paq_salsa){
+        Scanner scan = new  Scanner(System.in);
+        for(Object elemento:paq_salsa){
+            System.out.println(elemento);
+        }
+
+        System.out.println("\n\n -¿Qué deseas hacer ahora?- ");
+        System.out.println("\n*|1| para regresar al menu de tipo de paquetes" +
+                "\n*|2| para regresar al menu de tipo de producto"+
+                "\n*Cualquier otro número para salir de la tienda");
+        System.out.print("\n\nTu elección: ");
+        int eleccion = scan.nextInt();
+        return eleccion;
+    }
+
+    public static int imprimir_instrumentos_grandes(HashMap<String,Object> instrumentos_grandes){
+        Scanner scan = new  Scanner(System.in);
+
+        System.out.println(instrumentos_grandes.get("piano grande"));
+        System.out.println(instrumentos_grandes.get("bateria grande"));
+        System.out.println(instrumentos_grandes.get("guitarra grande"));
+
+        System.out.println("\n\n -¿Qué deseas hacer ahora?- ");
+        System.out.println("\n*|1| para regresar al menu de tipo de paquetes" +
+                "\n*|2| para regresar al menu de tipo de producto"+
+                "\n*Cualquier otro número para salir de la tienda");
+        System.out.print("\n\nTu elección: ");
+        int eleccion = scan.nextInt();
+        return eleccion;
+
+    }
+    public static int imprimir_instrumentos_pequeños(HashMap<String,Object> instrumentos_pequeños){
+        Scanner scan = new  Scanner(System.in);
+
+        System.out.println(instrumentos_pequeños.get("xilofono pequeño"));
+        System.out.println(instrumentos_pequeños.get("flauta pequeña"));
+        System.out.println(instrumentos_pequeños.get("trompeta pequeña"));
+
+        System.out.println("\n\n -¿Qué deseas hacer ahora?- ");
+        System.out.println("\n*|1| para regresar al menu de tipo de paquetes" +
+                "\n*|2| para regresar al menu de tipo de producto"+
+                "\n*Cualquier otro número para salir de la tienda");
+        System.out.print("\n\nTu elección: ");
+        int eleccion = scan.nextInt();
+        return eleccion;
+
+    }
+
+
+
 }
