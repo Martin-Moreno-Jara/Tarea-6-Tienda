@@ -53,9 +53,11 @@ public final class Guitarra extends Cuerda {
         this.tipo_madera = tipo_madera;
     }
 
-    public String tocar(){
-        return "Estás tocando la guitarra";
+    @Override
+    public String tipo_musica(){
+        return "Este instrumento generalmente se utiliza en el rock, jazz, metal, instrumental";
     }
+
 
     @Override
     public String toString(){
@@ -70,7 +72,8 @@ public final class Guitarra extends Cuerda {
                 "\nNúmero de trastes: "+this.getNumero_trastes()+
                 "\nNúmero de pastillas: "+this.getNumero_pastillas()+
                 "\nColor: "+this.getColor()+
-                "\nTipo de madera: "+this.getTipo_madera();
+                "\nTipo de madera: "+this.getTipo_madera()+
+                "\n"+tipo_musica();
     }
 
 }

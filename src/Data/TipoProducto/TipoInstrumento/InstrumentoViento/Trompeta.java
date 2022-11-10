@@ -46,6 +46,11 @@ public final class Trompeta extends Viento {
     public void setTamano(String tamano) {
         this.tamano = tamano;
     }
+
+    @Override
+    public String tipo_musica(){
+        return "Este instrumento generalmente se utiliza en salsa, cumbia, merengue";
+    }
     @Override
     public String toString(){
         return "-----------------------------------------------------------------"+
@@ -62,6 +67,7 @@ public final class Trompeta extends Viento {
 
                 "\nde estructura "+this.getEstructura()+
                 "\ncon una afinacion en"+this.getAfinacion()+
-                "\nde tamaño "+this.getTamano();
+                "\nde tamaño "+this.getTamano()+
+                "\n"+tipo_musica();
     }
 }

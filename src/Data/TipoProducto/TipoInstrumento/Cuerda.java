@@ -37,6 +37,7 @@ public abstract class Cuerda extends Instrumento {
         return this.tecnica;
     }
 
+
     public void setTecnica(String tecnica) {
         this.tecnica = tecnica;
     }

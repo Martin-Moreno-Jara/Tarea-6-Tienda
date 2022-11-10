@@ -46,6 +46,11 @@ public final class Flauta extends Viento {
     }
 
     @Override
+    public String tipo_musica(){
+        return "Este instrumento generalmente se utiliza en música sinfónica, jazz";
+    }
+
+    @Override
     public String toString() {
         return "-----------------------------------------------------------------" +
                 "\nLa flauta marca" + this.getMarca() +
@@ -61,7 +66,8 @@ public final class Flauta extends Viento {
 
                 "\nes una flauta de tipo" + this.getTipo_flauta() +
                 "\ncon una longitud de " + this.getLongitud() +
-                "\nnumero de huecos" + this.getNumero_Huecos();
+                "\nnumero de huecos" + this.getNumero_Huecos()+
+                "\n"+tipo_musica();
     }
 }
 

@@ -37,6 +37,8 @@ public abstract class Instrumento extends Producto {
         return this.generacion_del_sonido;
     }
 
+    public abstract String tipo_musica();
+
     public void setGeneracion_del_sonido(String generacion_del_sonido) {
         this.generacion_del_sonido = generacion_del_sonido;
     }

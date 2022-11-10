@@ -49,6 +49,12 @@ public final class Xilofono extends Percusion {
     }
 
     @Override
+    public String tipo_musica(){
+        return "Este instrumento generalmente se utiliza en música tropical, música infantil";
+    }
+
+
+    @Override
     public String toString(){
         return "-----------------------------------------------------------------"+
                 "\nEl xilofono marca"+this.getMarca()+
@@ -62,6 +68,7 @@ public final class Xilofono extends Percusion {
                 "\nclasifica como "+this.getClasificacion_de_elementos()+
                 "\nxilofono tipo "+this.getTipo_xilofono()+
                 "\nnumero de laminas "+this.getNumero_laminas()+
-                "\ncon laminas hechas de "+this.getMaterial_laminas();
+                "\ncon laminas hechas de "+this.getMaterial_laminas()+
+                "\n"+tipo_musica();
     }
 }

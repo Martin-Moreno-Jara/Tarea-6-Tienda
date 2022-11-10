@@ -168,12 +168,11 @@ public class Main {
         instrumentos_grandes.put("guitarra grande",guitarra1);
 
         //------------------------------------------------------------------------------------------------
-
-
         boolean verificador = true;
         boolean verificador_instrumento;
         boolean verificador_instrumento_final;
         boolean verificador_coleccion;
+
         //Aquí comienza el programa --------------------------------------------------------
 
         UI.Bienvenida();
@@ -480,7 +479,6 @@ public class Main {
                             verificador_coleccion=false;
                             verificador=false;
                             break;
-
                     }
                 }
                 break;

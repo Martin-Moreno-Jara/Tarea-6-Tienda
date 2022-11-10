@@ -54,6 +54,12 @@ public final class Piano extends Cuerda {
     }
 
     @Override
+    public String tipo_musica(){
+        return "Este instrumento generalmente se utiliza en la música clásica, música sinfónica";
+
+    }
+
+    @Override
     public String toString(){
         return "-----------------------------------------------------------------"
                 +"\nEl piano marca "+this.getMarca()+" y modelo "+this.getModelo()+" de distribución "
@@ -65,7 +71,8 @@ public final class Piano extends Cuerda {
                 "\nNúmero de cuerdas: "+this.getNumero_de_cuerdas()+
                 "\nNúmero de teclas: "+this.getNumero_teclas()+
                 "\nNúmero de octavas: "+this.getNumero_octavas()+
-                "\nColor: "+this.getColor();
+                "\nColor: "+this.getColor()+
+                "\n"+tipo_musica();
     }
 
 

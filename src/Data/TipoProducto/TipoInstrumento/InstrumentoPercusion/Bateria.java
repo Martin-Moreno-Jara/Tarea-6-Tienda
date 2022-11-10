@@ -47,6 +47,10 @@ public final class Bateria extends Percusion {
         this.numero_pedales = numero_pedales;
     }
 
+    @Override
+    public String tipo_musica(){
+        return "Este instrumento generalmente se utiliza en rock, salsa, jazz, blues o música instrumental";
+    }
 
     @Override
     public String toString(){
@@ -62,5 +66,6 @@ public final class Bateria extends Percusion {
                 "\nclasifica como "+this.getClasificacion_de_elementos()+
                 "\nnumero de tambores "+this.getNumero_tambores()+
                 "\nnumero de platillos "+this.getNumero_platillos()+
-                "\nnumero de pedales "+this.getNumero_pedales();}
+                "\nnumero de pedales "+this.getNumero_pedales()+
+                "\n"+tipo_musica();}
 }
