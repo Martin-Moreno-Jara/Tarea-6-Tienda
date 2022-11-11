@@ -9,6 +9,8 @@ import Data.TipoProducto.TipoInstrumento.InstrumentoViento.Flauta;
 import Data.TipoProducto.TipoInstrumento.InstrumentoViento.Trompeta;
 import UI.*;
 
+import javax.swing.*;
+import java.awt.*;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.HashSet;
@@ -16,6 +18,9 @@ import java.util.HashSet;
 public class Main {
 
     public static void main(String [] args) {
+        GUI interfaz = new GUI();
+        interfaz.setSize(550,550);
+        interfaz.setVisible(true);
 
         //------------------------------------------------------------------------------------------------ instanciación de piano
     final Piano piano1 = new Piano(4500000,111201,"Yamaha","PSR E273","Blanco y negro",
@@ -175,6 +180,7 @@ public class Main {
 
         //Aquí comienza el programa --------------------------------------------------------
 
+        /*
         UI.Bienvenida();
         while(verificador){
             verificador_instrumento = true;
@@ -489,6 +495,9 @@ public class Main {
                 break;
             }
         }
+        */
+
+
     }
 
 }
