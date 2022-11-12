@@ -54,25 +54,25 @@ public class GUII extends JFrame implements ActionListener{
         paquetes.setVisible(false);
 
         cuerda = new JPanel();
-        cuerda.setBackground(Color.CYAN);
+        cuerda.setBackground(Color.YELLOW);
         cuerda.setBounds(5,30,525,220);
         cuerda.setLayout(null);
         cuerda.setVisible(false);
 
         viento = new JPanel();
-        viento.setBackground(Color.CYAN);
+        viento.setBackground(Color.red);
         viento.setBounds(5,30,525,220);
         viento.setLayout(null);
         viento.setVisible(false);
 
         percusion = new JPanel();
-        percusion.setBackground(Color.CYAN);
+        percusion.setBackground(Color.blue);
         percusion.setBounds(5,30,525,220);
         percusion.setLayout(null);
         percusion.setVisible(false);
 
         guitarras = new JPanel();
-        percusion.setBackground(Color.CYAN);
+        percusion.setBackground(Color.GREEN);
         percusion.setBounds(5,30,525,220);
         percusion.setLayout(null);
         percusion.setVisible(false);
@@ -85,8 +85,9 @@ public class GUII extends JFrame implements ActionListener{
 
 
 
-        bienvenida = new JLabel("Bienvenido a la tienda de instrumentos musicales");
-        bienvenida.setBounds(5,5,300,23);
+        bienvenida = new JLabel("TIENDA DE INSTRUMENTOS MUSICALES");
+
+        bienvenida.setBounds(100,5,300,23);
 
 
 
@@ -224,7 +225,9 @@ public class GUII extends JFrame implements ActionListener{
 
         ButtonGroup grupo = new ButtonGroup();
         grupo.add(RpaqGuitarra);
-        grupo.add(RpaqGuitarra);
+        grupo.add(RpaqSalsa);
+        grupo.add(RpaqGrande);
+        grupo.add(RpaqPeque);
 
 
         paquetes.add(instruccion);
