@@ -18,9 +18,6 @@ import java.util.HashSet;
 public class Main {
 
     public static void main(String [] args) {
-        GUI interfaz = new GUI();
-        interfaz.setSize(550,550);
-        interfaz.setVisible(true);
 
         //------------------------------------------------------------------------------------------------ instanciación de piano
     final Piano piano1 = new Piano(4500000,111201,"Yamaha","PSR E273","Blanco y negro",
@@ -135,7 +132,7 @@ public class Main {
                             amplificador.setInstrumento("Guitarra");
                             amplificador.setNombre_del_accesorio("Amplificador");
 
-        final Accesorio capo = new Accesorio(25000,120102,"A-corde");
+         final Accesorio capo = new Accesorio(25000,120102,"A-corde");
                             capo.setNombre_del_accesorio("Capo");
                             capo.setInstrumento("Guitarra");
                             capo.setTipo_de_accesorio("Modificador del tono");
@@ -179,6 +176,10 @@ public class Main {
         boolean verificador_coleccion;
 
         //Aquí comienza el programa --------------------------------------------------------
+
+
+        GUII gui = new GUII();
+        gui.setVisible(true);
 
         /*
         UI.Bienvenida();
