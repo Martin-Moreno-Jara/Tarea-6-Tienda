@@ -1,5 +1,9 @@
 package Logic;
 
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.HashSet;
+
 import Data.TipoProducto.Accesorio;
 import Data.TipoProducto.TipoInstrumento.InstrumentoCuerda.Guitarra;
 import Data.TipoProducto.TipoInstrumento.InstrumentoCuerda.Piano;
@@ -185,6 +189,58 @@ public class Instancias {
         xilofono3.setTipo_xilofono("Infantil");
         return xilofono3;
     }
+
+
+
+    public static ArrayList<Object> bundle_guitarra(){
+        ArrayList<Object> bundle_guitarra = new ArrayList<Object>();
+        bundle_guitarra.add(guitarra1());
+        bundle_guitarra.add(amplificador());
+        bundle_guitarra.add(pua());
+        return bundle_guitarra;
+    }
+    public static ArrayList<Object> bundle_salsa(){
+        ArrayList<Object> bundle_salsa = new ArrayList<Object>();
+        bundle_salsa.add(trompeta1());
+        bundle_salsa.add(piano2());
+        bundle_salsa.add(bateria1());
+        return bundle_salsa;
+    }
+
+    public static HashSet<Object> bundle_rock(){
+        HashSet<Object> bundle_rock = new HashSet<Object>();
+        bundle_rock.add(guitarra1());
+        bundle_rock.add(guitarra1());
+        bundle_rock.add(bateria3());
+        return bundle_rock;
+    }
+    public static HashSet<Object> bundle_infantil(){
+        HashSet<Object> bundle_infantil = new HashSet<Object>();
+        bundle_infantil.add(flauta1());
+        bundle_infantil.add(xilofono2());
+        bundle_infantil.add(xilofono3());
+        return bundle_infantil;
+    }
+
+    public static  HashMap<String,Object> instrumentos_pequeños(){
+        HashMap<String,Object> instrumentos_pequeños = new HashMap<String,Object>();
+        instrumentos_pequeños.put("xilofono pequeño",xilofono3());
+        instrumentos_pequeños.put("flauta pequeña",flauta3());
+        instrumentos_pequeños.put("trompeta pequeña",trompeta3());
+        return instrumentos_pequeños;
+    }
+    public static  HashMap<String,Object> instrumentos_grandes(){
+        HashMap<String,Object> instrumentos_grandes = new HashMap<String,Object>();
+        instrumentos_grandes.put("piano grande",piano2());
+        instrumentos_grandes.put("bateria grande",bateria2());
+        instrumentos_grandes.put("guitarra grande",guitarra1());
+        return instrumentos_grandes;
+    }
+
+
+
+
+
 
 
 }
