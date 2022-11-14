@@ -11,6 +11,8 @@ import Logic.Instancias;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.ArrayList;
+import java.util.HashMap;
 import javax.swing.*;
 
 public class GUI extends JFrame implements ActionListener{
@@ -18,7 +20,7 @@ public class GUI extends JFrame implements ActionListener{
     JButton continuar,continuar_paquetes,continuar_instrumento,continuar_cuerda,continuar_viento,continuar_percusion,
             anterior_producto,anterior_instrumento_cuerda,anterior_accesorio,anterior_guitarra,anterior_piano,
             anterior_instrumento_viento,anterior_instrumento_percusion, anterior_producto_paquetes,anterior_flauta,anterior_trompeta,
-    anterior_bateria,anterior_xilofono;
+    anterior_bateria,anterior_xilofono,anterior_paq_guitarra,anterior_paq_salsa,anterior_paq_grande,anterior_paq_peq;
 
     JRadioButton Rinstrumentos,Raccesorios,Rpaquetes,Rcuerda,Rviento,Rpercusion,Rguitarra,Rpiano,Rflauta,Rtrompeta,
     Rbateria,Rxilofono,RpaqGuitarra,RpaqSalsa,RpaqGrande,RpaqPeque;
@@ -26,9 +28,10 @@ public class GUI extends JFrame implements ActionListener{
     JLabel bienvenida,instruccion;
 
     JPanel productos,accesorios,paquetes,instrumentos,cuerda,viento,percusion,guitarras,
-            pianos,flautas,trompetas,baterias,xilofonos,paqguitarra,paqsalsa,paqgrande,paqpeqqueño;
+            pianos,flautas,trompetas,baterias,xilofonos,paqguitarra,paqsalsa,paqgrande,paqpeq;
 
-    JScrollPane scroll_guitarras,scroll_pianos,scroll_flautas,scroll_trompetas,scroll_baterias,scroll_xilofono;
+    JScrollPane scroll_guitarras,scroll_pianos,scroll_flautas,scroll_trompetas,scroll_baterias,scroll_xilofono,scroll_paqguitarra,scroll_paqsalsa,
+    scroll_paqgrande,scroll_paqpeq;
 
 
     public GUI(){
@@ -38,9 +41,9 @@ public class GUI extends JFrame implements ActionListener{
         setLayout(null);
         setLocationRelativeTo(null);
         setResizable(false);
-        iniciar();
+        iniciar();}
 
-    }
+
     public void iniciar(){
         productos = new JPanel();
         productos.setBackground(Color.CYAN);
@@ -150,12 +153,53 @@ public class GUI extends JFrame implements ActionListener{
         scroll_xilofono.setViewportView(xilofonos);
         scroll_xilofono.setVisible(false);
 
+        paqguitarra = new JPanel();
+        paqguitarra.setBackground(Color.CYAN);
+        paqguitarra.setBounds(5,30,525,530);
+        paqguitarra.setPreferredSize(new Dimension(525,820));
+        paqguitarra.setLayout(null);
+        paqguitarra.setVisible(false);
+        scroll_paqguitarra = new JScrollPane();
+        scroll_paqguitarra.setBounds(5,30,525,530);
+        scroll_paqguitarra.setViewportView(paqguitarra);
+        scroll_paqguitarra.setVisible(false);
+
+        paqsalsa = new JPanel();
+        paqsalsa.setBackground(Color.CYAN);
+        paqsalsa.setBounds(5,30,525,530);
+        paqsalsa.setPreferredSize(new Dimension(525,820));
+        paqsalsa.setLayout(null);
+        paqsalsa.setVisible(false);
+        scroll_paqsalsa = new JScrollPane();
+        scroll_paqsalsa.setBounds(5,30,525,530);
+        scroll_paqsalsa.setViewportView(paqsalsa);
+        scroll_paqsalsa.setVisible(false);
+
+        paqgrande = new JPanel();
+        paqgrande.setBackground(Color.CYAN);
+        paqgrande.setBounds(5,30,525,530);
+        paqgrande.setPreferredSize(new Dimension(525,820));
+        paqgrande.setLayout(null);
+        paqgrande.setVisible(false);
+        scroll_paqgrande = new JScrollPane();
+        scroll_paqgrande.setBounds(5,30,525,530);
+        scroll_paqgrande.setViewportView(paqgrande);
+        scroll_paqgrande.setVisible(false);
+
+        paqpeq = new JPanel();
+        paqpeq.setBackground(Color.CYAN);
+        paqpeq.setBounds(5,30,525,530);
+        paqpeq.setPreferredSize(new Dimension(525,820));
+        paqpeq.setLayout(null);
+        paqpeq.setVisible(false);
+        scroll_paqpeq = new JScrollPane();
+        scroll_paqpeq.setBounds(5,30,525,530);
+        scroll_paqpeq.setViewportView(paqpeq);
+        scroll_paqpeq.setVisible(false);
 
         bienvenida = new JLabel("TIENDA DE INSTRUMENTOS MUSICALES");
 
         bienvenida.setBounds(155,5,300,23);
-
-
 
         cargar_componentes_productos();
         cargar_componentes_instrumentos();
@@ -170,6 +214,10 @@ public class GUI extends JFrame implements ActionListener{
         cargar_trompetas(Instancias.trompeta1(),Instancias.trompeta2(),Instancias.trompeta3());
         cargar_baterias(Instancias.bateria1(),Instancias.bateria2(),Instancias.bateria3());
         cargar_xilofonos(Instancias.xilofono1(),Instancias.xilofono2(),Instancias.xilofono3());
+        cargar_paq_guitarra(Instancias.bundle_guitarra());
+        cargar_paq_salsa(Instancias.bundle_salsa());
+        cargar_paq_grande(Instancias.instrumentos_grandes());
+        cargar_paq_peq(Instancias.instrumentos_pequeños());
 
         add(bienvenida);
         add(productos);
@@ -185,7 +233,10 @@ public class GUI extends JFrame implements ActionListener{
         add(scroll_trompetas);
         add(scroll_baterias);
         add(scroll_xilofono);
-
+        add(scroll_paqguitarra);
+        add(scroll_paqsalsa);
+        add(scroll_paqgrande);
+        add(scroll_paqpeq);
     }
     public void cargar_componentes_productos(){
 
@@ -217,7 +268,6 @@ public class GUI extends JFrame implements ActionListener{
         productos.add(Rpaquetes);
         productos.add(continuar);
     }
-
     public void cargar_componentes_instrumentos(){
 
         instruccion = new JLabel("Que Instrumento quieres escoger");
@@ -252,7 +302,6 @@ public class GUI extends JFrame implements ActionListener{
         instrumentos.add(continuar_instrumento);
         instrumentos.add(anterior_producto);
     }
-
     public void cargar_accesorios(Accesorio a,Accesorio b,Accesorio c){
 
         JTextPane accesorio1 = new JTextPane();
@@ -279,7 +328,6 @@ public class GUI extends JFrame implements ActionListener{
         accesorios.add(accesorio3);
         accesorios.add(anterior_accesorio);
     }
-
     public void cargar_paquetes(){
         instruccion = new JLabel("Que paquetes quieres escoger");
         instruccion.setBounds(5,10,300,20);
@@ -319,7 +367,6 @@ public class GUI extends JFrame implements ActionListener{
         paquetes.add(anterior_producto_paquetes);
         paquetes.add(continuar_paquetes);
     }
-
     public void cargar_cuerda(){
         instruccion = new JLabel("Que Instrumento de cuerda quieres escoger");
         instruccion.setBounds(5,10,300,20);
@@ -411,7 +458,6 @@ public class GUI extends JFrame implements ActionListener{
         percusion.add(continuar_percusion);
 
     }
-
     public void cargar_guitarras(Guitarra a, Guitarra b, Guitarra c){
         JTextPane guitarra1 = new JTextPane();
         guitarra1.setEditable(false);
@@ -438,7 +484,6 @@ public class GUI extends JFrame implements ActionListener{
         guitarras.add(guitarra3);
         guitarras.add(anterior_guitarra);
     }
-
     public void cargar_pianos(Piano a, Piano b, Piano c){
         JTextPane piano1 = new JTextPane();
         piano1.setEditable(false);
@@ -465,7 +510,6 @@ public class GUI extends JFrame implements ActionListener{
         pianos.add(piano3);
         pianos.add(anterior_piano);
     }
-
     public void cargar_flautas(Flauta a, Flauta b, Flauta c){
         JTextPane flauta1 = new JTextPane();
         flauta1.setEditable(false);
@@ -492,7 +536,6 @@ public class GUI extends JFrame implements ActionListener{
         flautas.add(flauta3);
         flautas.add(anterior_flauta);
     }
-
     public void cargar_trompetas(Trompeta a,Trompeta b,Trompeta c){
         JTextPane trompeta1 = new JTextPane();
         trompeta1.setEditable(false);
@@ -519,7 +562,6 @@ public class GUI extends JFrame implements ActionListener{
         trompetas.add(trompeta3);
         trompetas.add(anterior_trompeta);
     }
-
     public void cargar_baterias(Bateria a, Bateria b,Bateria c){
         JTextPane bateria1 = new JTextPane();
         bateria1.setEditable(false);
@@ -574,7 +616,133 @@ public class GUI extends JFrame implements ActionListener{
         xilofonos.add(anterior_xilofono);
 
     }
+    public void cargar_paq_guitarra(ArrayList<Object> a){
+        Object elemento1,elemento2,elemento3;
+        elemento1 = a.get(0);
+        elemento2 = a.get(1);
+        elemento3 = a.get(2);
 
+        JTextPane campo1 = new JTextPane();
+        campo1.setEditable(false);
+        campo1.setBounds(5,10,490,240);
+
+        JTextPane campo2 = new JTextPane();
+        campo2.setBounds(5,260,490,240);
+        campo2.setEditable(false);
+
+        JTextPane campo3 = new JTextPane();
+        campo3.setEditable(false);
+        campo3.setBounds(5,520,490,240);
+
+        campo1.setText(elemento1.toString());
+        campo2.setText(elemento2.toString());
+        campo3.setText(elemento3.toString());
+
+        anterior_paq_guitarra = new JButton("Anterior");
+        anterior_paq_guitarra.setBounds(250,780,110,30);
+        anterior_paq_guitarra.addActionListener(this);
+
+        paqguitarra.add(campo1);
+        paqguitarra.add(campo2);
+        paqguitarra.add(campo3);
+        paqguitarra.add(anterior_paq_guitarra);
+
+    }
+    public void cargar_paq_salsa(ArrayList<Object> a){
+        Object elemento1,elemento2,elemento3;
+        elemento1 = a.get(0);
+        elemento2 = a.get(1);
+        elemento3 = a.get(2);
+
+        JTextPane campo1 = new JTextPane();
+        campo1.setEditable(false);
+        campo1.setBounds(5,10,490,240);
+
+        JTextPane campo2 = new JTextPane();
+        campo2.setBounds(5,260,490,240);
+        campo2.setEditable(false);
+
+        JTextPane campo3 = new JTextPane();
+        campo3.setEditable(false);
+        campo3.setBounds(5,520,490,240);
+
+        campo1.setText(elemento1.toString());
+        campo2.setText(elemento2.toString());
+        campo3.setText(elemento3.toString());
+
+        anterior_paq_salsa = new JButton("Anterior");
+        anterior_paq_salsa.setBounds(250,780,110,30);
+        anterior_paq_salsa.addActionListener(this);
+
+        paqsalsa.add(campo1);
+        paqsalsa.add(campo2);
+        paqsalsa.add(campo3);
+        paqsalsa.add(anterior_paq_salsa);
+
+    }
+
+    public void cargar_paq_grande(HashMap<String,Object> a){
+        Object elemento1,elemento2,elemento3;
+        elemento1 = a.get("piano grande");
+        elemento2 = a.get("bateria grande");
+        elemento3 = a.get("guitarra grande");
+
+        JTextPane campo1 = new JTextPane();
+        campo1.setEditable(false);
+        campo1.setBounds(5,10,490,240);
+
+        JTextPane campo2 = new JTextPane();
+        campo2.setBounds(5,260,490,240);
+        campo2.setEditable(false);
+
+        JTextPane campo3 = new JTextPane();
+        campo3.setEditable(false);
+        campo3.setBounds(5,520,490,240);
+
+        campo1.setText(elemento1.toString());
+        campo2.setText(elemento2.toString());
+        campo3.setText(elemento3.toString());
+
+        anterior_paq_grande = new JButton("Anterior");
+        anterior_paq_grande.setBounds(250,780,110,30);
+        anterior_paq_grande.addActionListener(this);
+
+        paqgrande.add(campo1);
+        paqgrande.add(campo2);
+        paqgrande.add(campo3);
+        paqgrande.add(anterior_paq_grande);
+    }
+    public void cargar_paq_peq(HashMap<String,Object> a){
+        Object elemento1,elemento2,elemento3;
+        elemento1 = a.get("xilofono pequeño");
+        elemento2 = a.get("flauta pequeña");
+        elemento3 = a.get("trompeta pequeña");
+
+        JTextPane campo1 = new JTextPane();
+        campo1.setEditable(false);
+        campo1.setBounds(5,10,490,240);
+
+        JTextPane campo2 = new JTextPane();
+        campo2.setBounds(5,260,490,240);
+        campo2.setEditable(false);
+
+        JTextPane campo3 = new JTextPane();
+        campo3.setEditable(false);
+        campo3.setBounds(5,520,490,240);
+
+        campo1.setText(elemento1.toString());
+        campo2.setText(elemento2.toString());
+        campo3.setText(elemento3.toString());
+
+        anterior_paq_peq = new JButton("Anterior");
+        anterior_paq_peq.setBounds(250,780,110,30);
+        anterior_paq_peq.addActionListener(this);
+
+        paqpeq.add(campo1);
+        paqpeq.add(campo2);
+        paqpeq.add(campo3);
+        paqpeq.add(anterior_paq_peq);
+    }
     @Override
     public void actionPerformed(ActionEvent e) {
         //botones continuar
@@ -632,6 +800,26 @@ public class GUI extends JFrame implements ActionListener{
             percusion.setVisible(false);
             xilofonos.setVisible(true);
             scroll_xilofono.setVisible(true);}
+        else if(e.getSource()==continuar_paquetes && RpaqGuitarra.isSelected()){
+            paquetes.setVisible(false);
+            paqguitarra.setVisible(true);
+            scroll_paqguitarra.setVisible(true);
+                }
+        else if(e.getSource()==continuar_paquetes && RpaqSalsa.isSelected()){
+            paquetes.setVisible(false);
+            paqsalsa.setVisible(true);
+            scroll_paqsalsa.setVisible(true);
+                }
+        else if(e.getSource()==continuar_paquetes && RpaqGrande.isSelected()){
+            paquetes.setVisible(false);
+            paqgrande.setVisible(true);
+            scroll_paqgrande.setVisible(true);
+                }
+        else if(e.getSource()==continuar_paquetes && RpaqPeque.isSelected()){
+            paquetes.setVisible(false);
+            paqpeq.setVisible(true);
+            scroll_paqpeq.setVisible(true);
+                }
 
                 //botones anterior
         else if(e.getSource()==anterior_producto){
@@ -690,14 +878,21 @@ public class GUI extends JFrame implements ActionListener{
             scroll_xilofono.setVisible(false);
             xilofonos.setVisible(false);
             percusion.setVisible(true);}
+        if(e.getSource()==anterior_paq_guitarra){
+            scroll_paqguitarra.setVisible(false);
+            paqguitarra.setVisible(false);
+            paquetes.setVisible(true);}
+        if(e.getSource()==anterior_paq_salsa){
+            scroll_paqsalsa.setVisible(false);
+            paqsalsa.setVisible(false);
+            paquetes.setVisible(true);}
+        if(e.getSource()==anterior_paq_grande){
+            scroll_paqgrande.setVisible(false);
+            paqgrande.setVisible(false);
+            paquetes.setVisible(true);}
+        if(e.getSource()==anterior_paq_peq){
+            scroll_paqpeq.setVisible(false);
+            paqpeq.setVisible(false);
+            paquetes.setVisible(true);}
+        }
     }
-
-    }
-
-
-
-
-
-
-
-
