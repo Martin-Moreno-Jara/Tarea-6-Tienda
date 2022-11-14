@@ -61,8 +61,7 @@ public final class Piano extends Cuerda {
 
     @Override
     public String toString(){
-        return "----------------------------------------------------------------------------------------"
-                +"\n- Producto: Piano marca "+this.getMarca()+" "+this.getModelo()+
+        return "-Producto: Piano marca "+this.getMarca()+" "+this.getModelo()+
                 "\n- Número de referencia: #"+ this.getReferencia()+
                 "\n- Precio: $"+this.getPrecio()+
                 "\n- Caracteristicas: "+

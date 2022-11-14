@@ -54,8 +54,7 @@ public final class Bateria extends Percusion {
 
     @Override
     public String toString(){
-        return "----------------------------------------------------------------------------------------"+
-                "\n- Producto: Bateria marca "+this.getMarca()+" "+this.getModelo()+
+        return "- Producto: Bateria marca "+this.getMarca()+" "+this.getModelo()+
                 "\n- Número de referencia: #"+this.getReferencia()+
                 "\n- Precio: $"+this.getPrecio()+
                 "\n- Caracteristicas: "+

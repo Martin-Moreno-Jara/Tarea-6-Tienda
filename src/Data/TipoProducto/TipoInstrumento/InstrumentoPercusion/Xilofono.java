@@ -56,8 +56,7 @@ public final class Xilofono extends Percusion {
 
     @Override
     public String toString(){
-        return "----------------------------------------------------------------------------------------"+
-                "\n- Producto: Xilofono marca "+this.getMarca()+" "+this.getModelo()+
+        return "- Producto: Xilofono marca "+this.getMarca()+" "+this.getModelo()+
                 "\n- Número de referencia: #"+this.getReferencia()+
                 "\n- Precio: $"+this.getPrecio()+
                 "\n- Caracteristicas: "+

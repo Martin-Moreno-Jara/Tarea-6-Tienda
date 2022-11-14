@@ -61,8 +61,7 @@ public final class Guitarra extends Cuerda {
 
     @Override
     public String toString(){
-        return "----------------------------------------------------------------------------------------"
-                +"\n- Producto: Guitarra marca "+this.getMarca()+" "+this.getModelo() +
+        return "- Producto: Guitarra marca "+this.getMarca()+" "+this.getModelo() +
                 "\n- Número de referencia: #"+ this.getReferencia()+
                 "\n- Precio: $"+this.getPrecio()+
                 "\n- Caracteristicas: "+

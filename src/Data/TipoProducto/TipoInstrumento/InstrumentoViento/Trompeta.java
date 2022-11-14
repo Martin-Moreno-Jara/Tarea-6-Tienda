@@ -53,8 +53,7 @@ public final class Trompeta extends Viento {
     }
     @Override
     public String toString(){
-        return "----------------------------------------------------------------------------------------"+
-                "\n- Producto: Trompeta marca "+this.getMarca()+" "+this.getModelo()+
+        return "- Producto: Trompeta marca "+this.getMarca()+" "+this.getModelo()+
                 "\n- Número de referencia: #"+this.getReferencia()+
                 "\n- Precio: $"+this.getPrecio()+
                 "\n- Caracteristicas: "+

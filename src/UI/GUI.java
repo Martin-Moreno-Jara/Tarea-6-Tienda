@@ -36,7 +36,7 @@ public class GUI extends JFrame implements ActionListener{
 
     public GUI(){
         setDefaultCloseOperation(EXIT_ON_CLOSE);
-        setSize(550,600);
+        setSize(550,550);
         setTitle("Tienda");
         setLayout(null);
         setLocationRelativeTo(null);
@@ -47,13 +47,13 @@ public class GUI extends JFrame implements ActionListener{
     public void iniciar(){
         productos = new JPanel();
         productos.setBackground(Color.CYAN);
-        productos.setBounds(5,30,525,220);
+        productos.setBounds(5,30,525,475);
         productos.setLayout(null);
         productos.setVisible(true);
 
         instrumentos = new JPanel();
         instrumentos.setBackground(Color.GREEN);
-        instrumentos.setBounds(5,30,525,220);
+        instrumentos.setBounds(5,30,525,475);
         instrumentos.setLayout(null);
         instrumentos.setVisible(false);
 
@@ -65,36 +65,36 @@ public class GUI extends JFrame implements ActionListener{
 
         paquetes = new JPanel();
         paquetes.setBackground(Color.ORANGE);
-        paquetes.setBounds(5,30,525,220);
+        paquetes.setBounds(5,30,525,475);
         paquetes.setLayout(null);
         paquetes.setVisible(false);
 
         cuerda = new JPanel();
         cuerda.setBackground(Color.YELLOW);
-        cuerda.setBounds(5,30,525,220);
+        cuerda.setBounds(5,30,525,475);
         cuerda.setLayout(null);
         cuerda.setVisible(false);
 
         viento = new JPanel();
         viento.setBackground(Color.red);
-        viento.setBounds(5,30,525,220);
+        viento.setBounds(5,30,525,475);
         viento.setLayout(null);
         viento.setVisible(false);
 
         percusion = new JPanel();
         percusion.setBackground(Color.blue);
-        percusion.setBounds(5,30,525,220);
+        percusion.setBounds(5,30,525,475);
         percusion.setLayout(null);
         percusion.setVisible(false);
 
         guitarras = new JPanel();
         guitarras.setBackground(Color.GREEN);
-        guitarras.setBounds(5,30,525,530);
+        guitarras.setBounds(5,30,525,475);
         guitarras.setPreferredSize(new Dimension(525,820));
         guitarras.setLayout(null);
         guitarras.setVisible(false);
         scroll_guitarras = new JScrollPane();
-        scroll_guitarras.setBounds(5,30,525,530);
+        scroll_guitarras.setBounds(5,30,525,475);
         scroll_guitarras.setViewportView(guitarras);
         scroll_guitarras.setVisible(false);
 

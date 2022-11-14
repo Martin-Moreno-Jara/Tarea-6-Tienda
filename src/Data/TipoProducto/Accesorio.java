@@ -46,8 +46,7 @@ public final class Accesorio extends Producto {
 
     @Override
     public String toString(){
-        return "----------------------------------------------------------------------------------------"+
-                "\n- Producto: Accesorio \""+this.getNombre_del_accesorio()+"\" de la marca "+this.getMarca()+
+        return "- Producto: Accesorio \""+this.getNombre_del_accesorio()+"\" de la marca "+this.getMarca()+
                 "\n- Número de referencia: #"+this.getReferencia()+
                 "\n- Precio: $"+this.getPrecio()+
                 "\n- Instrumento al que pertenece: " + this.getInstrumento()+
