@@ -25,18 +25,18 @@ public class GUI extends JFrame implements ActionListener{
     JRadioButton Rinstrumentos,Raccesorios,Rpaquetes,Rcuerda,Rviento,Rpercusion,Rguitarra,Rpiano,Rflauta,Rtrompeta,
     Rbateria,Rxilofono,RpaqGuitarra,RpaqSalsa,RpaqGrande,RpaqPeque;
 
-    JLabel bienvenida,instruccion;
+    JLabel bienvenida,instruccion,creditos;
 
-    JPanel productos,accesorios,paquetes,instrumentos,cuerda,viento,percusion,guitarras,
+    JPanel productos,accesorios,paquetes,instrumentos,cuerda,viento,percusion,guitarras,cabecera,footer,
             pianos,flautas,trompetas,baterias,xilofonos,paqguitarra,paqsalsa,paqgrande,paqpeq;
 
     JScrollPane scroll_guitarras,scroll_pianos,scroll_flautas,scroll_trompetas,scroll_baterias,scroll_xilofono,scroll_paqguitarra,scroll_paqsalsa,
-    scroll_paqgrande,scroll_paqpeq;
+    scroll_paqgrande,scroll_paqpeq,scroll_accesorios;
 
 
     public GUI(){
         setDefaultCloseOperation(EXIT_ON_CLOSE);
-        setSize(550,550);
+        setSize(550,400);
         setTitle("Tienda");
         setLayout(null);
         setLocationRelativeTo(null);
@@ -46,160 +46,162 @@ public class GUI extends JFrame implements ActionListener{
 
     public void iniciar(){
         productos = new JPanel();
-        productos.setBackground(Color.CYAN);
-        productos.setBounds(5,30,525,475);
+        productos.setBounds(0,75,550,240);
         productos.setLayout(null);
         productos.setVisible(true);
+        productos.setBackground(Color.green);
+
+        cabecera = new JPanel();
+        cabecera.setBounds(0,0,550,75);
+        cabecera.setBackground(Color.CYAN);
+        bienvenida = new JLabel("TIENDA DE INSTRUMENTOS MUSICALES");
+        bienvenida.setBounds(100,5,500,45);
+        bienvenida.setFont(new Font("calibri",Font.BOLD,17));
+        cabecera.add(bienvenida);
+        cabecera.setVisible(true);
+
+        footer = new JPanel();
+        footer.setBounds(0,315,550,46);
+        footer.setBackground(Color.CYAN);
+        creditos = new JLabel("programación orientada a objetos 2022");
+        creditos.setBounds(0,0,500,5);
+        footer.add(creditos);
+        footer.setVisible(true);
 
         instrumentos = new JPanel();
-        instrumentos.setBackground(Color.GREEN);
-        instrumentos.setBounds(5,30,525,475);
+        instrumentos.setBounds(0,75,550,240);
         instrumentos.setLayout(null);
         instrumentos.setVisible(false);
 
         accesorios = new JPanel();
-        accesorios.setBackground(Color.pink);
-        accesorios.setBounds(5,30,525,530);
+        accesorios.setBounds(0,0,530,400);
         accesorios.setLayout(null);
         accesorios.setVisible(false);
+        accesorios.setPreferredSize(new Dimension(550,600));
+        scroll_accesorios = new JScrollPane();
+        scroll_accesorios.setBounds(0,0,525,380);
+        scroll_accesorios.setViewportView(accesorios);
+        scroll_accesorios.setVisible(false);
 
         paquetes = new JPanel();
-        paquetes.setBackground(Color.ORANGE);
-        paquetes.setBounds(5,30,525,475);
+        paquetes.setBounds(0,75,550,240);
         paquetes.setLayout(null);
         paquetes.setVisible(false);
 
         cuerda = new JPanel();
-        cuerda.setBackground(Color.YELLOW);
-        cuerda.setBounds(5,30,525,475);
+        cuerda.setBounds(0,75,550,240);
         cuerda.setLayout(null);
         cuerda.setVisible(false);
 
         viento = new JPanel();
-        viento.setBackground(Color.red);
-        viento.setBounds(5,30,525,475);
+        viento.setBounds(0,75,550,240);
         viento.setLayout(null);
         viento.setVisible(false);
 
         percusion = new JPanel();
-        percusion.setBackground(Color.blue);
-        percusion.setBounds(5,30,525,475);
+        percusion.setBounds(0,75,550,240);
         percusion.setLayout(null);
         percusion.setVisible(false);
 
         guitarras = new JPanel();
-        guitarras.setBackground(Color.GREEN);
-        guitarras.setBounds(5,30,525,475);
-        guitarras.setPreferredSize(new Dimension(525,820));
+        guitarras.setBounds(0,0,550,400);
+        guitarras.setPreferredSize(new Dimension(550,820));
         guitarras.setLayout(null);
         guitarras.setVisible(false);
         scroll_guitarras = new JScrollPane();
-        scroll_guitarras.setBounds(5,30,525,475);
+        scroll_guitarras.setBounds(0,0,525,380);
         scroll_guitarras.setViewportView(guitarras);
         scroll_guitarras.setVisible(false);
 
         pianos = new JPanel();
-        pianos.setBackground(Color.CYAN);
-        pianos.setBounds(5,30,525,530);
-        pianos.setPreferredSize(new Dimension(525,820));
+        pianos.setBounds(0,0,550,400);
+        pianos.setPreferredSize(new Dimension(550,820));
         pianos.setLayout(null);
         pianos.setVisible(false);
         scroll_pianos = new JScrollPane();
-        scroll_pianos.setBounds(5,30,525,530);
+        scroll_pianos.setBounds(0,0,525,380);
         scroll_pianos.setViewportView(pianos);
         scroll_pianos.setVisible(false);
 
         flautas = new JPanel();
-        flautas.setBackground(Color.CYAN);
-        flautas.setBounds(5,30,525,530);
-        flautas.setPreferredSize(new Dimension(525,820));
+        flautas.setBounds(0,0,550,400);
+        flautas.setPreferredSize(new Dimension(550,820));
         flautas.setLayout(null);
         flautas.setVisible(false);
         scroll_flautas = new JScrollPane();
-        scroll_flautas.setBounds(5,30,525,530);
+        scroll_flautas.setBounds(0,0,525,380);
         scroll_flautas.setViewportView(flautas);
         scroll_flautas.setVisible(false);
 
         trompetas = new JPanel();
-        trompetas.setBackground(Color.CYAN);
-        trompetas.setBounds(5,30,525,530);
-        trompetas.setPreferredSize(new Dimension(525,820));
+        trompetas.setBounds(0,0,550,400);
+        trompetas.setPreferredSize(new Dimension(550,820));
         trompetas.setLayout(null);
         trompetas.setVisible(false);
         scroll_trompetas = new JScrollPane();
-        scroll_trompetas.setBounds(5,30,525,530);
+        scroll_trompetas.setBounds(0,0,525,380);
         scroll_trompetas.setViewportView(trompetas);
         scroll_trompetas.setVisible(false);
 
         baterias = new JPanel();
-        baterias.setBackground(Color.CYAN);
-        baterias.setBounds(5,30,525,530);
-        baterias.setPreferredSize(new Dimension(525,820));
+        baterias.setBounds(0,0,550,400);
+        baterias.setPreferredSize(new Dimension(550,820));
         baterias.setLayout(null);
         baterias.setVisible(false);
         scroll_baterias = new JScrollPane();
-        scroll_baterias.setBounds(5,30,525,530);
+        scroll_baterias.setBounds(0,0,525,380);
         scroll_baterias.setViewportView(baterias);
         scroll_baterias.setVisible(false);
 
         xilofonos = new JPanel();
-        xilofonos.setBackground(Color.CYAN);
-        xilofonos.setBounds(5,30,525,530);
-        xilofonos.setPreferredSize(new Dimension(525,820));
+        xilofonos.setBounds(0,0,550,400);
+        xilofonos.setPreferredSize(new Dimension(550,820));
         xilofonos.setLayout(null);
         xilofonos.setVisible(false);
         scroll_xilofono = new JScrollPane();
-        scroll_xilofono.setBounds(5,30,525,530);
+        scroll_xilofono.setBounds(0,0,525,380);
         scroll_xilofono.setViewportView(xilofonos);
         scroll_xilofono.setVisible(false);
 
         paqguitarra = new JPanel();
-        paqguitarra.setBackground(Color.CYAN);
-        paqguitarra.setBounds(5,30,525,530);
-        paqguitarra.setPreferredSize(new Dimension(525,820));
+        paqguitarra.setBounds(0,0,550,400);
+        paqguitarra.setPreferredSize(new Dimension(550,820));
         paqguitarra.setLayout(null);
         paqguitarra.setVisible(false);
         scroll_paqguitarra = new JScrollPane();
-        scroll_paqguitarra.setBounds(5,30,525,530);
+        scroll_paqguitarra.setBounds(0,0,525,380);
         scroll_paqguitarra.setViewportView(paqguitarra);
         scroll_paqguitarra.setVisible(false);
 
         paqsalsa = new JPanel();
-        paqsalsa.setBackground(Color.CYAN);
-        paqsalsa.setBounds(5,30,525,530);
-        paqsalsa.setPreferredSize(new Dimension(525,820));
+        paqsalsa.setBounds(0,0,550,400);
+        paqsalsa.setPreferredSize(new Dimension(550,820));
         paqsalsa.setLayout(null);
         paqsalsa.setVisible(false);
         scroll_paqsalsa = new JScrollPane();
-        scroll_paqsalsa.setBounds(5,30,525,530);
+        scroll_paqsalsa.setBounds(0,0,525,380);
         scroll_paqsalsa.setViewportView(paqsalsa);
         scroll_paqsalsa.setVisible(false);
 
         paqgrande = new JPanel();
-        paqgrande.setBackground(Color.CYAN);
-        paqgrande.setBounds(5,30,525,530);
-        paqgrande.setPreferredSize(new Dimension(525,820));
+        paqgrande.setBounds(0,0,550,400);
+        paqgrande.setPreferredSize(new Dimension(550,820));
         paqgrande.setLayout(null);
         paqgrande.setVisible(false);
         scroll_paqgrande = new JScrollPane();
-        scroll_paqgrande.setBounds(5,30,525,530);
+        scroll_paqgrande.setBounds(0,0,525,380);
         scroll_paqgrande.setViewportView(paqgrande);
         scroll_paqgrande.setVisible(false);
 
         paqpeq = new JPanel();
-        paqpeq.setBackground(Color.CYAN);
-        paqpeq.setBounds(5,30,525,530);
-        paqpeq.setPreferredSize(new Dimension(525,820));
+        paqpeq.setBounds(0,0,550,400);
+        paqpeq.setPreferredSize(new Dimension(550,820));
         paqpeq.setLayout(null);
         paqpeq.setVisible(false);
         scroll_paqpeq = new JScrollPane();
-        scroll_paqpeq.setBounds(5,30,525,530);
+        scroll_paqpeq.setBounds(0,0,525,380);
         scroll_paqpeq.setViewportView(paqpeq);
         scroll_paqpeq.setVisible(false);
-
-        bienvenida = new JLabel("TIENDA DE INSTRUMENTOS MUSICALES");
-
-        bienvenida.setBounds(155,5,300,23);
 
         cargar_componentes_productos();
         cargar_componentes_instrumentos();
@@ -219,14 +221,13 @@ public class GUI extends JFrame implements ActionListener{
         cargar_paq_grande(Instancias.instrumentos_grandes());
         cargar_paq_peq(Instancias.instrumentos_pequeños());
 
-        add(bienvenida);
         add(productos);
         add(instrumentos);
         add(cuerda);
         add(viento);
         add(percusion);
         add(paquetes);
-        add(accesorios);
+        add(scroll_accesorios);
         add(scroll_guitarras);
         add(scroll_pianos);
         add(scroll_flautas);
@@ -237,24 +238,31 @@ public class GUI extends JFrame implements ActionListener{
         add(scroll_paqsalsa);
         add(scroll_paqgrande);
         add(scroll_paqpeq);
+        add(cabecera);
+        add(footer);
     }
     public void cargar_componentes_productos(){
 
-        instruccion = new JLabel("Que producto quieres escoger");
-        instruccion.setBounds(5,10,300,20);
+        instruccion = new JLabel("Escoge el producto que quieres ver");
+        instruccion.setFont(new Font("calibri",Font.PLAIN,19));
+        instruccion.setBounds(12,20,500,20);
 
         Rinstrumentos = new JRadioButton("Instrumentos musicales");
-        Rinstrumentos.setBounds(8,40,300,20);
+        Rinstrumentos.setFont(new Font("calibri",Font.PLAIN,15));
+        Rinstrumentos.setBounds(20,55,300,30);
 
         Raccesorios = new JRadioButton("Accesorios");
-        Raccesorios.setBounds(8,70,300,20);
+        Raccesorios.setFont(new Font("calibri",Font.PLAIN,15));
+        Raccesorios.setBounds(20,85,300,30);
 
         Rpaquetes = new JRadioButton("Paquetes");
-        Rpaquetes.setBounds(8,100,300,20);
+        Rpaquetes.setFont(new Font("calibri",Font.PLAIN,15));
+        Rpaquetes.setBounds(20,115,300,30);
 
         continuar = new JButton("Continuar");
         continuar.setBounds(400,170,110,30);
         continuar.addActionListener(this);
+
 
 
         ButtonGroup grupo = new ButtonGroup();
@@ -269,18 +277,21 @@ public class GUI extends JFrame implements ActionListener{
         productos.add(continuar);
     }
     public void cargar_componentes_instrumentos(){
+        instruccion = new JLabel("Escoge que tipo de instrumento quieres ver");
+        instruccion.setFont(new Font("calibri",Font.PLAIN,19));
+        instruccion.setBounds(12,20,500,20);
 
-        instruccion = new JLabel("Que Instrumento quieres escoger");
-        instruccion.setBounds(5,10,300,20);
+        Rcuerda = new JRadioButton("Cuerda");
+        Rcuerda.setFont(new Font("calibri",Font.PLAIN,15));
+        Rcuerda.setBounds(20,55,300,30);
 
-        Rcuerda = new JRadioButton("Instrumentos de cuerda");
-        Rcuerda.setBounds(8,40,300,20);
+        Rviento = new JRadioButton("Viento");
+        Rviento.setFont(new Font("calibri",Font.PLAIN,15));
+        Rviento.setBounds(20,85,300,30);
 
-        Rviento = new JRadioButton("Instrumentos de viento");
-        Rviento.setBounds(8,70,300,20);
-
-        Rpercusion = new JRadioButton("Instrumentos de percusión");
-        Rpercusion.setBounds(8,100,300,20);
+        Rpercusion = new JRadioButton("Percusión");
+        Rpercusion.setFont(new Font("calibri",Font.PLAIN,15));
+        Rpercusion.setBounds(20,115,300,30);
 
         continuar_instrumento = new JButton("Continuar");
         continuar_instrumento.setBounds(400,170,110,30);
@@ -329,20 +340,25 @@ public class GUI extends JFrame implements ActionListener{
         accesorios.add(anterior_accesorio);
     }
     public void cargar_paquetes(){
-        instruccion = new JLabel("Que paquetes quieres escoger");
-        instruccion.setBounds(5,10,300,20);
+        instruccion = new JLabel("Escoge el paquete que quieres ver ");
+        instruccion.setFont(new Font("calibri",Font.PLAIN,19));
+        instruccion.setBounds(12,20,500,20);
 
-        RpaqGuitarra = new JRadioButton("Paquete de guitarra");
-        RpaqGuitarra.setBounds(8,40,300,20);
+        RpaqGuitarra = new JRadioButton("Bundle de guitarra");
+        RpaqGuitarra.setFont(new Font("calibri",Font.PLAIN,15));
+        RpaqGuitarra.setBounds(20,55,300,30);
 
-        RpaqSalsa = new JRadioButton("Paquete de salsa");
-        RpaqSalsa.setBounds(8,70,300,20);
+        RpaqSalsa = new JRadioButton("Instrumentos de salsa");
+        RpaqSalsa.setFont(new Font("calibri",Font.PLAIN,15));
+        RpaqSalsa.setBounds(20,85,300,30);
 
-        RpaqGrande = new JRadioButton("Paquete de instrumentos grandes");
-        RpaqGrande.setBounds(8,100,300,20);
+        RpaqGrande = new JRadioButton("Instrumentos grandes");
+        RpaqGrande.setFont(new Font("calibri",Font.PLAIN,15));
+        RpaqGrande.setBounds(20,115,300,30);
 
-        RpaqPeque = new JRadioButton("Paquete de instrumentos pequeños");
-        RpaqPeque.setBounds(8,130,300,20);
+        RpaqPeque = new JRadioButton("Instrumentos pequeños");
+        RpaqPeque.setFont(new Font("calibri",Font.PLAIN,15));
+        RpaqPeque.setBounds(20,145,300,30);
 
         anterior_producto_paquetes = new JButton("Anterior ");
         anterior_producto_paquetes.setBounds(275,170,110,30);
@@ -369,13 +385,16 @@ public class GUI extends JFrame implements ActionListener{
     }
     public void cargar_cuerda(){
         instruccion = new JLabel("Que Instrumento de cuerda quieres escoger");
-        instruccion.setBounds(5,10,300,20);
+        instruccion.setFont(new Font("calibri",Font.PLAIN,19));
+        instruccion.setBounds(12,20,500,20);
 
         Rguitarra = new JRadioButton("Guitarra");
-        Rguitarra.setBounds(8,40,300,20);
+        Rguitarra.setFont(new Font("calibri",Font.PLAIN,15));
+        Rguitarra.setBounds(20,55,300,30);
 
         Rpiano = new JRadioButton("Piano");
-        Rpiano.setBounds(8,70,300,20);
+        Rpiano.setFont(new Font("calibri",Font.PLAIN,15));
+        Rpiano.setBounds(20,85,300,30);
 
         anterior_instrumento_cuerda = new JButton("Anterior ");
         anterior_instrumento_cuerda.setBounds(275,170,110,30);
@@ -398,13 +417,16 @@ public class GUI extends JFrame implements ActionListener{
     }
     public void cargar_viento(){
         instruccion = new JLabel("Que Instrumento de viento quieres escoger");
-        instruccion.setBounds(5,10,300,20);
+        instruccion.setFont(new Font("calibri",Font.PLAIN,19));
+        instruccion.setBounds(12,20,500,20);
 
         Rflauta = new JRadioButton("Flauta");
-        Rflauta.setBounds(8,40,300,20);
+        Rflauta.setFont(new Font("calibri",Font.PLAIN,15));
+        Rflauta.setBounds(20,55,300,30);
 
         Rtrompeta = new JRadioButton("Trompeta");
-        Rtrompeta.setBounds(8,70,300,20);
+        Rtrompeta.setFont(new Font("calibri",Font.PLAIN,15));
+        Rtrompeta.setBounds(20,85,300,30);
 
         anterior_instrumento_viento = new JButton("Anterior");
         anterior_instrumento_viento.setBounds(275,170,110,30);
@@ -429,13 +451,16 @@ public class GUI extends JFrame implements ActionListener{
     }
     public void cargar_percusion() {
         instruccion = new JLabel("Que Instrumento de percusión quieres escoger");
-        instruccion.setBounds(5, 10, 300, 20);
+        instruccion.setFont(new Font("calibri",Font.PLAIN,19));
+        instruccion.setBounds(12,20,500,20);
 
         Rbateria = new JRadioButton("Bateria");
-        Rbateria.setBounds(8, 40, 300, 20);
+        Rbateria.setFont(new Font("calibri",Font.PLAIN,15));
+        Rbateria.setBounds(20,55,300,30);
 
         Rxilofono = new JRadioButton("Xilofono");
-        Rxilofono.setBounds(8, 70, 300, 20);
+        Rxilofono.setFont(new Font("calibri",Font.PLAIN,15));
+        Rxilofono.setBounds(20,85,300,30);
 
         anterior_instrumento_percusion = new JButton("Anterior");
         anterior_instrumento_percusion.setBounds(275,170,110,30);
@@ -478,6 +503,7 @@ public class GUI extends JFrame implements ActionListener{
         anterior_guitarra = new JButton("Anterior");
         anterior_guitarra.setBounds(250,780,110,30);
         anterior_guitarra.addActionListener(this);
+
 
         guitarras.add(guitarra1);
         guitarras.add(guitarra2);
@@ -746,152 +772,194 @@ public class GUI extends JFrame implements ActionListener{
     @Override
     public void actionPerformed(ActionEvent e) {
         //botones continuar
+        //----------------------------------------------------ver instrumentos
         if(e.getSource()==continuar && Rinstrumentos.isSelected()) {
             productos.setVisible(false);
             instrumentos.setVisible(true);}
-
-            if (e.getSource()==continuar_instrumento && Rcuerda.isSelected()) {
-                instrumentos.setVisible(false);
-                cuerda.setVisible(true);}
-
-                if(e.getSource()==continuar_cuerda && Rguitarra.isSelected()){
-                    cuerda.setVisible(false);
-                    guitarras.setVisible(true);
-                    scroll_guitarras.setVisible(true);
-                }
+        //----------------------------------------------------ver accesorios
+            else if(e.getSource()==continuar && Raccesorios.isSelected()){
+                productos.setVisible(false);
+                cabecera.setVisible(false);
+                footer.setVisible(false);
+                scroll_accesorios.setVisible(true);
+                accesorios.setVisible(true);}
+        //-----------------------------------------------------ver paquetes
+            else if(e.getSource()==continuar && Rpaquetes.isSelected()){
+                productos.setVisible(false);
+                paquetes.setVisible(true);}
+        //----------------------------------------------------ver instrumentos de cuerda
+        if (e.getSource()==continuar_instrumento && Rcuerda.isSelected()) {
+            instrumentos.setVisible(false);
+            cuerda.setVisible(true);}
+        //---------------------------------------------------ver instrumentos de viento
             else if(e.getSource()==continuar_instrumento && Rviento.isSelected()){
                 instrumentos.setVisible(false);
                 viento.setVisible(true);}
-
+        //---------------------------------------------------ver isntrumentos de percusión
             else if(e.getSource()==continuar_instrumento && Rpercusion.isSelected()){
                 instrumentos.setVisible(false);
                 percusion.setVisible(true);}
-
-        else if(e.getSource()==continuar && Raccesorios.isSelected()){
-            productos.setVisible(false);
-            accesorios.setVisible(true);
-                }
-        else if(e.getSource()==continuar && Rpaquetes.isSelected()){
-            productos.setVisible(false);
-            paquetes.setVisible(true);
-        }
-        else if(e.getSource()==continuar_cuerda && Rguitarra.isSelected()){
+        //--------------------------------------------------ver guitarras
+        if(e.getSource()==continuar_cuerda && Rguitarra.isSelected()){
             cuerda.setVisible(false);
+            cabecera.setVisible(false);
+            footer.setVisible(false);
             guitarras.setVisible(true);
-            scroll_pianos.setVisible(true);}
-
-        else if(e.getSource()==continuar_cuerda && Rpiano.isSelected()){
-            cuerda.setVisible(false);
-            pianos.setVisible(true);
-            scroll_pianos.setVisible(true);}
-        else if(e.getSource()==continuar_viento && Rflauta.isSelected()){
+            scroll_guitarras.setVisible(true);}
+        //-------------------------------------------------ver pianos
+            else if(e.getSource()==continuar_cuerda && Rpiano.isSelected()){
+                cuerda.setVisible(false);
+                cabecera.setVisible(false);
+                footer.setVisible(false);
+                pianos.setVisible(true);
+                scroll_pianos.setVisible(true);}
+        //-------------------------------------------------ver flautas
+        if(e.getSource()==continuar_viento && Rflauta.isSelected()){
             viento.setVisible(false);
+            cabecera.setVisible(false);
+            footer.setVisible(false);
             flautas.setVisible(true);
             scroll_flautas.setVisible(true);}
-        else if(e.getSource()==continuar_viento && Rtrompeta.isSelected()){
-            viento.setVisible(false);
-            trompetas.setVisible(true);
-            scroll_trompetas.setVisible(true);}
-        else if(e.getSource()==continuar_percusion && Rbateria.isSelected()){
+        //-------------------------------------------------ver trompetas
+            else if(e.getSource()==continuar_viento && Rtrompeta.isSelected()){
+                viento.setVisible(false);
+                cabecera.setVisible(false);
+                footer.setVisible(false);
+                trompetas.setVisible(true);
+                scroll_trompetas.setVisible(true);}
+        //-------------------------------------------------ver baterias
+        if(e.getSource()==continuar_percusion && Rbateria.isSelected()){
             percusion.setVisible(false);
+            cabecera.setVisible(false);
+            footer.setVisible(false);
             baterias.setVisible(true);
             scroll_baterias.setVisible(true);}
-        else if(e.getSource()==continuar_percusion && Rxilofono.isSelected()){
-            percusion.setVisible(false);
-            xilofonos.setVisible(true);
-            scroll_xilofono.setVisible(true);}
-        else if(e.getSource()==continuar_paquetes && RpaqGuitarra.isSelected()){
+        //-------------------------------------------------ver xilofonos
+            else if(e.getSource()==continuar_percusion && Rxilofono.isSelected()){
+                percusion.setVisible(false);
+                cabecera.setVisible(false);
+                footer.setVisible(false);
+                xilofonos.setVisible(true);
+                scroll_xilofono.setVisible(true);}
+        //---------------------------------------------------ver bundle guitarra
+        if(e.getSource()==continuar_paquetes && RpaqGuitarra.isSelected()){
             paquetes.setVisible(false);
+            cabecera.setVisible(false);
+            footer.setVisible(false);
             paqguitarra.setVisible(true);
-            scroll_paqguitarra.setVisible(true);
-                }
-        else if(e.getSource()==continuar_paquetes && RpaqSalsa.isSelected()){
-            paquetes.setVisible(false);
-            paqsalsa.setVisible(true);
-            scroll_paqsalsa.setVisible(true);
-                }
-        else if(e.getSource()==continuar_paquetes && RpaqGrande.isSelected()){
-            paquetes.setVisible(false);
-            paqgrande.setVisible(true);
-            scroll_paqgrande.setVisible(true);
-                }
-        else if(e.getSource()==continuar_paquetes && RpaqPeque.isSelected()){
-            paquetes.setVisible(false);
-            paqpeq.setVisible(true);
-            scroll_paqpeq.setVisible(true);
-                }
+            scroll_paqguitarra.setVisible(true);}
+        //----------------------------------------------------ver salsa
+            else if(e.getSource()==continuar_paquetes && RpaqSalsa.isSelected()){
+                paquetes.setVisible(false);
+                cabecera.setVisible(false);
+                footer.setVisible(false);
+                paqsalsa.setVisible(true);
+                scroll_paqsalsa.setVisible(true);}
+        //------------------------------------------------------ver instrumentos grandes
+            else if(e.getSource()==continuar_paquetes && RpaqGrande.isSelected()){
+                paquetes.setVisible(false);
+                cabecera.setVisible(false);
+                footer.setVisible(false);
+                paqgrande.setVisible(true);
+                scroll_paqgrande.setVisible(true);}
+        //------------------------------------------------------ver instrumentos pequeños
+            else if(e.getSource()==continuar_paquetes && RpaqPeque.isSelected()){
+                paquetes.setVisible(false);
+                cabecera.setVisible(false);
+                footer.setVisible(false);
+                paqpeq.setVisible(true);
+                scroll_paqpeq.setVisible(true);}
+        //----------------------------------------------------------------------------------------------------------------------------------------------
 
-                //botones anterior
-        else if(e.getSource()==anterior_producto){
+        //botones anterior
+        //-------------------------------------------------------------------------------------------retorceder a menú productos
+        if(e.getSource()==anterior_producto){
             productos.setVisible(true);
             instrumentos.setVisible(false);}
-
+        if(e.getSource()==anterior_producto_paquetes){
+            productos.setVisible(true);
+            paquetes.setVisible(false);}
+        if(e.getSource()==anterior_accesorio){
+            productos.setVisible(true);
+            cabecera.setVisible(true);
+            footer.setVisible(true);
+            scroll_accesorios.setVisible(false);
+            accesorios.setVisible(false);}
+        //-------------------------------------------------------------------------------------------retorceder a menú instumentos
         else if(e.getSource()==anterior_instrumento_cuerda){
             productos.setVisible(false);
             cuerda.setVisible(false);
             instrumentos.setVisible(true);}
-
         if(e.getSource()==anterior_instrumento_viento){
             productos.setVisible(false);
             instrumentos.setVisible(true);
             viento.setVisible(false);}
-
         if(e.getSource()==anterior_instrumento_percusion){
             productos.setVisible(false);
             instrumentos.setVisible(true);
             percusion.setVisible(false);}
-
-        if(e.getSource()==anterior_producto_paquetes){
-            productos.setVisible(true);
-            paquetes.setVisible(false);}
-
-        if(e.getSource()==anterior_accesorio){
-            productos.setVisible(true);
-            accesorios.setVisible(false);}
-
+        //-------------------------------------------------------------------------------------------retorceder a menú instrumentos de cuerda
         if(e.getSource()==anterior_guitarra){
             guitarras.setVisible(false);
+            cabecera.setVisible(true);
+            footer.setVisible(true);
             scroll_guitarras.setVisible(false);
             cuerda.setVisible(true);}
-
         if(e.getSource()==anterior_piano){
             pianos.setVisible(false);
+            cabecera.setVisible(true);
+            footer.setVisible(true);
             scroll_pianos.setVisible(false);
             cuerda.setVisible(true);}
-
+        //-------------------------------------------------------------------------------------------retorceder a menú instrumentos de viento
         if(e.getSource()==anterior_flauta){
             scroll_flautas.setVisible(false);
             flautas.setVisible(false);
+            cabecera.setVisible(true);
+            footer.setVisible(true);
             viento.setVisible(true);}
-
         if(e.getSource()==anterior_trompeta){
             scroll_trompetas.setVisible(false);
+            cabecera.setVisible(true);
+            footer.setVisible(true);
             trompetas.setVisible(false);
             viento.setVisible(true);}
-
+        //-------------------------------------------------------------------------------------------retorceder a menú instrumentos de percusión
         if(e.getSource()==anterior_bateria){
             scroll_baterias.setVisible(false);
             baterias.setVisible(false);
+            cabecera.setVisible(true);
+            footer.setVisible(true);
             percusion.setVisible(true);}
-
         if(e.getSource()==anterior_xilofono){
             scroll_xilofono.setVisible(false);
             xilofonos.setVisible(false);
+            cabecera.setVisible(true);
+            footer.setVisible(true);
             percusion.setVisible(true);}
+        //------------------------------------------------------------------------------------------retroceder a menú paquetes
         if(e.getSource()==anterior_paq_guitarra){
             scroll_paqguitarra.setVisible(false);
+            cabecera.setVisible(true);
+            footer.setVisible(true);
             paqguitarra.setVisible(false);
             paquetes.setVisible(true);}
         if(e.getSource()==anterior_paq_salsa){
             scroll_paqsalsa.setVisible(false);
+            cabecera.setVisible(true);
+            footer.setVisible(true);
             paqsalsa.setVisible(false);
             paquetes.setVisible(true);}
         if(e.getSource()==anterior_paq_grande){
             scroll_paqgrande.setVisible(false);
+            cabecera.setVisible(true);
+            footer.setVisible(true);
             paqgrande.setVisible(false);
             paquetes.setVisible(true);}
         if(e.getSource()==anterior_paq_peq){
             scroll_paqpeq.setVisible(false);
+            cabecera.setVisible(true);
+            footer.setVisible(true);
             paqpeq.setVisible(false);
             paquetes.setVisible(true);}
         }
