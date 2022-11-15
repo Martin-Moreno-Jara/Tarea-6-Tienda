@@ -16,20 +16,15 @@ import java.util.HashMap;
 import javax.swing.*;
 
 public class GUI extends JFrame implements ActionListener{
-
     JButton continuar,continuar_paquetes,continuar_instrumento,continuar_cuerda,continuar_viento,continuar_percusion,
             anterior_producto,anterior_instrumento_cuerda,anterior_accesorio,anterior_guitarra,anterior_piano,
             anterior_instrumento_viento,anterior_instrumento_percusion, anterior_producto_paquetes,anterior_flauta,anterior_trompeta,
     anterior_bateria,anterior_xilofono,anterior_paq_guitarra,anterior_paq_salsa,anterior_paq_grande,anterior_paq_peq;
-
     JRadioButton Rinstrumentos,Raccesorios,Rpaquetes,Rcuerda,Rviento,Rpercusion,Rguitarra,Rpiano,Rflauta,Rtrompeta,
     Rbateria,Rxilofono,RpaqGuitarra,RpaqSalsa,RpaqGrande,RpaqPeque;
-
     JLabel bienvenida,instruccion,creditos;
-
     JPanel productos,accesorios,paquetes,instrumentos,cuerda,viento,percusion,guitarras,cabecera,footer,
             pianos,flautas,trompetas,baterias,xilofonos,paqguitarra,paqsalsa,paqgrande,paqpeq;
-
     JScrollPane scroll_guitarras,scroll_pianos,scroll_flautas,scroll_trompetas,scroll_baterias,scroll_xilofono,scroll_paqguitarra,scroll_paqsalsa,
     scroll_paqgrande,scroll_paqpeq,scroll_accesorios;
 
@@ -47,7 +42,6 @@ public class GUI extends JFrame implements ActionListener{
         productos.setBounds(0,75,550,240);
         productos.setLayout(null);
         productos.setVisible(true);
-        productos.setBackground(Color.green);
 
         cabecera = new JPanel();
         cabecera.setBounds(0,0,550,75);
@@ -75,7 +69,7 @@ public class GUI extends JFrame implements ActionListener{
         accesorios.setBounds(0,0,530,400);
         accesorios.setLayout(null);
         accesorios.setVisible(false);
-        accesorios.setPreferredSize(new Dimension(550,600));
+        accesorios.setPreferredSize(new Dimension(550,450));
         scroll_accesorios = new JScrollPane();
         scroll_accesorios.setBounds(0,0,525,380);
         scroll_accesorios.setViewportView(accesorios);
@@ -328,7 +322,7 @@ public class GUI extends JFrame implements ActionListener{
         accesorio3.setText(c.toString());
 
         anterior_accesorio = new JButton("Anterior");
-        anterior_accesorio.setBounds(250,500,110,30);
+        anterior_accesorio.setBounds(380,400,110,30);
         anterior_accesorio.addActionListener(this);
 
 
@@ -499,7 +493,7 @@ public class GUI extends JFrame implements ActionListener{
         guitarra3.setText(c.toString());
 
         anterior_guitarra = new JButton("Anterior");
-        anterior_guitarra.setBounds(250,780,110,30);
+        anterior_guitarra.setBounds(370,780,110,30);
         anterior_guitarra.addActionListener(this);
 
 
@@ -526,7 +520,7 @@ public class GUI extends JFrame implements ActionListener{
         piano3.setText(c.toString());
 
         anterior_piano = new JButton("Anterior");
-        anterior_piano.setBounds(250,780,110,30);
+        anterior_piano.setBounds(370,780,110,30);
         anterior_piano.addActionListener(this);
 
         pianos.add(piano1);
@@ -552,7 +546,7 @@ public class GUI extends JFrame implements ActionListener{
         flauta3.setText(c.toString());
 
         anterior_flauta = new JButton("Anterior");
-        anterior_flauta.setBounds(250,780,110,30);
+        anterior_flauta.setBounds(370,780,110,30);
         anterior_flauta.addActionListener(this);
 
         flautas.add(flauta1);
@@ -578,7 +572,7 @@ public class GUI extends JFrame implements ActionListener{
         trompeta3.setText(c.toString());
 
         anterior_trompeta = new JButton("Anterior");
-        anterior_trompeta.setBounds(250,780,110,30);
+        anterior_trompeta.setBounds(370,780,110,30);
         anterior_trompeta.addActionListener(this);
 
         trompetas.add(trompeta1);
@@ -604,7 +598,7 @@ public class GUI extends JFrame implements ActionListener{
         bateria3.setText(c.toString());
 
         anterior_bateria = new JButton("Anterior");
-        anterior_bateria.setBounds(250,780,110,30);
+        anterior_bateria.setBounds(370,780,110,30);
         anterior_bateria.addActionListener(this);
 
         baterias.add(bateria1);
@@ -631,7 +625,7 @@ public class GUI extends JFrame implements ActionListener{
         xilofono3.setText(c.toString());
 
         anterior_xilofono = new JButton("Anterior");
-        anterior_xilofono.setBounds(250,780,110,30);
+        anterior_xilofono.setBounds(370,780,110,30);
         anterior_xilofono.addActionListener(this);
 
         xilofonos.add(xilofono1);
@@ -651,19 +645,19 @@ public class GUI extends JFrame implements ActionListener{
         campo1.setBounds(5,10,490,240);
 
         JTextPane campo2 = new JTextPane();
-        campo2.setBounds(5,260,490,240);
+        campo2.setBounds(5,260,490,200);
         campo2.setEditable(false);
 
         JTextPane campo3 = new JTextPane();
         campo3.setEditable(false);
-        campo3.setBounds(5,520,490,240);
+        campo3.setBounds(5,470,490,200);
 
         campo1.setText(elemento1.toString());
         campo2.setText(elemento2.toString());
         campo3.setText(elemento3.toString());
 
         anterior_paq_guitarra = new JButton("Anterior");
-        anterior_paq_guitarra.setBounds(250,780,110,30);
+        anterior_paq_guitarra.setBounds(370,780,110,30);
         anterior_paq_guitarra.addActionListener(this);
 
         paqguitarra.add(campo1);
@@ -695,7 +689,7 @@ public class GUI extends JFrame implements ActionListener{
         campo3.setText(elemento3.toString());
 
         anterior_paq_salsa = new JButton("Anterior");
-        anterior_paq_salsa.setBounds(250,780,110,30);
+        anterior_paq_salsa.setBounds(370,780,110,30);
         anterior_paq_salsa.addActionListener(this);
 
         paqsalsa.add(campo1);
@@ -727,7 +721,7 @@ public class GUI extends JFrame implements ActionListener{
         campo3.setText(elemento3.toString());
 
         anterior_paq_grande = new JButton("Anterior");
-        anterior_paq_grande.setBounds(250,780,110,30);
+        anterior_paq_grande.setBounds(370,780,110,30);
         anterior_paq_grande.addActionListener(this);
 
         paqgrande.add(campo1);
@@ -758,7 +752,7 @@ public class GUI extends JFrame implements ActionListener{
         campo3.setText(elemento3.toString());
 
         anterior_paq_peq = new JButton("Anterior");
-        anterior_paq_peq.setBounds(250,780,110,30);
+        anterior_paq_peq.setBounds(370,780,110,30);
         anterior_paq_peq.addActionListener(this);
 
         paqpeq.add(campo1);
