@@ -42,8 +42,6 @@ public class GUI extends JFrame implements ActionListener{
         setLocationRelativeTo(null);
         setResizable(false);
         iniciar();}
-
-
     public void iniciar(){
         productos = new JPanel();
         productos.setBounds(0,75,550,240);
@@ -706,7 +704,6 @@ public class GUI extends JFrame implements ActionListener{
         paqsalsa.add(anterior_paq_salsa);
 
     }
-
     public void cargar_paq_grande(HashMap<String,Object> a){
         Object elemento1,elemento2,elemento3;
         elemento1 = a.get("piano grande");
