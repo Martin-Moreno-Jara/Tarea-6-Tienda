@@ -17,6 +17,5 @@ public class Main extends Instancias{
         }
         GUI gui = new GUI();
         gui.setVisible(true);
-
             }
 }

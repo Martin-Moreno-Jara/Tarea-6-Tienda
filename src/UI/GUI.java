@@ -45,7 +45,7 @@ public class GUI extends JFrame implements ActionListener{
 
         cabecera = new JPanel();
         cabecera.setBounds(0,0,550,75);
-        cabecera.setBackground(Color.CYAN);
+        cabecera.setBackground(Color.lightGray);
         bienvenida = new JLabel("TIENDA DE INSTRUMENTOS MUSICALES");
         bienvenida.setBounds(100,5,500,45);
         bienvenida.setFont(new Font("calibri",Font.BOLD,17));
@@ -54,7 +54,7 @@ public class GUI extends JFrame implements ActionListener{
 
         footer = new JPanel();
         footer.setBounds(0,315,550,46);
-        footer.setBackground(Color.CYAN);
+        footer.setBackground(Color.lightGray);
         creditos = new JLabel("programación orientada a objetos 2022");
         creditos.setBounds(0,0,500,5);
         footer.add(creditos);
