@@ -7,7 +7,6 @@ import Data.TipoProducto.TipoInstrumento.InstrumentoPercusion.Xilofono;
 import Data.TipoProducto.TipoInstrumento.InstrumentoViento.Flauta;
 import Data.TipoProducto.TipoInstrumento.InstrumentoViento.Trompeta;
 import Logic.Instancias;
-
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -22,17 +21,16 @@ public class GUI extends JFrame implements ActionListener{
     anterior_bateria,anterior_xilofono,anterior_paq_guitarra,anterior_paq_salsa,anterior_paq_grande,anterior_paq_peq;
     JRadioButton Rinstrumentos,Raccesorios,Rpaquetes,Rcuerda,Rviento,Rpercusion,Rguitarra,Rpiano,Rflauta,Rtrompeta,
     Rbateria,Rxilofono,RpaqGuitarra,RpaqSalsa,RpaqGrande,RpaqPeque;
-    JLabel bienvenida,instruccion,creditos;
+    JLabel bienvenida,instruccion,creditos,imagen_cabecera;
     JPanel productos,accesorios,paquetes,instrumentos,cuerda,viento,percusion,guitarras,cabecera,footer,
             pianos,flautas,trompetas,baterias,xilofonos,paqguitarra,paqsalsa,paqgrande,paqpeq;
     JScrollPane scroll_guitarras,scroll_pianos,scroll_flautas,scroll_trompetas,scroll_baterias,scroll_xilofono,scroll_paqguitarra,scroll_paqsalsa,
     scroll_paqgrande,scroll_paqpeq,scroll_accesorios;
 
-
     public GUI(){
         setDefaultCloseOperation(EXIT_ON_CLOSE);
         setSize(550,400);
-        setTitle("Tienda");
+        setTitle("Tienda GUI");
         setLayout(null);
         setLocationRelativeTo(null);
         setResizable(false);
@@ -47,13 +45,13 @@ public class GUI extends JFrame implements ActionListener{
         cabecera.setBounds(0,0,550,75);
         cabecera.setBackground(Color.lightGray);
         bienvenida = new JLabel("TIENDA DE INSTRUMENTOS MUSICALES");
-        bienvenida.setBounds(100,5,500,45);
+        bienvenida.setBounds(25,36,450,45);
         bienvenida.setFont(new Font("calibri",Font.BOLD,17));
         cabecera.add(bienvenida);
         cabecera.setVisible(true);
 
         footer = new JPanel();
-        footer.setBounds(0,315,550,46);
+        footer.setBounds(0,315,550,60);
         footer.setBackground(Color.lightGray);
         creditos = new JLabel("programación orientada a objetos 2022");
         creditos.setBounds(0,0,500,5);
@@ -69,9 +67,10 @@ public class GUI extends JFrame implements ActionListener{
         accesorios.setBounds(0,0,530,400);
         accesorios.setLayout(null);
         accesorios.setVisible(false);
-        accesorios.setPreferredSize(new Dimension(550,450));
+        accesorios.setPreferredSize(new Dimension(490,450));
         scroll_accesorios = new JScrollPane();
-        scroll_accesorios.setBounds(0,0,525,380);
+        scroll_accesorios.setHorizontalScrollBarPolicy(JScrollPane.HORIZONTAL_SCROLLBAR_NEVER);
+        scroll_accesorios.setBounds(0,0,545,380);
         scroll_accesorios.setViewportView(accesorios);
         scroll_accesorios.setVisible(false);
 
@@ -101,7 +100,8 @@ public class GUI extends JFrame implements ActionListener{
         guitarras.setLayout(null);
         guitarras.setVisible(false);
         scroll_guitarras = new JScrollPane();
-        scroll_guitarras.setBounds(0,0,525,380);
+        scroll_guitarras.setHorizontalScrollBarPolicy(JScrollPane.HORIZONTAL_SCROLLBAR_NEVER);
+        scroll_guitarras.setBounds(0,0,545,370);
         scroll_guitarras.setViewportView(guitarras);
         scroll_guitarras.setVisible(false);
 
@@ -111,7 +111,8 @@ public class GUI extends JFrame implements ActionListener{
         pianos.setLayout(null);
         pianos.setVisible(false);
         scroll_pianos = new JScrollPane();
-        scroll_pianos.setBounds(0,0,525,380);
+        scroll_pianos.setHorizontalScrollBarPolicy(JScrollPane.HORIZONTAL_SCROLLBAR_NEVER);
+        scroll_pianos.setBounds(0,0,545,370);
         scroll_pianos.setViewportView(pianos);
         scroll_pianos.setVisible(false);
 
@@ -121,7 +122,8 @@ public class GUI extends JFrame implements ActionListener{
         flautas.setLayout(null);
         flautas.setVisible(false);
         scroll_flautas = new JScrollPane();
-        scroll_flautas.setBounds(0,0,525,380);
+        scroll_flautas.setHorizontalScrollBarPolicy(JScrollPane.HORIZONTAL_SCROLLBAR_NEVER);
+        scroll_flautas.setBounds(0,0,545,370);
         scroll_flautas.setViewportView(flautas);
         scroll_flautas.setVisible(false);
 
@@ -131,7 +133,8 @@ public class GUI extends JFrame implements ActionListener{
         trompetas.setLayout(null);
         trompetas.setVisible(false);
         scroll_trompetas = new JScrollPane();
-        scroll_trompetas.setBounds(0,0,525,380);
+        scroll_trompetas.setHorizontalScrollBarPolicy(JScrollPane.HORIZONTAL_SCROLLBAR_NEVER);
+        scroll_trompetas.setBounds(0,0,545,370);
         scroll_trompetas.setViewportView(trompetas);
         scroll_trompetas.setVisible(false);
 
@@ -141,7 +144,8 @@ public class GUI extends JFrame implements ActionListener{
         baterias.setLayout(null);
         baterias.setVisible(false);
         scroll_baterias = new JScrollPane();
-        scroll_baterias.setBounds(0,0,525,380);
+        scroll_baterias.setHorizontalScrollBarPolicy(JScrollPane.HORIZONTAL_SCROLLBAR_NEVER);
+        scroll_baterias.setBounds(0,0,545,370);
         scroll_baterias.setViewportView(baterias);
         scroll_baterias.setVisible(false);
 
@@ -151,17 +155,19 @@ public class GUI extends JFrame implements ActionListener{
         xilofonos.setLayout(null);
         xilofonos.setVisible(false);
         scroll_xilofono = new JScrollPane();
-        scroll_xilofono.setBounds(0,0,525,380);
+        scroll_xilofono.setHorizontalScrollBarPolicy(JScrollPane.HORIZONTAL_SCROLLBAR_NEVER);
+        scroll_xilofono.setBounds(0,0,545,370);
         scroll_xilofono.setViewportView(xilofonos);
         scroll_xilofono.setVisible(false);
 
         paqguitarra = new JPanel();
         paqguitarra.setBounds(0,0,550,400);
-        paqguitarra.setPreferredSize(new Dimension(550,820));
+        paqguitarra.setPreferredSize(new Dimension(490,550));
         paqguitarra.setLayout(null);
         paqguitarra.setVisible(false);
         scroll_paqguitarra = new JScrollPane();
-        scroll_paqguitarra.setBounds(0,0,525,380);
+        scroll_paqguitarra.setHorizontalScrollBarPolicy(JScrollPane.HORIZONTAL_SCROLLBAR_NEVER);
+        scroll_paqguitarra.setBounds(0,0,545,370);
         scroll_paqguitarra.setViewportView(paqguitarra);
         scroll_paqguitarra.setVisible(false);
 
@@ -171,7 +177,8 @@ public class GUI extends JFrame implements ActionListener{
         paqsalsa.setLayout(null);
         paqsalsa.setVisible(false);
         scroll_paqsalsa = new JScrollPane();
-        scroll_paqsalsa.setBounds(0,0,525,380);
+        scroll_paqsalsa.setHorizontalScrollBarPolicy(JScrollPane.HORIZONTAL_SCROLLBAR_NEVER);
+        scroll_paqsalsa.setBounds(0,0,545,370);
         scroll_paqsalsa.setViewportView(paqsalsa);
         scroll_paqsalsa.setVisible(false);
 
@@ -181,7 +188,8 @@ public class GUI extends JFrame implements ActionListener{
         paqgrande.setLayout(null);
         paqgrande.setVisible(false);
         scroll_paqgrande = new JScrollPane();
-        scroll_paqgrande.setBounds(0,0,525,380);
+        scroll_paqgrande.setHorizontalScrollBarPolicy(JScrollPane.HORIZONTAL_SCROLLBAR_NEVER);
+        scroll_paqgrande.setBounds(0,0,545,370);
         scroll_paqgrande.setViewportView(paqgrande);
         scroll_paqgrande.setVisible(false);
 
@@ -191,7 +199,8 @@ public class GUI extends JFrame implements ActionListener{
         paqpeq.setLayout(null);
         paqpeq.setVisible(false);
         scroll_paqpeq = new JScrollPane();
-        scroll_paqpeq.setBounds(0,0,525,380);
+        scroll_paqpeq.setHorizontalScrollBarPolicy(JScrollPane.HORIZONTAL_SCROLLBAR_NEVER);
+        scroll_paqpeq.setBounds(0,0,545,370);
         scroll_paqpeq.setViewportView(paqpeq);
         scroll_paqpeq.setVisible(false);
 
@@ -235,7 +244,7 @@ public class GUI extends JFrame implements ActionListener{
     }
     public void cargar_componentes_productos(){
 
-        instruccion = new JLabel("Escoge el producto que quieres ver");
+        instruccion = new JLabel(UI.leyenda("producto"));
         instruccion.setFont(new Font("calibri",Font.PLAIN,19));
         instruccion.setBounds(12,20,500,20);
 
@@ -269,7 +278,7 @@ public class GUI extends JFrame implements ActionListener{
         productos.add(continuar);
     }
     public void cargar_componentes_instrumentos(){
-        instruccion = new JLabel("Escoge que tipo de instrumento quieres ver");
+        instruccion = new JLabel(UI.leyenda("tipo de instrumento"));
         instruccion.setFont(new Font("calibri",Font.PLAIN,19));
         instruccion.setBounds(12,20,500,20);
 
@@ -332,7 +341,7 @@ public class GUI extends JFrame implements ActionListener{
         accesorios.add(anterior_accesorio);
     }
     public void cargar_paquetes(){
-        instruccion = new JLabel("Escoge el paquete que quieres ver ");
+        instruccion = new JLabel(UI.leyenda("paquete"));
         instruccion.setFont(new Font("calibri",Font.PLAIN,19));
         instruccion.setBounds(12,20,500,20);
 
@@ -350,7 +359,7 @@ public class GUI extends JFrame implements ActionListener{
 
         RpaqPeque = new JRadioButton("Instrumentos pequeños");
         RpaqPeque.setFont(new Font("calibri",Font.PLAIN,15));
-        RpaqPeque.setBounds(20,145,300,30);
+        RpaqPeque.setBounds(20,145,250,30);
 
         anterior_producto_paquetes = new JButton("Anterior ");
         anterior_producto_paquetes.setBounds(275,170,110,30);
@@ -376,7 +385,7 @@ public class GUI extends JFrame implements ActionListener{
         paquetes.add(continuar_paquetes);
     }
     public void cargar_cuerda(){
-        instruccion = new JLabel("Que Instrumento de cuerda quieres escoger");
+        instruccion = new JLabel(UI.leyenda("instrumento de cuerda"));
         instruccion.setFont(new Font("calibri",Font.PLAIN,19));
         instruccion.setBounds(12,20,500,20);
 
@@ -408,7 +417,7 @@ public class GUI extends JFrame implements ActionListener{
         cuerda.add(continuar_cuerda);
     }
     public void cargar_viento(){
-        instruccion = new JLabel("Que Instrumento de viento quieres escoger");
+        instruccion = new JLabel((UI.leyenda("instrumento de viento")));
         instruccion.setFont(new Font("calibri",Font.PLAIN,19));
         instruccion.setBounds(12,20,500,20);
 
@@ -442,7 +451,7 @@ public class GUI extends JFrame implements ActionListener{
 
     }
     public void cargar_percusion() {
-        instruccion = new JLabel("Que Instrumento de percusión quieres escoger");
+        instruccion = new JLabel((UI.leyenda("instrumento de percusión")));
         instruccion.setFont(new Font("calibri",Font.PLAIN,19));
         instruccion.setBounds(12,20,500,20);
 
@@ -486,7 +495,7 @@ public class GUI extends JFrame implements ActionListener{
 
         JTextPane guitarra3 = new JTextPane();
         guitarra3.setEditable(false);
-        guitarra3.setBounds(5,520,490,240);
+        guitarra3.setBounds(5,510,490,240);
 
         guitarra1.setText(a.toString());
         guitarra2.setText(b.toString());
@@ -513,7 +522,7 @@ public class GUI extends JFrame implements ActionListener{
 
         JTextPane piano3 = new JTextPane();
         piano3.setEditable(false);
-        piano3.setBounds(5,520,490,240);
+        piano3.setBounds(5,510,490,240);
 
         piano1.setText(a.toString());
         piano2.setText(b.toString());
@@ -539,7 +548,7 @@ public class GUI extends JFrame implements ActionListener{
 
         JTextPane flauta3 = new JTextPane();
         flauta3.setEditable(false);
-        flauta3.setBounds(5,520,490,240);
+        flauta3.setBounds(5,510,490,240);
 
         flauta1.setText(a.toString());
         flauta2.setText(b.toString());
@@ -565,7 +574,7 @@ public class GUI extends JFrame implements ActionListener{
 
         JTextPane trompeta3 = new JTextPane();
         trompeta3.setEditable(false);
-        trompeta3.setBounds(5,520,490,240);
+        trompeta3.setBounds(5,510,490,240);
 
         trompeta1.setText(a.toString());
         trompeta2.setText(b.toString());
@@ -591,7 +600,7 @@ public class GUI extends JFrame implements ActionListener{
 
         JTextPane bateria3 = new JTextPane();
         bateria3.setEditable(false);
-        bateria3.setBounds(5,520,490,240);
+        bateria3.setBounds(5,510,490,240);
 
         bateria1.setText(a.toString());
         bateria2.setText(b.toString());
@@ -618,7 +627,7 @@ public class GUI extends JFrame implements ActionListener{
 
         JTextPane xilofono3 = new JTextPane();
         xilofono3.setEditable(false);
-        xilofono3.setBounds(5,520,490,240);
+        xilofono3.setBounds(5,510,490,240);
 
         xilofono1.setText(a.toString());
         xilofono2.setText(b.toString());
@@ -645,19 +654,19 @@ public class GUI extends JFrame implements ActionListener{
         campo1.setBounds(5,10,490,240);
 
         JTextPane campo2 = new JTextPane();
-        campo2.setBounds(5,260,490,200);
+        campo2.setBounds(5,260,490,110);
         campo2.setEditable(false);
 
         JTextPane campo3 = new JTextPane();
         campo3.setEditable(false);
-        campo3.setBounds(5,470,490,200);
+        campo3.setBounds(5,380,490,110);
 
         campo1.setText(elemento1.toString());
         campo2.setText(elemento2.toString());
         campo3.setText(elemento3.toString());
 
         anterior_paq_guitarra = new JButton("Anterior");
-        anterior_paq_guitarra.setBounds(370,780,110,30);
+        anterior_paq_guitarra.setBounds(370,510,110,30);
         anterior_paq_guitarra.addActionListener(this);
 
         paqguitarra.add(campo1);
@@ -682,7 +691,7 @@ public class GUI extends JFrame implements ActionListener{
 
         JTextPane campo3 = new JTextPane();
         campo3.setEditable(false);
-        campo3.setBounds(5,520,490,240);
+        campo3.setBounds(5,510,490,240);
 
         campo1.setText(elemento1.toString());
         campo2.setText(elemento2.toString());
@@ -714,7 +723,7 @@ public class GUI extends JFrame implements ActionListener{
 
         JTextPane campo3 = new JTextPane();
         campo3.setEditable(false);
-        campo3.setBounds(5,520,490,240);
+        campo3.setBounds(5,510,490,240);
 
         campo1.setText(elemento1.toString());
         campo2.setText(elemento2.toString());
@@ -745,7 +754,7 @@ public class GUI extends JFrame implements ActionListener{
 
         JTextPane campo3 = new JTextPane();
         campo3.setEditable(false);
-        campo3.setBounds(5,520,490,240);
+        campo3.setBounds(5,510,490,240);
 
         campo1.setText(elemento1.toString());
         campo2.setText(elemento2.toString());
@@ -763,6 +772,19 @@ public class GUI extends JFrame implements ActionListener{
     @Override
     public void actionPerformed(ActionEvent e) {
         //botones continuar
+        //----------------------------------------------------botones sin seleccionar
+        if(e.getSource()==continuar && !Rinstrumentos.isSelected() && !Raccesorios.isSelected() && !Rpaquetes.isSelected()) {
+           UI.no_seleccionado();}
+        if(e.getSource()==continuar_instrumento && !Rcuerda.isSelected() && !Rviento.isSelected() && !Rpercusion.isSelected()) {
+            UI.no_seleccionado();}
+        if(e.getSource()==continuar_paquetes && !RpaqGuitarra.isSelected() && !RpaqSalsa.isSelected() && !RpaqGrande.isSelected() && !RpaqPeque.isSelected()) {
+            UI.no_seleccionado();}
+        if(e.getSource()==continuar_cuerda && !Rguitarra.isSelected() && !Rpiano.isSelected()) {
+            UI.no_seleccionado();}
+        if(e.getSource()==continuar_percusion && !Rbateria.isSelected() && !Rxilofono.isSelected()) {
+            UI.no_seleccionado();}
+        if(e.getSource()==continuar_viento && !Rflauta.isSelected() && !Rtrompeta.isSelected()) {
+            UI.no_seleccionado();}
         //----------------------------------------------------ver instrumentos
         if(e.getSource()==continuar && Rinstrumentos.isSelected()) {
             productos.setVisible(false);
