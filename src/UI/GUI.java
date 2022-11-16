@@ -44,17 +44,25 @@ public class GUI extends JFrame implements ActionListener{
         cabecera = new JPanel();
         cabecera.setBounds(0,0,550,75);
         cabecera.setBackground(Color.lightGray);
+        cabecera.setLayout(null);
         bienvenida = new JLabel("TIENDA DE INSTRUMENTOS MUSICALES");
-        bienvenida.setBounds(25,36,450,45);
+        bienvenida.setBounds(20,30,280,25);
         bienvenida.setFont(new Font("calibri",Font.BOLD,17));
+        ImageIcon icono = new ImageIcon("src/Icons/Tienda icono.png");
+        imagen_cabecera = new JLabel(icono);
+        imagen_cabecera.setBounds(460,5,55,65);
+        Icon icon = new ImageIcon(icono.getImage().getScaledInstance(imagen_cabecera.getWidth(),imagen_cabecera.getHeight(),Image.SCALE_DEFAULT));
+        imagen_cabecera.setIcon(icon);
+        cabecera.add(imagen_cabecera);
         cabecera.add(bienvenida);
         cabecera.setVisible(true);
 
         footer = new JPanel();
         footer.setBounds(0,315,550,60);
         footer.setBackground(Color.lightGray);
+        footer.setLayout(null);
         creditos = new JLabel("programación orientada a objetos 2022");
-        creditos.setBounds(0,0,500,5);
+        creditos.setBounds(167,20,500,20);
         footer.add(creditos);
         footer.setVisible(true);
 
