@@ -13,11 +13,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Scanner;
 public class UI {
-
-    public static String diferenciador_menus(){
-        return "--------------------------------------------------------------------------------------------------------";
-    }
-
+    
     public static void no_seleccionado(){
         JOptionPane.showMessageDialog(null,"No se ha seleccionado ninguna opción","Error",JOptionPane.ERROR_MESSAGE);}
 
