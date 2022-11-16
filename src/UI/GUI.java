@@ -78,7 +78,7 @@ public class GUI extends JFrame implements ActionListener{
         accesorios.setPreferredSize(new Dimension(490,450));
         scroll_accesorios = new JScrollPane();
         scroll_accesorios.setHorizontalScrollBarPolicy(JScrollPane.HORIZONTAL_SCROLLBAR_NEVER);
-        scroll_accesorios.setBounds(0,0,545,380);
+        scroll_accesorios.setBounds(0,0,535,370);
         scroll_accesorios.setViewportView(accesorios);
         scroll_accesorios.setVisible(false);
 
@@ -109,7 +109,7 @@ public class GUI extends JFrame implements ActionListener{
         guitarras.setVisible(false);
         scroll_guitarras = new JScrollPane();
         scroll_guitarras.setHorizontalScrollBarPolicy(JScrollPane.HORIZONTAL_SCROLLBAR_NEVER);
-        scroll_guitarras.setBounds(0,0,545,370);
+        scroll_guitarras.setBounds(0,0,535,360);
         scroll_guitarras.setViewportView(guitarras);
         scroll_guitarras.setVisible(false);
 
@@ -120,7 +120,7 @@ public class GUI extends JFrame implements ActionListener{
         pianos.setVisible(false);
         scroll_pianos = new JScrollPane();
         scroll_pianos.setHorizontalScrollBarPolicy(JScrollPane.HORIZONTAL_SCROLLBAR_NEVER);
-        scroll_pianos.setBounds(0,0,545,370);
+        scroll_pianos.setBounds(0,0,535,360);
         scroll_pianos.setViewportView(pianos);
         scroll_pianos.setVisible(false);
 
@@ -131,7 +131,7 @@ public class GUI extends JFrame implements ActionListener{
         flautas.setVisible(false);
         scroll_flautas = new JScrollPane();
         scroll_flautas.setHorizontalScrollBarPolicy(JScrollPane.HORIZONTAL_SCROLLBAR_NEVER);
-        scroll_flautas.setBounds(0,0,545,370);
+        scroll_flautas.setBounds(0,0,535,360);
         scroll_flautas.setViewportView(flautas);
         scroll_flautas.setVisible(false);
 
@@ -142,7 +142,7 @@ public class GUI extends JFrame implements ActionListener{
         trompetas.setVisible(false);
         scroll_trompetas = new JScrollPane();
         scroll_trompetas.setHorizontalScrollBarPolicy(JScrollPane.HORIZONTAL_SCROLLBAR_NEVER);
-        scroll_trompetas.setBounds(0,0,545,370);
+        scroll_trompetas.setBounds(0,0,535,360);
         scroll_trompetas.setViewportView(trompetas);
         scroll_trompetas.setVisible(false);
 
@@ -153,7 +153,7 @@ public class GUI extends JFrame implements ActionListener{
         baterias.setVisible(false);
         scroll_baterias = new JScrollPane();
         scroll_baterias.setHorizontalScrollBarPolicy(JScrollPane.HORIZONTAL_SCROLLBAR_NEVER);
-        scroll_baterias.setBounds(0,0,545,370);
+        scroll_baterias.setBounds(0,0,535,360);
         scroll_baterias.setViewportView(baterias);
         scroll_baterias.setVisible(false);
 
@@ -164,7 +164,7 @@ public class GUI extends JFrame implements ActionListener{
         xilofonos.setVisible(false);
         scroll_xilofono = new JScrollPane();
         scroll_xilofono.setHorizontalScrollBarPolicy(JScrollPane.HORIZONTAL_SCROLLBAR_NEVER);
-        scroll_xilofono.setBounds(0,0,545,370);
+        scroll_xilofono.setBounds(0,0,535,360);
         scroll_xilofono.setViewportView(xilofonos);
         scroll_xilofono.setVisible(false);
 
@@ -175,7 +175,7 @@ public class GUI extends JFrame implements ActionListener{
         paqguitarra.setVisible(false);
         scroll_paqguitarra = new JScrollPane();
         scroll_paqguitarra.setHorizontalScrollBarPolicy(JScrollPane.HORIZONTAL_SCROLLBAR_NEVER);
-        scroll_paqguitarra.setBounds(0,0,545,370);
+        scroll_paqguitarra.setBounds(0,0,535,360);
         scroll_paqguitarra.setViewportView(paqguitarra);
         scroll_paqguitarra.setVisible(false);
 
@@ -186,7 +186,7 @@ public class GUI extends JFrame implements ActionListener{
         paqsalsa.setVisible(false);
         scroll_paqsalsa = new JScrollPane();
         scroll_paqsalsa.setHorizontalScrollBarPolicy(JScrollPane.HORIZONTAL_SCROLLBAR_NEVER);
-        scroll_paqsalsa.setBounds(0,0,545,370);
+        scroll_paqsalsa.setBounds(0,0,535,360);
         scroll_paqsalsa.setViewportView(paqsalsa);
         scroll_paqsalsa.setVisible(false);
 
@@ -197,7 +197,7 @@ public class GUI extends JFrame implements ActionListener{
         paqgrande.setVisible(false);
         scroll_paqgrande = new JScrollPane();
         scroll_paqgrande.setHorizontalScrollBarPolicy(JScrollPane.HORIZONTAL_SCROLLBAR_NEVER);
-        scroll_paqgrande.setBounds(0,0,545,370);
+        scroll_paqgrande.setBounds(0,0,535,360);
         scroll_paqgrande.setViewportView(paqgrande);
         scroll_paqgrande.setVisible(false);
 
@@ -208,7 +208,7 @@ public class GUI extends JFrame implements ActionListener{
         paqpeq.setVisible(false);
         scroll_paqpeq = new JScrollPane();
         scroll_paqpeq.setHorizontalScrollBarPolicy(JScrollPane.HORIZONTAL_SCROLLBAR_NEVER);
-        scroll_paqpeq.setBounds(0,0,545,370);
+        scroll_paqpeq.setBounds(0,0,535,360);
         scroll_paqpeq.setViewportView(paqpeq);
         scroll_paqpeq.setVisible(false);
 
